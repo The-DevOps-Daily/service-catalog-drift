@@ -154,11 +154,13 @@ class Checker:
         if found:
             e = self.gh.get(f"/repos/{slug}/codeowners/errors", {"ref": branch} if branch else None)
             unknown = set()
-            found["other_errors"] = 0
+            skipped_lines = set()
             if e.status == 200:
                 for err in (e.json() or {}).get("errors", []):
                     if "unknown owner" not in (err.get("kind", "") + err.get("message", "")).lower():
-                        found["other_errors"] += 1  # syntax errors and the like
+                        # GitHub skips a line with invalid syntax, so it is not ownership evidence
+                        if isinstance(err.get("line"), int):
+                            skipped_lines.add(err["line"])
                         continue
                     # "make sure @user exists and ..." or "make sure the team @org/team exists, ..."
                     named = re.findall(UNKNOWN_OWNER, err.get("message", ""))
@@ -167,6 +169,8 @@ class Checker:
                         unknown.update(_owners_on_line(err.get("source", "")))
             found["unknown"] = unknown
             found["errors_status"] = e.status
+            found["skipped_lines"] = sorted(skipped_lines)
+            found["rules"] = [r for r in found["rules"] if r["line"] not in skipped_lines]
         self._codeowners_cache[key] = found
         return found
 
@@ -412,6 +416,7 @@ class Checker:
                 co = self.codeowners(info["full_name"], (self.ref if is_source and self.ref else None)
                                      or info.get("default_branch"))
                 out["last_human_commit"] = info.get("last_human_commit")
+                out["repo_archived"] = bool(info.get("archived"))
                 src = source.get("repo")
                 if repo_res["status"] == "ok" and src and info["full_name"].lower() != src.lower() \
                         and source["path"].count("/") == 0:
@@ -428,7 +433,7 @@ class Checker:
         else:
             out["checks"]["repo"] = result("n/a", "no github.com/project-slug and no source repository")
         out["checks"]["owner"] = self.check_owner(owner_ref, org, co)
-        same_repo = source.get("repo") and slug and info and info.get("status") == 200 and \
+        same_repo = source.get("repo") and info and info.get("status") == 200 and \
             info["full_name"].lower() == source["repo"].lower()
         # For an entry that describes another repository, use the rule for that repository's root.
         file_path = source["path"] if same_repo else "catalog-info.yaml"
@@ -489,8 +494,8 @@ def valid_slug(slug):
 
 def repo_slug(ann, source_repo):
     """The repository an entry points at. Values from the file are validated, never trusted."""
-    slug = ann.get("github.com/project-slug")
-    if slug is not None:
+    if "github.com/project-slug" in ann:
+        slug = ann["github.com/project-slug"]
         if isinstance(slug, str) and valid_slug(slug.strip()):
             return slug.strip(), "github.com/project-slug"
         return None, "invalid"
@@ -752,12 +757,16 @@ def main(argv=None):
                 "entries": entries,
             }, f, indent=1)
         print(f"wrote {args.json}")
+    counts["api_failures"] = gh.failures
+    if gh.failures:
+        print(f"  {gh.failures} GitHub API answers were 401 or 5xx: the run is incomplete", file=sys.stderr)
     return exit_code(entries, counts, args.fail_on)
 
 
 def exit_code(entries, counts, fail_on="drift"):
     """2: the run could not check what it was given. 1: drift, or a catalog file that does not parse."""
-    if counts.get("errors") or counts.get("unreadable") or (not entries and not counts.get("templates")
+    if counts.get("errors") or counts.get("unreadable") or counts.get("api_failures") or \
+            (not entries and not counts.get("templates")
                                                               and not counts.get("other_kinds")):
         return 2
     if counts.get("unparsed") or any(e["status"] == "drift" for e in entries):

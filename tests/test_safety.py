@@ -219,8 +219,17 @@ class GitHubPaths(unittest.TestCase):
         gh = FakeGitHub(world={"/repos/acme/repo/commits/main?per_page=1": (200, [{}])})
         lc = links.LinkChecker(gh, cache_dir=tempfile.mkdtemp(), use_cache=False)
         lc.check("https://github.com/acme/repo/blob/main/docs/a%3Fb%23c.md")
-        self.assertEqual(gh.log, ["/repos/acme/repo/commits/main?per_page=1",
-                                  "/repos/acme/repo/contents/docs/a%3Fb%23c.md?ref=main"])
+        self.assertEqual(gh.log[:2], ["/repos/acme/repo/commits/main?per_page=1",
+                                      "/repos/acme/repo/contents/docs/a%3Fb%23c.md?ref=main"])
+
+    def test_ambiguous_slash_ref_is_not_called_dead(self):
+        # blob/release/v1/README.md: tag "release" exists, and so does branch "release/v1"
+        gh = FakeGitHub(world={"/repos/acme/repo/commits/release?per_page=1": (200, [{}]),
+                               "/repos/acme/repo/commits/release%2Fv1?per_page=1": (200, [{}])})
+        lc = links.LinkChecker(gh, cache_dir=tempfile.mkdtemp(), use_cache=False)
+        res = lc.check("https://github.com/acme/repo/blob/release/v1/README.md")
+        self.assertEqual(res["result"], links.UNVERIFIABLE)
+        self.assertIn("ambiguous", res["reason"])
 
     def test_unknown_ref_is_not_called_dead(self):
         gh = FakeGitHub(world={"/repos/acme/repo": (200, {"full_name": "acme/repo"})})
@@ -236,8 +245,8 @@ class GitHubPaths(unittest.TestCase):
         self.assertEqual(lc.check("https://github.com/acme/repo")["result"], links.OK)
 
     def test_slugs_from_catalog_files_are_validated(self):
-        for bad in ("../x", "a/..", "a/b/c", "a/.", "a b/c", "a/b?x=1"):
-            self.assertEqual(drift.repo_slug({"github.com/project-slug": bad}, None), (None, "invalid"), bad)
+        for bad in ("../x", "a/..", "a/b/c", "a/.", "a b/c", "a/b?x=1", None, ""):
+            self.assertEqual(drift.repo_slug({"github.com/project-slug": bad}, "x/y"), (None, "invalid"), bad)
         self.assertEqual(drift.repo_slug({"backstage.io/source-location": "url:https://github.com/../x/"}, None),
                          (None, None))
 

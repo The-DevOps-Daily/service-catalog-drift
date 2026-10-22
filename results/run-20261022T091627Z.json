@@ -1,15 +1,15 @@
 {
- "started_at": "2026-10-22T08:58:28+00:00",
- "finished_at": "2026-10-22T08:58:49+00:00",
+ "started_at": "2026-10-22T09:16:27+00:00",
+ "finished_at": "2026-10-22T09:16:46+00:00",
  "github_responses_fetched": {
   "first": "2026-10-22T08:36:04+00:00",
-  "last": "2026-10-22T08:58:49+00:00"
+  "last": "2026-10-22T09:16:45+00:00"
  },
  "links_checked": {
   "first": "2026-10-22T08:37:03+00:00",
   "last": "2026-10-22T08:56:49+00:00"
  },
- "code_sha256": "2f2afb8b86793903209373601eeeda0ffa4b34533ad5795202ae5b16f1429f14",
+ "code_sha256": "6da7660d96d68acd6d82bfd1d3daeaed0e2ddf2e654ecab975d58fab1e43da31",
  "input_sha256": "19e0e14e387f01a3cb00e8f07f50dd8d3746fe755f33191c5e60f8acfca1dd1a",
  "args": {
   "repo": null,
@@ -19,7 +19,7 @@
   "redact": true,
   "check_links": true,
   "allow_private": false,
-  "json": "results/run-20261022T085822Z.json",
+  "json": "results/run-final.json",
   "quiet": true,
   "fail_on": "drift",
   "no_cache": false,
@@ -31,8 +31,8 @@
   "files": []
  },
  "stale_days": 365,
- "api_calls": 35,
- "api_cache_hits": 1674,
+ "api_calls": 30,
+ "api_cache_hits": 1679,
  "link_requests": 0,
  "check_links": true,
  "file_counts": {
@@ -1972,7 +1972,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "experimental",
-   "owner": "group:<176f05>",
+   "owner": "group:<d750cd>",
    "owner_kind": "group",
    "repo": "bcgov/raven",
    "repo_from": "github.com/project-slug",
@@ -1983,11 +1983,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @bcgov/<176f05>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @bcgov/<d750cd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<176f05>, .github/CODEOWNERS says @<user>, @<user>",
+     "reason": "disagree: catalog says group:<d750cd>, .github/CODEOWNERS says @<user>, @<user>",
      "disagreement": "catalog names a team, CODEOWNERS people"
     },
     "links": {
@@ -2000,6 +2000,7 @@
     }
    },
    "last_human_commit": "2026-10-19T18:18:14Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2026-08-14T20:57:35Z",
@@ -2012,7 +2013,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<1638cf>",
+   "owner": "group:<d9d9ce>",
    "owner_kind": "group",
    "repo": "bcgov/drop-docs",
    "repo_from": "github.com/project-slug",
@@ -2023,7 +2024,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @bcgov/<1638cf>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @bcgov/<d9d9ce>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2039,6 +2040,7 @@
     }
    },
    "last_human_commit": "2023-11-02T22:55:07Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2023-11-02T22:52:06Z",
@@ -2051,7 +2053,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "experimental",
-   "owner": "group:<e1fb32>",
+   "owner": "group:<7541f7>",
    "owner_kind": "group",
    "repo": "bcgov/bcdg",
    "repo_from": "github.com/project-slug",
@@ -2062,7 +2064,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@bcgov/<e1fb32> resolves in .github/CODEOWNERS of bcgov/mobile-developer-guide (GitHub validates CODEOWNERS teams)"
+     "reason": "@bcgov/<7541f7> resolves in .github/CODEOWNERS of bcgov/mobile-developer-guide (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -2078,6 +2080,7 @@
     }
    },
    "last_human_commit": "2026-09-10T17:44:14Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-06-12T19:18:58Z",
@@ -2090,7 +2093,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<2b927b>",
+   "owner": "group:<bdfd03>",
    "owner_kind": "group",
    "repo": "bcgov/design-system",
    "repo_from": "github.com/project-slug",
@@ -2101,11 +2104,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @bcgov/<2b927b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @bcgov/<bdfd03>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<2b927b>, .github/CODEOWNERS says @bcgov/<ac12b2>",
+     "reason": "disagree: catalog says group:<bdfd03>, .github/CODEOWNERS says @bcgov/<a72f87>",
      "disagreement": "different team names"
     },
     "links": {
@@ -2118,6 +2121,7 @@
     }
    },
    "last_human_commit": "2026-10-21T20:12:22Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2026-01-07T23:42:39Z",
@@ -2130,7 +2134,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "experimental",
-   "owner": "group:<157564>",
+   "owner": "group:<fd2c84>",
    "owner_kind": "group",
    "repo": "bcgov/demo-coco-docs",
    "repo_from": "github.com/project-slug",
@@ -2141,7 +2145,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @bcgov/<157564>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @bcgov/<fd2c84>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2157,6 +2161,7 @@
     }
    },
    "last_human_commit": "2024-09-05T21:21:05Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2024-09-05T21:21:05Z",
@@ -2169,7 +2174,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<7e2c9f>",
+   "owner": "group:<351256>",
    "owner_kind": "group",
    "repo": "bcgov/platform-developer-docs",
    "repo_from": "github.com/project-slug",
@@ -2180,7 +2185,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@bcgov/<7e2c9f> resolves in .github/CODEOWNERS of bcgov/platform-services-sre (GitHub validates CODEOWNERS teams)"
+     "reason": "@bcgov/<351256> resolves in .github/CODEOWNERS of bcgov/platform-services-sre (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -2196,6 +2201,7 @@
     }
    },
    "last_human_commit": "2026-10-16T22:08:28Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-11-06T22:42:55Z",
@@ -2208,7 +2214,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<aefd14>",
+   "owner": "group:<511b2d>",
    "owner_kind": "group",
    "repo": "broadinstitute/.github",
    "repo_from": "github.com/project-slug",
@@ -2219,11 +2225,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@broadinstitute/<aefd14> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@broadinstitute/<511b2d> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<aefd14>"
+     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<511b2d>"
     },
     "links": {
      "status": "n/a",
@@ -2235,6 +2241,7 @@
     }
    },
    "last_human_commit": "2025-06-10T14:49:29Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-05-30T18:20:34Z",
@@ -2247,7 +2254,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<aefd14>",
+   "owner": "group:<511b2d>",
    "owner_kind": "group",
    "repo": "broadinstitute/python-cert_manager",
    "repo_from": "github.com/project-slug",
@@ -2258,11 +2265,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@broadinstitute/<aefd14> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@broadinstitute/<511b2d> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<aefd14>"
+     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<511b2d>"
     },
     "links": {
      "status": "n/a",
@@ -2274,6 +2281,7 @@
     }
    },
    "last_human_commit": "2026-07-13T15:47:38Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-03-12T14:45:39Z",
@@ -2286,7 +2294,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<d3cd9e>",
+   "owner": "group:<490d86>",
    "owner_kind": "group",
    "repo": "broadinstitute/kubernetes-netbox",
    "repo_from": "github.com/project-slug",
@@ -2297,11 +2305,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@broadinstitute/<d3cd9e> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@broadinstitute/<490d86> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<aefd14>, @broadinstitute/<d3cd9e>"
+     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<511b2d>, @broadinstitute/<490d86>"
     },
     "links": {
      "status": "n/a",
@@ -2313,6 +2321,7 @@
     }
    },
    "last_human_commit": "2025-10-24T17:47:37Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-10-24T17:35:26Z",
@@ -2325,7 +2334,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<da8d41>",
+   "owner": "group:<d7b6fc>",
    "owner_kind": "group",
    "repo": "broadinstitute/bibt-gcp-iam",
    "repo_from": "github.com/project-slug",
@@ -2336,11 +2345,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @broadinstitute/<da8d41>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @broadinstitute/<d7b6fc>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<da8d41>, .github/CODEOWNERS says @broadinstitute/<7457e6>",
+     "reason": "disagree: catalog says group:<d7b6fc>, .github/CODEOWNERS says @broadinstitute/<8eeacb>",
      "disagreement": "different team names"
     },
     "links": {
@@ -2353,6 +2362,7 @@
     }
    },
    "last_human_commit": "2026-09-16T14:50:06Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "bibt-gcp-iam",
@@ -2374,7 +2384,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<aefd14>",
+   "owner": "group:<511b2d>",
    "owner_kind": "group",
    "repo": "broadinstitute/backstage",
    "repo_from": "github.com/project-slug",
@@ -2385,11 +2395,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@broadinstitute/<aefd14> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@broadinstitute/<511b2d> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<aefd14>"
+     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<511b2d>"
     },
     "links": {
      "status": "ok",
@@ -2402,6 +2412,7 @@
     }
    },
    "last_human_commit": "2026-10-09T20:26:19Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Backstage",
@@ -2423,7 +2434,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<da8d41>",
+   "owner": "group:<d7b6fc>",
    "owner_kind": "group",
    "repo": "broadinstitute/bibt-gcp-secrets",
    "repo_from": "github.com/project-slug",
@@ -2434,11 +2445,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @broadinstitute/<da8d41>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @broadinstitute/<d7b6fc>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<da8d41>, .github/CODEOWNERS says @broadinstitute/<7457e6>",
+     "reason": "disagree: catalog says group:<d7b6fc>, .github/CODEOWNERS says @broadinstitute/<8eeacb>",
      "disagreement": "different team names"
     },
     "links": {
@@ -2451,6 +2462,7 @@
     }
    },
    "last_human_commit": "2026-09-16T14:51:11Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "bibt-gcp-secrets",
@@ -2472,7 +2484,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<805bca>",
+   "owner": "group:<474a12>",
    "owner_kind": "group",
    "repo": "broadinstitute/puppet-sentinelone_agent",
    "repo_from": "github.com/project-slug",
@@ -2483,11 +2495,11 @@
     },
     "owner": {
      "status": "warn",
-     "reason": "GitHub cannot resolve @broadinstitute/<805bca> in the CODEOWNERS files that name it (deleted, renamed, secret, or without write access)"
+     "reason": "GitHub cannot resolve @broadinstitute/<474a12> in the CODEOWNERS files that name it (deleted, renamed, secret, or without write access)"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<805bca>, .github/CODEOWNERS says @broadinstitute/<5e53fe>",
+     "reason": "disagree: catalog says group:<474a12>, .github/CODEOWNERS says @broadinstitute/<ad13dd>",
      "disagreement": "different team names"
     },
     "links": {
@@ -2500,6 +2512,7 @@
     }
    },
    "last_human_commit": "2025-05-23T19:28:12Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2024-10-31T13:32:28Z",
@@ -2512,7 +2525,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<da8d41>",
+   "owner": "group:<d7b6fc>",
    "owner_kind": "group",
    "repo": "broadinstitute/bibt-sentinelone",
    "repo_from": "github.com/project-slug",
@@ -2523,11 +2536,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @broadinstitute/<da8d41>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @broadinstitute/<d7b6fc>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<da8d41>, .github/CODEOWNERS says @broadinstitute/<7457e6>",
+     "reason": "disagree: catalog says group:<d7b6fc>, .github/CODEOWNERS says @broadinstitute/<8eeacb>",
      "disagreement": "different team names"
     },
     "links": {
@@ -2540,6 +2553,7 @@
     }
    },
    "last_human_commit": "2026-09-16T14:51:52Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2026-09-16T14:13:10Z",
@@ -2552,7 +2566,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<e25ffd>",
+   "owner": "group:<db602a>",
    "owner_kind": "group",
    "repo": "cds-snc/cds-superset-docs",
    "repo_from": "github.com/project-slug",
@@ -2563,11 +2577,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cds-snc/<e25ffd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cds-snc/<db602a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<e25ffd>, .github/CODEOWNERS says @cds-snc/<fea439>",
+     "reason": "disagree: catalog says group:<db602a>, .github/CODEOWNERS says @cds-snc/<f7992b>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -2580,6 +2594,7 @@
     }
    },
    "last_human_commit": "2026-10-21T17:05:42Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2026-02-09T14:42:50Z",
@@ -2592,7 +2607,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<859488>",
+   "owner": "group:<42194e>",
    "owner_kind": "group",
    "repo": "cds-snc/dns",
    "repo_from": "file location",
@@ -2603,11 +2618,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@cds-snc/<859488> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@cds-snc/<42194e> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @cds-snc/<859488>, @<user>"
+     "reason": ".github/CODEOWNERS agrees: @cds-snc/<42194e>, @<user>"
     },
     "links": {
      "status": "n/a",
@@ -2619,6 +2634,7 @@
     }
    },
    "last_human_commit": "2026-08-24T16:58:47Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-02-20T20:36:44Z",
@@ -2631,7 +2647,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<e25ffd>",
+   "owner": "group:<db602a>",
    "owner_kind": "group",
    "repo": "cds-snc/data-lake",
    "repo_from": "github.com/project-slug",
@@ -2642,11 +2658,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cds-snc/<e25ffd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cds-snc/<db602a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<e25ffd>, .github/CODEOWNERS says @cds-snc/<fea439>",
+     "reason": "disagree: catalog says group:<db602a>, .github/CODEOWNERS says @cds-snc/<f7992b>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -2659,6 +2675,7 @@
     }
    },
    "last_human_commit": "2026-09-21T15:21:31Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2026-02-09T14:41:55Z",
@@ -2671,7 +2688,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "experimental",
-   "owner": "group:<859488>",
+   "owner": "group:<42194e>",
    "owner_kind": "group",
    "repo": "cds-snc/sentinel-forward-data-action",
    "repo_from": "file location",
@@ -2682,7 +2699,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@cds-snc/<859488> resolves in .github/CODEOWNERS of cds-snc/dns (GitHub validates CODEOWNERS teams)"
+     "reason": "@cds-snc/<42194e> resolves in .github/CODEOWNERS of cds-snc/dns (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -2698,6 +2715,7 @@
     }
    },
    "last_human_commit": "2026-06-11T16:01:09Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-02-20T21:00:25Z",
@@ -2710,7 +2728,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<961e0d>",
+   "owner": "group:<00653b>",
    "owner_kind": "group",
    "repo": "cds-snc/cds-website-cms",
    "repo_from": "github.com/project-slug",
@@ -2721,7 +2739,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cds-snc/<961e0d>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cds-snc/<00653b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2737,6 +2755,7 @@
     }
    },
    "last_human_commit": "2025-04-17T17:56:39Z",
+   "repo_archived": false,
    "links": [
     {
      "title": null,
@@ -2758,7 +2777,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "experimental",
-   "owner": "group:<2c3382>",
+   "owner": "group:<41e223>",
    "owner_kind": "group",
    "repo": "cds-snc/forms-terraform",
    "repo_from": "file location",
@@ -2769,7 +2788,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cds-snc/<2c3382>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cds-snc/<41e223>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2785,6 +2804,7 @@
     }
    },
    "last_human_commit": "2026-10-21T18:33:29Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-03-04T15:51:29Z",
@@ -2797,7 +2817,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "experimental",
-   "owner": "group:<ec4795>",
+   "owner": "group:<93be5f>",
    "owner_kind": "group",
    "repo": "cds-snc/platform-forms-client",
    "repo_from": "file location",
@@ -2808,7 +2828,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cds-snc/<ec4795>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cds-snc/<93be5f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2824,6 +2844,7 @@
     }
    },
    "last_human_commit": "2026-10-21T18:52:20Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-01-31T15:44:11Z",
@@ -2836,7 +2857,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "experimental",
-   "owner": "group:<ec4795>",
+   "owner": "group:<93be5f>",
    "owner_kind": "group",
    "repo": "cds-snc/.github",
    "repo_from": "file location",
@@ -2847,7 +2868,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cds-snc/<ec4795>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cds-snc/<93be5f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2863,6 +2884,7 @@
     }
    },
    "last_human_commit": "2026-10-20T21:43:34Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2023-12-29T00:03:06Z",
@@ -2875,7 +2897,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<dbae0f>",
+   "owner": "group:<8669c0>",
    "owner_kind": "group",
    "repo": "Clever/mongo-lock-go",
    "repo_from": "file location",
@@ -2886,7 +2908,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Clever/<dbae0f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Clever/<8669c0>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2902,6 +2924,7 @@
     }
    },
    "last_human_commit": "2025-11-05T22:49:36Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-11-05T22:49:36Z",
@@ -2914,7 +2937,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<dbae0f>",
+   "owner": "group:<8669c0>",
    "owner_kind": "group",
    "repo": "Clever/components",
    "repo_from": "file location",
@@ -2925,7 +2948,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Clever/<dbae0f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Clever/<8669c0>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2941,6 +2964,7 @@
     }
    },
    "last_human_commit": "2026-03-02T23:45:18Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-11-06T16:52:13Z",
@@ -2953,7 +2977,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<b0788d>",
+   "owner": "group:<1ede7d>",
    "owner_kind": "group",
    "repo": "Clever/go-utils",
    "repo_from": "file location",
@@ -2964,7 +2988,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Clever/<b0788d> resolves in .github/CODEOWNERS of Clever/microplane (GitHub validates CODEOWNERS teams)"
+     "reason": "@Clever/<1ede7d> resolves in .github/CODEOWNERS of Clever/microplane (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -2980,6 +3004,7 @@
     }
    },
    "last_human_commit": "2025-11-05T23:02:22Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-10-22T02:47:29Z",
@@ -2992,7 +3017,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<dbae0f>",
+   "owner": "group:<8669c0>",
    "owner_kind": "group",
    "repo": "Clever/connect-session-compress",
    "repo_from": "file location",
@@ -3003,7 +3028,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Clever/<dbae0f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Clever/<8669c0>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3019,6 +3044,7 @@
     }
    },
    "last_human_commit": "2025-11-06T16:51:43Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-11-06T16:51:43Z",
@@ -3031,7 +3057,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<dbae0f>",
+   "owner": "group:<8669c0>",
    "owner_kind": "group",
    "repo": "Clever/writable-stream-parallel",
    "repo_from": "file location",
@@ -3042,7 +3068,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Clever/<dbae0f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Clever/<8669c0>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3058,6 +3084,7 @@
     }
    },
    "last_human_commit": "2025-11-05T00:36:00Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-11-05T00:36:00Z",
@@ -3070,7 +3097,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<dbae0f>",
+   "owner": "group:<8669c0>",
    "owner_kind": "group",
    "repo": "Clever/go-redis-reservation",
    "repo_from": "file location",
@@ -3081,7 +3108,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Clever/<dbae0f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Clever/<8669c0>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3097,6 +3124,7 @@
     }
    },
    "last_human_commit": "2025-11-05T23:03:28Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-11-05T23:03:28Z",
@@ -3109,7 +3137,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<b0788d>",
+   "owner": "group:<1ede7d>",
    "owner_kind": "group",
    "repo": "Clever/launch-gen",
    "repo_from": "file location",
@@ -3120,11 +3148,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Clever/<b0788d> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@Clever/<1ede7d> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @Clever/<b0788d>"
+     "reason": ".github/CODEOWNERS agrees: @Clever/<1ede7d>"
     },
     "links": {
      "status": "n/a",
@@ -3136,6 +3164,7 @@
     }
    },
    "last_human_commit": "2026-07-02T23:25:19Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-10-22T02:48:23Z",
@@ -3148,7 +3177,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<b0788d>",
+   "owner": "group:<1ede7d>",
    "owner_kind": "group",
    "repo": "Clever/ci-scripts",
    "repo_from": "file location",
@@ -3159,11 +3188,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Clever/<b0788d> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@Clever/<1ede7d> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @Clever/<b0788d>"
+     "reason": ".github/CODEOWNERS agrees: @Clever/<1ede7d>"
     },
     "links": {
      "status": "n/a",
@@ -3175,6 +3204,7 @@
     }
    },
    "last_human_commit": "2026-09-29T04:26:13Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-11-07T07:09:23Z",
@@ -3187,7 +3217,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<f077a8>",
+   "owner": "group:<a3d5d1>",
    "owner_kind": "group",
    "repo": "contentful/browserslist-config",
    "repo_from": "github.com/project-slug",
@@ -3198,11 +3228,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<f077a8> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<a3d5d1> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<f077a8>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<a3d5d1>"
     },
     "links": {
      "status": "n/a",
@@ -3214,6 +3244,7 @@
     }
    },
    "last_human_commit": "2026-10-09T12:06:12Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-03-01T10:34:05Z",
@@ -3226,7 +3257,7 @@
    "kind": "Component",
    "type": "cli",
    "lifecycle": "production",
-   "owner": "group:<fa1391>",
+   "owner": "group:<0d6de2>",
    "owner_kind": "group",
    "repo": "contentful/contentful-import",
    "repo_from": "github.com/project-slug",
@@ -3237,11 +3268,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<fa1391> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<0d6de2> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<fa1391>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<0d6de2>"
     },
     "links": {
      "status": "n/a",
@@ -3253,6 +3284,7 @@
     }
    },
    "last_human_commit": "2026-10-19T15:02:37Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-15T17:24:02Z",
@@ -3265,7 +3297,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<fa1391>",
+   "owner": "group:<0d6de2>",
    "owner_kind": "group",
    "repo": "contentful/ui-extensions-sdk",
    "repo_from": "github.com/project-slug",
@@ -3276,11 +3308,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<fa1391> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<0d6de2> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<fa1391>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<0d6de2>"
     },
     "links": {
      "status": "n/a",
@@ -3292,6 +3324,7 @@
     }
    },
    "last_human_commit": "2026-10-19T07:31:33Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-10-01T17:52:06Z",
@@ -3304,7 +3337,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<fa1391>",
+   "owner": "group:<0d6de2>",
    "owner_kind": "group",
    "repo": "contentful/contentful.swift",
    "repo_from": "github.com/project-slug",
@@ -3315,11 +3348,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<fa1391> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<0d6de2> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<fa1391>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<0d6de2>"
     },
     "links": {
      "status": "n/a",
@@ -3331,6 +3364,7 @@
     }
    },
    "last_human_commit": "2026-09-28T15:25:38Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-15T17:25:41Z",
@@ -3343,7 +3377,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<fa1391>",
+   "owner": "group:<0d6de2>",
    "owner_kind": "group",
    "repo": "contentful/contentful-batch-libs",
    "repo_from": "github.com/project-slug",
@@ -3354,11 +3388,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<fa1391> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<0d6de2> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<fa1391>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<0d6de2>"
     },
     "links": {
      "status": "n/a",
@@ -3370,6 +3404,7 @@
     }
    },
    "last_human_commit": "2026-09-18T15:21:38Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-15T17:23:38Z",
@@ -3382,7 +3417,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<fa1391>",
+   "owner": "group:<0d6de2>",
    "owner_kind": "group",
    "repo": "contentful/contentful-core.php",
    "repo_from": "github.com/project-slug",
@@ -3393,11 +3428,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<fa1391> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<0d6de2> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<fa1391>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<0d6de2>"
     },
     "links": {
      "status": "n/a",
@@ -3409,6 +3444,7 @@
     }
    },
    "last_human_commit": "2026-09-15T17:42:50Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-15T16:27:33Z",
@@ -3421,7 +3457,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<fa1391>",
+   "owner": "group:<0d6de2>",
    "owner_kind": "group",
    "repo": "contentful/integration-frontend-toolkit",
    "repo_from": "github.com/project-slug",
@@ -3432,11 +3468,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<fa1391> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<0d6de2> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<fa1391>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<0d6de2>"
     },
     "links": {
      "status": "n/a",
@@ -3448,6 +3484,7 @@
     }
    },
    "last_human_commit": "2026-09-16T16:49:08Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-15T22:37:37Z",
@@ -3460,7 +3497,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<fa1391>",
+   "owner": "group:<0d6de2>",
    "owner_kind": "group",
    "repo": "contentful/contentful-management.py",
    "repo_from": "github.com/project-slug",
@@ -3471,11 +3508,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<fa1391> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<0d6de2> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<fa1391>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<0d6de2>"
     },
     "links": {
      "status": "n/a",
@@ -3487,6 +3524,7 @@
     }
    },
    "last_human_commit": "2026-09-15T17:24:28Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-15T17:24:28Z",
@@ -3499,7 +3537,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<551bb4>",
+   "owner": "group:<0267a6>",
    "owner_kind": "group",
    "repo": "cultureamp/terraform-provider-schemaregistry",
    "repo_from": "github.com/project-slug",
@@ -3510,11 +3548,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@cultureamp/<551bb4> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@cultureamp/<0267a6> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @cultureamp/<551bb4>"
+     "reason": ".github/CODEOWNERS agrees: @cultureamp/<0267a6>"
     },
     "links": {
      "status": "ok",
@@ -3527,6 +3565,7 @@
     }
    },
    "last_human_commit": "2026-09-29T01:47:03Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Source",
@@ -3556,7 +3595,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "development",
-   "owner": "group:<e1fb32>",
+   "owner": "group:<7541f7>",
    "owner_kind": "group",
    "repo": null,
    "repo_from": "invalid",
@@ -3567,7 +3606,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cultureamp/<e1fb32>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cultureamp/<7541f7>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3594,7 +3633,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<228108>",
+   "owner": "group:<2448fa>",
    "owner_kind": "group",
    "repo": null,
    "repo_from": "invalid",
@@ -3605,11 +3644,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@cultureamp/<228108> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@cultureamp/<2448fa> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @cultureamp/<228108>"
+     "reason": ".github/CODEOWNERS agrees: @cultureamp/<2448fa>"
     },
     "links": {
      "status": "ok",
@@ -3642,7 +3681,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<d65f7d>",
+   "owner": "group:<b75fed>",
    "owner_kind": "group",
    "repo": "cultureamp/kaizen-design-system",
    "repo_from": "github.com/project-slug",
@@ -3653,11 +3692,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cultureamp/<d65f7d>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cultureamp/<b75fed>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": "CODEOWNERS line 4 names owners GitHub cannot resolve: @cultureamp/<c1333a>",
+     "reason": "CODEOWNERS line 4 names owners GitHub cannot resolve: @cultureamp/<e2808c>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -3671,6 +3710,7 @@
     }
    },
    "last_human_commit": "2026-10-20T00:45:56Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub",
@@ -3724,7 +3764,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<e1fb32>",
+   "owner": "group:<7541f7>",
    "owner_kind": "group",
    "repo": "cultureamp/elm-css-modules-plugin",
    "repo_from": "github.com/project-slug",
@@ -3735,7 +3775,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cultureamp/<e1fb32>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cultureamp/<7541f7>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3751,6 +3791,7 @@
     }
    },
    "last_human_commit": "2024-01-29T03:53:44Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-11-23T23:45:08Z",
@@ -3763,7 +3804,7 @@
    "kind": "Component",
    "type": "frontend",
    "lifecycle": "alpha",
-   "owner": "group:<5ca8af>",
+   "owner": "group:<bd6fa3>",
    "owner_kind": "group",
    "repo": "defra/coreai-techspike-document-analysis",
    "repo_from": "github.com/project-slug",
@@ -3774,7 +3815,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<5ca8af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<bd6fa3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3791,6 +3832,7 @@
     }
    },
    "last_human_commit": "2024-08-14T06:03:19Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub Repository",
@@ -3884,7 +3926,7 @@
    "kind": "Component",
    "type": "backend",
    "lifecycle": "alpha",
-   "owner": "group:<5ca8af>",
+   "owner": "group:<bd6fa3>",
    "owner_kind": "group",
    "repo": "defra/coreai-mcu-document-processor",
    "repo_from": "github.com/project-slug",
@@ -3895,7 +3937,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<5ca8af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<bd6fa3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3912,6 +3954,7 @@
     }
    },
    "last_human_commit": "2024-07-29T09:55:47Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub Repository",
@@ -3973,7 +4016,7 @@
    "kind": "Component",
    "type": "backend",
    "lifecycle": "discovery",
-   "owner": "group:<d79007>",
+   "owner": "group:<af001c>",
    "owner_kind": "group",
    "repo": "defra/rpa-mit-manual-templates-api",
    "repo_from": "github.com/project-slug",
@@ -3984,7 +4027,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<d79007>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<af001c>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -4000,6 +4043,7 @@
     }
    },
    "last_human_commit": "2024-06-05T12:26:25Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub Repository",
@@ -4061,7 +4105,7 @@
    "kind": "Component",
    "type": "backend",
    "lifecycle": "alpha",
-   "owner": "group:<5ca8af>",
+   "owner": "group:<bd6fa3>",
    "owner_kind": "group",
    "repo": "defra/coreai-techspike-document-analysis-api",
    "repo_from": "github.com/project-slug",
@@ -4072,7 +4116,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<5ca8af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<bd6fa3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -4089,6 +4133,7 @@
     }
    },
    "last_human_commit": "2024-08-14T14:35:18Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub Repository",
@@ -4150,7 +4195,7 @@
    "kind": "Component",
    "type": "backend",
    "lifecycle": "discovery",
-   "owner": "group:<5ca8af>",
+   "owner": "group:<bd6fa3>",
    "owner_kind": "group",
    "repo": "defra/coreai-mcu-backend",
    "repo_from": "github.com/project-slug",
@@ -4161,7 +4206,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<5ca8af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<bd6fa3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -4178,6 +4223,7 @@
     }
    },
    "last_human_commit": "2024-06-28T14:27:18Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub Repository",
@@ -4239,7 +4285,7 @@
    "kind": "Component",
    "type": "backend",
    "lifecycle": "alpha",
-   "owner": "group:<5ca8af>",
+   "owner": "group:<bd6fa3>",
    "owner_kind": "group",
    "repo": "defra/coreai-mcu-email-processor",
    "repo_from": "github.com/project-slug",
@@ -4250,7 +4296,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<5ca8af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<bd6fa3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -4267,6 +4313,7 @@
     }
    },
    "last_human_commit": "2024-06-28T14:26:26Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub Repository",
@@ -4328,7 +4375,7 @@
    "kind": "Component",
    "type": "backend",
    "lifecycle": "alpha",
-   "owner": "group:<5ca8af>",
+   "owner": "group:<bd6fa3>",
    "owner_kind": "group",
    "repo": "defra/coreai-mcu-responses",
    "repo_from": "github.com/project-slug",
@@ -4339,7 +4386,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<5ca8af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<bd6fa3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -4356,6 +4403,7 @@
     }
    },
    "last_human_commit": "2024-08-14T10:08:53Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub Repository",
@@ -4417,7 +4465,7 @@
    "kind": "Component",
    "type": "frontend",
    "lifecycle": "discovery",
-   "owner": "group:<5ca8af>",
+   "owner": "group:<bd6fa3>",
    "owner_kind": "group",
    "repo": "defra/crai-jaf-frontend",
    "repo_from": "github.com/project-slug",
@@ -4428,7 +4476,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<5ca8af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<bd6fa3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -4445,6 +4493,7 @@
     }
    },
    "last_human_commit": "2024-08-16T22:40:50Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub Repository",
@@ -4568,6 +4617,7 @@
     }
    },
    "last_human_commit": "2026-06-11T11:36:15Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Ansible Galaxy",
@@ -4635,6 +4685,7 @@
     }
    },
    "last_human_commit": "2026-10-07T10:24:30Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Ansible Galaxy",
@@ -4700,6 +4751,7 @@
     }
    },
    "last_human_commit": "2026-07-27T07:26:22Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Ansible Galaxy",
@@ -4765,6 +4817,7 @@
     }
    },
    "last_human_commit": "2026-09-24T10:29:43Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "PyPI",
@@ -4822,6 +4875,7 @@
     }
    },
    "last_human_commit": "2026-08-14T08:19:09Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Ansible Galaxy",
@@ -4889,6 +4943,7 @@
     }
    },
    "last_human_commit": "2026-10-15T05:58:47Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Ansible Galaxy",
@@ -4954,6 +5009,7 @@
     }
    },
    "last_human_commit": "2026-07-27T09:23:49Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "PyPI",
@@ -5013,6 +5069,7 @@
     }
    },
    "last_human_commit": "2026-07-27T06:54:07Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Dell Terraform Providers Documentation",
@@ -5042,7 +5099,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<435176>",
+   "owner": "group:<86abea>",
    "owner_kind": "group",
    "repo": "DiamondLightSource/aa-edit-data",
    "repo_from": "file location",
@@ -5053,7 +5110,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @DiamondLightSource/<435176>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @DiamondLightSource/<86abea>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5069,6 +5126,7 @@
     }
    },
    "last_human_commit": "2025-03-10T11:03:52Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-03-07T13:49:20Z",
@@ -5081,7 +5139,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<d509eb>",
+   "owner": "group:<56713a>",
    "owner_kind": "group",
    "repo": "DiamondLightSource/cryoem-monitor",
    "repo_from": "github.com/project-slug",
@@ -5092,7 +5150,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @DiamondLightSource/<d509eb>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @DiamondLightSource/<56713a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5108,6 +5166,7 @@
     }
    },
    "last_human_commit": "2026-07-02T15:29:25Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-10-22T15:56:39Z",
@@ -5147,6 +5206,7 @@
     }
    },
    "last_human_commit": "2024-10-28T16:07:36Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2024-10-28T16:07:36Z",
@@ -5159,7 +5219,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "unknown",
-   "owner": "group:<060d6f>",
+   "owner": "group:<f56ed4>",
    "owner_kind": "group",
    "repo": "DiamondLightSource/flask-ispyb-logistics",
    "repo_from": "github.com/project-slug",
@@ -5170,7 +5230,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @DiamondLightSource/<060d6f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @DiamondLightSource/<f56ed4>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5186,6 +5246,7 @@
     }
    },
    "last_human_commit": "2026-10-14T11:00:02Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Live website",
@@ -5207,7 +5268,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<f56331>",
+   "owner": "group:<86725a>",
    "owner_kind": "group",
    "repo": "DiamondLightSource/dls-dependency-tree",
    "repo_from": "file location",
@@ -5218,7 +5279,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @DiamondLightSource/<f56331>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @DiamondLightSource/<86725a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5234,6 +5295,7 @@
     }
    },
    "last_human_commit": "2025-10-16T10:37:29Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-10-16T10:37:29Z",
@@ -5246,7 +5308,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "unknown",
-   "owner": "group:<d509eb>",
+   "owner": "group:<56713a>",
    "owner_kind": "group",
    "repo": "DiamondLightSource/polspex",
    "repo_from": "github.com/project-slug",
@@ -5257,7 +5319,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @DiamondLightSource/<d509eb>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @DiamondLightSource/<56713a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5273,6 +5335,7 @@
     }
    },
    "last_human_commit": "2025-09-03T08:21:11Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-06-18T16:37:41Z",
@@ -5312,6 +5375,7 @@
     }
    },
    "last_human_commit": "2025-07-21T11:11:22Z",
+   "repo_archived": false,
    "links": [],
    "status": "drift",
    "catalog_file_last_commit": "2024-10-02T10:40:13Z",
@@ -5324,7 +5388,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<d9bd23>",
+   "owner": "group:<d77c1e>",
    "owner_kind": "group",
    "repo": "dwp/ui-atw-claim-counter-sign",
    "repo_from": "file location",
@@ -5335,7 +5399,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<d9bd23>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<d77c1e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5352,6 +5416,7 @@
     }
    },
    "last_human_commit": "2025-11-11T10:49:34Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Repository",
@@ -5381,7 +5446,7 @@
    "kind": "Component",
    "type": "prototype",
    "lifecycle": "experimental",
-   "owner": "group:<50c64f>",
+   "owner": "group:<160802>",
    "owner_kind": "group",
    "repo": "dwp/blank-prototype-kit",
    "repo_from": "file location",
@@ -5392,7 +5457,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<50c64f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<160802>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5409,6 +5474,7 @@
     }
    },
    "last_human_commit": "2026-10-05T01:09:27Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Repository",
@@ -5430,7 +5496,7 @@
    "kind": "Component",
    "type": "prototype",
    "lifecycle": "experimental",
-   "owner": "group:<50c64f>",
+   "owner": "group:<160802>",
    "owner_kind": "group",
    "repo": "dwp/prototype-residency-test",
    "repo_from": "file location",
@@ -5441,7 +5507,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<50c64f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<160802>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5458,6 +5524,7 @@
     }
    },
    "last_human_commit": "2026-10-12T03:01:34Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Repository",
@@ -5479,7 +5546,7 @@
    "kind": "Component",
    "type": "prototype",
    "lifecycle": "experimental",
-   "owner": "group:<50c64f>",
+   "owner": "group:<160802>",
    "owner_kind": "group",
    "repo": "dwp/atw-payment-claims-grant",
    "repo_from": "file location",
@@ -5490,7 +5557,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<50c64f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<160802>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5507,6 +5574,7 @@
     }
    },
    "last_human_commit": "2026-10-05T00:53:36Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Repository",
@@ -5528,7 +5596,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<d9bd23>",
+   "owner": "group:<d77c1e>",
    "owner_kind": "group",
    "repo": "dwp/ms-atw-claim",
    "repo_from": "file location",
@@ -5539,7 +5607,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<d9bd23>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<d77c1e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5556,6 +5624,7 @@
     }
    },
    "last_human_commit": "2026-01-23T16:20:16Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Repository",
@@ -5585,7 +5654,7 @@
    "kind": "Component",
    "type": "prototype",
    "lifecycle": "experimental",
-   "owner": "group:<50c64f>",
+   "owner": "group:<160802>",
    "owner_kind": "group",
    "repo": "dwp/attendance-allowance",
    "repo_from": "file location",
@@ -5596,7 +5665,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<50c64f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<160802>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5613,6 +5682,7 @@
     }
    },
    "last_human_commit": "2026-10-07T14:30:24Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Repository",
@@ -5634,7 +5704,7 @@
    "kind": "Component",
    "type": "prototype",
    "lifecycle": "experimental",
-   "owner": "group:<50c64f>",
+   "owner": "group:<160802>",
    "owner_kind": "group",
    "repo": "dwp/service-strategy-prototype",
    "repo_from": "file location",
@@ -5645,7 +5715,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<50c64f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<160802>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5662,6 +5732,7 @@
     }
    },
    "last_human_commit": "2025-09-20T10:31:25Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Repository",
@@ -5683,7 +5754,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<d9bd23>",
+   "owner": "group:<d77c1e>",
    "owner_kind": "group",
    "repo": "dwp/ms-atw-claim-to-pdf",
    "repo_from": "file location",
@@ -5694,7 +5765,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<d9bd23>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<d77c1e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5711,6 +5782,7 @@
     }
    },
    "last_human_commit": "2025-09-29T14:32:27Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Repository",
@@ -5740,7 +5812,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<d32afa>",
+   "owner": "group:<3168f6>",
    "owner_kind": "group",
    "repo": "eduNEXT/atlas-ansible-utils",
    "repo_from": "file location",
@@ -5751,11 +5823,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@eduNEXT/<d32afa> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@eduNEXT/<3168f6> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @eduNEXT/<d32afa>"
+     "reason": ".github/CODEOWNERS agrees: @eduNEXT/<3168f6>"
     },
     "links": {
      "status": "n/a",
@@ -5767,6 +5839,7 @@
     }
    },
    "last_human_commit": "2026-08-18T18:48:28Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2023-03-17T00:40:45Z",
@@ -5779,7 +5852,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<776e38>",
+   "owner": "group:<0ec312>",
    "owner_kind": "group",
    "repo": "elastic/cli",
    "repo_from": "file location",
@@ -5790,7 +5863,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@elastic/<776e38> resolves in CODEOWNERS of elastic/cursor-plugins (GitHub validates CODEOWNERS teams)"
+     "reason": "@elastic/<0ec312> resolves in CODEOWNERS of elastic/cursor-plugins (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "drift",
@@ -5808,6 +5881,7 @@
     }
    },
    "last_human_commit": "2026-10-15T20:14:14Z",
+   "repo_archived": false,
    "links": [],
    "status": "drift",
    "catalog_file_last_commit": "2026-10-06T17:15:26Z",
@@ -5820,7 +5894,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<4abc49>",
+   "owner": "group:<d8b220>",
    "owner_kind": "group",
    "repo": "elastic/go-lookslike",
    "repo_from": "file location",
@@ -5831,7 +5905,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @elastic/<4abc49>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @elastic/<d8b220>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5847,6 +5921,7 @@
     }
    },
    "last_human_commit": "2025-05-15T23:04:27Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2024-11-28T21:38:47Z",
@@ -5859,7 +5934,7 @@
    "kind": "Component",
    "type": "application",
    "lifecycle": "production",
-   "owner": "group:<71e2da>",
+   "owner": "group:<caccfd>",
    "owner_kind": "group",
    "repo": "elastic/rally-tracks",
    "repo_from": "github.com/project-slug",
@@ -5870,7 +5945,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@elastic/<71e2da> resolves in .github/CODEOWNERS of elastic/rally (GitHub validates CODEOWNERS teams)"
+     "reason": "@elastic/<caccfd> resolves in .github/CODEOWNERS of elastic/rally (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -5886,6 +5961,7 @@
     }
    },
    "last_human_commit": "2026-10-21T22:54:13Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-07-16T20:11:50Z",
@@ -5898,7 +5974,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "production",
-   "owner": "group:<281512>",
+   "owner": "group:<c7285b>",
    "owner_kind": "group",
    "repo": "equinor/armada",
    "repo_from": "github.com/project-slug",
@@ -5909,7 +5985,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<281512>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<c7285b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5925,6 +6001,7 @@
     }
    },
    "last_human_commit": "2026-10-10T10:54:34Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-02-09T11:27:38Z",
@@ -5937,7 +6014,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<b1bfb3>",
+   "owner": "group:<091a2f>",
    "owner_kind": "group",
    "repo": "equinor/radix-cost-allocation",
    "repo_from": "github.com/project-slug",
@@ -5948,7 +6025,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<b1bfb3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<091a2f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5964,6 +6041,7 @@
     }
    },
    "last_human_commit": "2026-08-28T09:59:29Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-02-03T11:22:40Z",
@@ -5976,7 +6054,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<281512>",
+   "owner": "group:<c7285b>",
    "owner_kind": "group",
    "repo": "equinor/sara-thermal-reading",
    "repo_from": "github.com/project-slug",
@@ -5987,7 +6065,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<281512>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<c7285b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6003,6 +6081,7 @@
     }
    },
    "last_human_commit": "2026-10-10T14:23:53Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-02-09T16:00:19Z",
@@ -6015,7 +6094,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<281512>",
+   "owner": "group:<c7285b>",
    "owner_kind": "group",
    "repo": "equinor/sara-utilities",
    "repo_from": "github.com/project-slug",
@@ -6026,7 +6105,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<281512>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<c7285b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6042,6 +6121,7 @@
     }
    },
    "last_human_commit": "2026-09-10T06:08:50Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-06-22T06:07:16Z",
@@ -6054,7 +6134,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<281512>",
+   "owner": "group:<c7285b>",
    "owner_kind": "group",
    "repo": "equinor/isar",
    "repo_from": "github.com/project-slug",
@@ -6065,7 +6145,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<281512>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<c7285b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6081,6 +6161,7 @@
     }
    },
    "last_human_commit": "2026-10-21T08:01:24Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-02-09T15:19:26Z",
@@ -6093,7 +6174,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<281512>",
+   "owner": "group:<c7285b>",
    "owner_kind": "group",
    "repo": "equinor/flotilla",
    "repo_from": "github.com/project-slug",
@@ -6104,7 +6185,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<281512>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<c7285b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6121,6 +6202,7 @@
     }
    },
    "last_human_commit": "2026-10-22T07:43:04Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Flotilla Frontend Dev",
@@ -6158,7 +6240,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<281512>",
+   "owner": "group:<c7285b>",
    "owner_kind": "group",
    "repo": "equinor/flotilla",
    "repo_from": "github.com/project-slug",
@@ -6169,7 +6251,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<281512>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<c7285b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6186,6 +6268,7 @@
     }
    },
    "last_human_commit": "2026-10-22T07:43:04Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Flotilla Backend Dev",
@@ -6223,7 +6306,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<281512>",
+   "owner": "group:<c7285b>",
    "owner_kind": "group",
    "repo": "equinor/flotilla",
    "repo_from": "github.com/project-slug",
@@ -6234,7 +6317,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<281512>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<c7285b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6250,6 +6333,7 @@
     }
    },
    "last_human_commit": "2026-10-22T07:43:04Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-08-17T11:15:20Z",
@@ -6262,7 +6346,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<54fb9e>",
+   "owner": "group:<58ee79>",
    "owner_kind": "group",
    "repo": "equinor/rvmsharp",
    "repo_from": "github.com/project-slug",
@@ -6273,7 +6357,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<54fb9e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<58ee79>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6289,6 +6373,7 @@
     }
    },
    "last_human_commit": "2026-10-05T13:41:59Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-11-03T12:48:58Z",
@@ -6301,7 +6386,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<10e3d8>",
+   "owner": "group:<ce6066>",
    "owner_kind": "group",
    "repo": "equinor/appsec",
    "repo_from": "github.com/project-slug",
@@ -6312,7 +6397,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<10e3d8>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<ce6066>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6329,6 +6414,7 @@
     }
    },
    "last_human_commit": "2026-10-21T11:56:04Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Official Equinor AppSec Website",
@@ -6350,7 +6436,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<eaef29>",
+   "owner": "group:<4f0ab5>",
    "owner_kind": "group",
    "repo": "grafana/synthetic-monitoring-app",
    "repo_from": "github.com/project-slug",
@@ -6361,11 +6447,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@grafana/<eaef29> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@grafana/<4f0ab5> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": "CODEOWNERS agrees: @grafana/<eaef29>"
+     "reason": "CODEOWNERS agrees: @grafana/<4f0ab5>"
     },
     "links": {
      "status": "n/a",
@@ -6377,6 +6463,7 @@
     }
    },
    "last_human_commit": "2026-10-21T12:13:31Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-05-23T10:20:30Z",
@@ -6389,7 +6476,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<dc882f>",
+   "owner": "group:<3e4211>",
    "owner_kind": "group",
    "repo": "grafana/xk6-sql-driver-postgres",
    "repo_from": "github.com/project-slug",
@@ -6400,11 +6487,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @grafana/<dc882f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @grafana/<3e4211>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<dc882f>, CODEOWNERS says @grafana/<d70805>",
+     "reason": "disagree: catalog says group:<3e4211>, CODEOWNERS says @grafana/<6e37e3>",
      "disagreement": "different team names"
     },
     "links": {
@@ -6417,6 +6504,7 @@
     }
    },
    "last_human_commit": "2026-09-15T14:55:01Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-05-16T10:32:20Z",
@@ -6429,7 +6517,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<d70805>",
+   "owner": "group:<6e37e3>",
    "owner_kind": "group",
    "repo": "grafana/k6-jslib-utils",
    "repo_from": "github.com/project-slug",
@@ -6440,11 +6528,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@grafana/<d70805> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@grafana/<6e37e3> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": "CODEOWNERS agrees: @grafana/<d70805>"
+     "reason": "CODEOWNERS agrees: @grafana/<6e37e3>"
     },
     "links": {
      "status": "n/a",
@@ -6456,6 +6544,7 @@
     }
    },
    "last_human_commit": "2026-08-19T12:53:24Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-06-16T10:35:48Z",
@@ -6468,7 +6557,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<e45ee8>",
+   "owner": "group:<872605>",
    "owner_kind": "group",
    "repo": "grafana/xk6-environment",
    "repo_from": "github.com/project-slug",
@@ -6479,11 +6568,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @grafana/<e45ee8>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @grafana/<872605>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<e45ee8>, CODEOWNERS says @<user>",
+     "reason": "disagree: catalog says group:<872605>, CODEOWNERS says @<user>",
      "disagreement": "catalog names a team, CODEOWNERS people"
     },
     "links": {
@@ -6496,10 +6585,11 @@
     }
    },
    "last_human_commit": null,
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-04-29T09:05:43Z",
-   "catalog_file_age_days": 540
+   "catalog_file_age_days": 541
   },
   {
    "source": "grafana/cloudcost-exporter:catalog-info.yaml",
@@ -6508,7 +6598,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<ef9993>",
+   "owner": "group:<a97b70>",
    "owner_kind": "group",
    "repo": "grafana/cloudcost-exporter",
    "repo_from": "github.com/project-slug",
@@ -6519,11 +6609,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@grafana/<ef9993> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@grafana/<a97b70> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": "CODEOWNERS agrees: @grafana/<ef9993>"
+     "reason": "CODEOWNERS agrees: @grafana/<a97b70>"
     },
     "links": {
      "status": "ok",
@@ -6536,6 +6626,7 @@
     }
    },
    "last_human_commit": "2026-10-21T14:32:46Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Community Slack Channel",
@@ -6565,7 +6656,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<dc882f>",
+   "owner": "group:<3e4211>",
    "owner_kind": "group",
    "repo": "grafana/xk6-kubernetes",
    "repo_from": "github.com/project-slug",
@@ -6576,11 +6667,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @grafana/<dc882f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @grafana/<3e4211>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<dc882f>, CODEOWNERS says @grafana/<d70805>",
+     "reason": "disagree: catalog says group:<3e4211>, CODEOWNERS says @grafana/<6e37e3>",
      "disagreement": "different team names"
     },
     "links": {
@@ -6593,6 +6684,7 @@
     }
    },
    "last_human_commit": "2026-09-23T14:18:24Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-05-15T14:39:19Z",
@@ -6605,7 +6697,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<028db0>",
+   "owner": "group:<3e86e9>",
    "owner_kind": "group",
    "repo": "grafana/run-k6-action",
    "repo_from": "github.com/project-slug",
@@ -6616,11 +6708,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @grafana/<028db0>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @grafana/<3e86e9>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<028db0>, CODEOWNERS says @grafana/<d70805>",
+     "reason": "disagree: catalog says group:<3e86e9>, CODEOWNERS says @grafana/<6e37e3>",
      "disagreement": "different team names"
     },
     "links": {
@@ -6633,6 +6725,7 @@
     }
    },
    "last_human_commit": "2026-09-22T10:32:03Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-04-29T13:11:59Z",
@@ -6645,22 +6738,22 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "production",
-   "owner": "group:<028db0>",
+   "owner": "group:<3e86e9>",
    "owner_kind": "group",
    "repo": "grafana/openapi-to-k6",
    "repo_from": "github.com/project-slug",
    "checks": {
     "repo": {
      "status": "ok",
-     "reason": "grafana/openapi-to-k6 active (8 days since a human commit)"
+     "reason": "grafana/openapi-to-k6 active (9 days since a human commit)"
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @grafana/<028db0>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @grafana/<3e86e9>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<028db0>, CODEOWNERS says @grafana/<e51b9f>",
+     "reason": "disagree: catalog says group:<3e86e9>, CODEOWNERS says @grafana/<f3a1be>",
      "disagreement": "different team names"
     },
     "links": {
@@ -6673,6 +6766,7 @@
     }
    },
    "last_human_commit": "2026-10-13T09:04:57Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-06-16T10:24:39Z",
@@ -6685,7 +6779,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<3fd5c4>",
+   "owner": "group:<606576>",
    "owner_kind": "group",
    "repo": "hmcts/cms-template",
    "repo_from": "github.com/project-slug",
@@ -6696,7 +6790,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<3fd5c4>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<606576>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6713,6 +6807,7 @@
     }
    },
    "last_human_commit": "2026-07-16T12:46:43Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "#dtsse-tech on Slack",
@@ -6734,7 +6829,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<4ffb95>",
+   "owner": "group:<da2ced>",
    "owner_kind": "group",
    "repo": "hmcts/probate-submit-service",
    "repo_from": "github.com/project-slug",
@@ -6745,11 +6840,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<4ffb95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<da2ced>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<4ffb95>, .github/CODEOWNERS says @hmcts/<3cad34>",
+     "reason": "disagree: catalog says group:<da2ced>, .github/CODEOWNERS says @hmcts/<902495>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -6763,6 +6858,7 @@
     }
    },
    "last_human_commit": "2026-10-21T12:25:57Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "#probate on Slack",
@@ -6784,7 +6880,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<7dd3be>",
+   "owner": "group:<9203c5>",
    "owner_kind": "group",
    "repo": "hmcts/em-stitching-api",
    "repo_from": "github.com/project-slug",
@@ -6795,7 +6891,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<7dd3be>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<9203c5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6812,6 +6908,7 @@
     }
    },
    "last_human_commit": "2026-10-20T15:24:12Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "#em-dev-chat on Slack",
@@ -6833,7 +6930,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<a40b51>",
+   "owner": "group:<4729e5>",
    "owner_kind": "group",
    "repo": "hmcts/plum-test",
    "repo_from": "github.com/project-slug",
@@ -6844,11 +6941,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<a40b51>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<4729e5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": ".github/CODEOWNERS line 1 names owners GitHub cannot resolve: @hmcts/<ff80e7>, @hmcts/<2e4daf>",
+     "reason": ".github/CODEOWNERS line 1 names owners GitHub cannot resolve: @hmcts/<257141>, @hmcts/<b2724f>",
      "unknown_teams": 2,
      "unknown_users": 0
     },
@@ -6863,6 +6960,7 @@
     }
    },
    "last_human_commit": "2026-09-28T12:29:46Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "cloud-native on Slack",
@@ -6884,7 +6982,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<32e41c>",
+   "owner": "group:<2f1128>",
    "owner_kind": "group",
    "repo": "hmcts/wa-task-batch-service",
    "repo_from": "github.com/project-slug",
@@ -6895,7 +6993,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<32e41c>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<2f1128>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6912,6 +7010,7 @@
     }
    },
    "last_human_commit": "2026-10-21T12:48:31Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "#wa-tech on Slack",
@@ -6933,7 +7032,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<19acff>",
+   "owner": "group:<f4895a>",
    "owner_kind": "group",
    "repo": "hmcts/nfdiv-frontend",
    "repo_from": "github.com/project-slug",
@@ -6944,7 +7043,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<19acff>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<f4895a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6961,6 +7060,7 @@
     }
    },
    "last_human_commit": "2026-10-20T15:20:22Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "#no-fault-divorce-tech on Slack",
@@ -6982,7 +7082,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<32e41c>",
+   "owner": "group:<2f1128>",
    "owner_kind": "group",
    "repo": "hmcts/wa-task-management-api",
    "repo_from": "github.com/project-slug",
@@ -6993,7 +7093,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<32e41c>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<2f1128>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7010,6 +7110,7 @@
     }
    },
    "last_human_commit": "2026-10-22T07:34:54Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "#wa-tech on Slack",
@@ -7031,7 +7132,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<c063de>",
+   "owner": "group:<798d4b>",
    "owner_kind": "group",
    "repo": "invoca/process_settings",
    "repo_from": "github.com/project-slug",
@@ -7042,11 +7143,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@invoca/<c063de> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@invoca/<798d4b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @Invoca/<c063de>"
+     "reason": ".github/CODEOWNERS agrees: @Invoca/<798d4b>"
     },
     "links": {
      "status": "n/a",
@@ -7058,6 +7159,7 @@
     }
    },
    "last_human_commit": "2026-07-21T19:39:40Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-07-08T16:37:17Z",
@@ -7070,7 +7172,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<c063de>",
+   "owner": "group:<798d4b>",
    "owner_kind": "group",
    "repo": "Invoca/parameter_substitution",
    "repo_from": "github.com/project-slug",
@@ -7081,7 +7183,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Invoca/<c063de> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
+     "reason": "@Invoca/<798d4b> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -7097,6 +7199,7 @@
     }
    },
    "last_human_commit": "2026-02-25T00:19:07Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-01-27T22:54:32Z",
@@ -7109,7 +7212,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<c063de>",
+   "owner": "group:<798d4b>",
    "owner_kind": "group",
    "repo": "Invoca/invoca-utils",
    "repo_from": "github.com/project-slug",
@@ -7120,11 +7223,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Invoca/<c063de> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@Invoca/<798d4b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @Invoca/<c063de>"
+     "reason": ".github/CODEOWNERS agrees: @Invoca/<798d4b>"
     },
     "links": {
      "status": "n/a",
@@ -7136,6 +7239,7 @@
     }
    },
    "last_human_commit": "2026-07-21T19:39:31Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-01-27T22:48:24Z",
@@ -7148,7 +7252,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<c063de>",
+   "owner": "group:<798d4b>",
    "owner_kind": "group",
    "repo": "invoca/yard-to_mkdocs",
    "repo_from": "github.com/project-slug",
@@ -7159,7 +7263,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Invoca/<c063de> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
+     "reason": "@Invoca/<798d4b> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -7175,6 +7279,7 @@
     }
    },
    "last_human_commit": "2026-07-01T16:33:33Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-07-01T16:33:33Z",
@@ -7187,7 +7292,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<c063de>",
+   "owner": "group:<798d4b>",
    "owner_kind": "group",
    "repo": "Invoca/integer-obfuscator",
    "repo_from": "github.com/project-slug",
@@ -7198,7 +7303,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Invoca/<c063de> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
+     "reason": "@Invoca/<798d4b> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -7214,6 +7319,7 @@
     }
    },
    "last_human_commit": "2026-07-14T14:04:31Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-07-15T08:12:05Z",
@@ -7226,7 +7332,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<c063de>",
+   "owner": "group:<798d4b>",
    "owner_kind": "group",
    "repo": "invoca/declare_schema",
    "repo_from": "github.com/project-slug",
@@ -7237,11 +7343,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@invoca/<c063de> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@invoca/<798d4b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @Invoca/<c063de>"
+     "reason": ".github/CODEOWNERS agrees: @Invoca/<798d4b>"
     },
     "links": {
      "status": "n/a",
@@ -7253,6 +7359,7 @@
     }
    },
    "last_human_commit": "2026-07-08T16:20:51Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-01-27T22:34:43Z",
@@ -7265,7 +7372,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<c063de>",
+   "owner": "group:<798d4b>",
    "owner_kind": "group",
    "repo": "invoca/mock_redis_lua_extension",
    "repo_from": "github.com/project-slug",
@@ -7276,7 +7383,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Invoca/<c063de> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
+     "reason": "@Invoca/<798d4b> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -7292,6 +7399,7 @@
     }
    },
    "last_human_commit": "2026-07-14T14:04:13Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-07-13T20:50:41Z",
@@ -7304,7 +7412,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<c063de>",
+   "owner": "group:<798d4b>",
    "owner_kind": "group",
    "repo": "Invoca/escalate",
    "repo_from": "github.com/project-slug",
@@ -7315,7 +7423,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Invoca/<c063de> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
+     "reason": "@Invoca/<798d4b> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -7331,6 +7439,7 @@
     }
    },
    "last_human_commit": "2026-07-14T14:04:25Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-07-01T16:31:50Z",
@@ -7343,7 +7452,7 @@
    "kind": "Component",
    "type": "theme",
    "lifecycle": "production",
-   "owner": "group:<2e4506>",
+   "owner": "group:<1b3e73>",
    "owner_kind": "group",
    "repo": "Kajabi/theme-cornerstone-product",
    "repo_from": "github.com/project-slug",
@@ -7354,7 +7463,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<2e4506>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<1b3e73>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7370,6 +7479,7 @@
     }
    },
    "last_human_commit": "2022-06-15T01:44:32Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2022-06-14T23:07:54Z",
@@ -7382,7 +7492,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<a906fd>",
+   "owner": "group:<ca7580>",
    "owner_kind": "group",
    "repo": "Kajabi/sage-lib",
    "repo_from": "file location",
@@ -7393,7 +7503,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<a906fd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<ca7580>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7409,6 +7519,7 @@
     }
    },
    "last_human_commit": "2026-08-07T16:45:19Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-02-19T21:03:59Z",
@@ -7421,7 +7532,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "production",
-   "owner": "group:<a906fd>",
+   "owner": "group:<ca7580>",
    "owner_kind": "group",
    "repo": "Kajabi/sage-lib",
    "repo_from": "github.com/project-slug",
@@ -7432,7 +7543,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<a906fd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<ca7580>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7448,6 +7559,7 @@
     }
    },
    "last_human_commit": "2026-08-07T16:45:19Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-02-19T21:03:59Z",
@@ -7460,7 +7572,7 @@
    "kind": "Component",
    "type": "theme",
    "lifecycle": "production",
-   "owner": "group:<2e4506>",
+   "owner": "group:<1b3e73>",
    "owner_kind": "group",
    "repo": "Kajabi/theme-cornerstone-site",
    "repo_from": "github.com/project-slug",
@@ -7471,7 +7583,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<2e4506>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<1b3e73>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7487,6 +7599,7 @@
     }
    },
    "last_human_commit": "2022-06-15T01:42:56Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2022-06-14T23:20:37Z",
@@ -7499,7 +7612,7 @@
    "kind": "Component",
    "type": "gem",
    "lifecycle": "production",
-   "owner": "group:<d62476>",
+   "owner": "group:<cdd075>",
    "owner_kind": "group",
    "repo": "Kajabi/s3_sign",
    "repo_from": "github.com/project-slug",
@@ -7510,7 +7623,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Kajabi/<d62476> resolves in .github/CODEOWNERS of Kajabi/sage-lib (GitHub validates CODEOWNERS teams)"
+     "reason": "@Kajabi/<cdd075> resolves in .github/CODEOWNERS of Kajabi/sage-lib (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -7526,6 +7639,7 @@
     }
    },
    "last_human_commit": "2025-06-24T18:36:28Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-06-24T18:36:28Z",
@@ -7538,7 +7652,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "experimental",
-   "owner": "group:<a906fd>",
+   "owner": "group:<ca7580>",
    "owner_kind": "group",
    "repo": "Kajabi/vskajabi",
    "repo_from": "github.com/project-slug",
@@ -7549,7 +7663,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<a906fd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<ca7580>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7565,6 +7679,7 @@
     }
    },
    "last_human_commit": "2023-06-07T18:04:12Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2023-06-07T18:04:12Z",
@@ -7577,7 +7692,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "experimental",
-   "owner": "group:<a906fd>",
+   "owner": "group:<ca7580>",
    "owner_kind": "group",
    "repo": "Kajabi/dss-challenge",
    "repo_from": "file location",
@@ -7588,7 +7703,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<a906fd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<ca7580>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7604,6 +7719,7 @@
     }
    },
    "last_human_commit": "2025-02-06T19:59:32Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-02-06T19:56:33Z",
@@ -7616,7 +7732,7 @@
    "kind": "Component",
    "type": "theme",
    "lifecycle": "production",
-   "owner": "group:<2e4506>",
+   "owner": "group:<1b3e73>",
    "owner_kind": "group",
    "repo": "Kajabi/theme-cornerstone-email",
    "repo_from": "github.com/project-slug",
@@ -7627,7 +7743,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<2e4506>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<1b3e73>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7644,6 +7760,7 @@
     }
    },
    "last_human_commit": "2022-06-08T21:05:42Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Getting Started",
@@ -7665,7 +7782,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<a906fd>",
+   "owner": "group:<ca7580>",
    "owner_kind": "group",
    "repo": "Kajabi/pine",
    "repo_from": "github.com/project-slug",
@@ -7676,11 +7793,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<a906fd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<ca7580>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<a906fd>, .github/CODEOWNERS says @Kajabi/<bfcb98>",
+     "reason": "disagree: catalog says group:<ca7580>, .github/CODEOWNERS says @Kajabi/<9545e2>",
      "disagreement": "different team names"
     },
     "links": {
@@ -7693,6 +7810,7 @@
     }
    },
    "last_human_commit": "2026-10-21T22:20:25Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2024-01-11T19:20:38Z",
@@ -7705,7 +7823,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<eff278>",
+   "owner": "group:<2b9742>",
    "owner_kind": "group",
    "repo": "kartverket/Geonorge.Endringslogg",
    "repo_from": "file location",
@@ -7716,7 +7834,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<eff278>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<2b9742>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7732,10 +7850,11 @@
     }
    },
    "last_human_commit": "2026-09-28T13:30:44Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-04-22T08:59:25Z",
-   "catalog_file_age_days": 182
+   "catalog_file_age_days": 183
   },
   {
    "source": "kartverket/prodspek_fkb_arealbruk:catalog-info.yaml",
@@ -7744,7 +7863,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<023b3f>",
+   "owner": "group:<3d7926>",
    "owner_kind": "group",
    "repo": "kartverket/prodspek_fkb_arealbruk",
    "repo_from": "file location",
@@ -7755,7 +7874,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<023b3f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<3d7926>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7771,6 +7890,7 @@
     }
    },
    "last_human_commit": "2026-10-22T07:53:47Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-10-28T12:54:35Z",
@@ -7783,7 +7903,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<023b3f>",
+   "owner": "group:<3d7926>",
    "owner_kind": "group",
    "repo": "kartverket/prodspek_fkb_veg",
    "repo_from": "file location",
@@ -7794,7 +7914,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<023b3f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<3d7926>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7810,6 +7930,7 @@
     }
    },
    "last_human_commit": "2026-08-11T10:14:36Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-10-28T12:55:19Z",
@@ -7822,7 +7943,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "development",
-   "owner": "group:<c29a4c>",
+   "owner": "group:<e80a62>",
    "owner_kind": "group",
    "repo": "kartverket/kv-deltashare-examples",
    "repo_from": "file location",
@@ -7833,7 +7954,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<c29a4c>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<e80a62>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7849,6 +7970,7 @@
     }
    },
    "last_human_commit": "2026-10-16T11:12:57Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-03T19:23:20Z",
@@ -7861,7 +7983,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<023b3f>",
+   "owner": "group:<3d7926>",
    "owner_kind": "group",
    "repo": "kartverket/prodspek_arealplan",
    "repo_from": "file location",
@@ -7872,7 +7994,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<023b3f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<3d7926>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7888,6 +8010,7 @@
     }
    },
    "last_human_commit": "2026-08-27T13:44:31Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-11-19T12:37:35Z",
@@ -7900,7 +8023,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<023b3f>",
+   "owner": "group:<3d7926>",
    "owner_kind": "group",
    "repo": "kartverket/standard_fkb_generell_del",
    "repo_from": "file location",
@@ -7911,7 +8034,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<023b3f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<3d7926>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7927,6 +8050,7 @@
     }
    },
    "last_human_commit": "2026-10-06T06:24:27Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-10-28T12:55:42Z",
@@ -7939,7 +8063,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<3e193d>",
+   "owner": "group:<337ae2>",
    "owner_kind": "group",
    "repo": "kartverket/ALB_Best_Practice_Manual",
    "repo_from": "file location",
@@ -7950,7 +8074,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<3e193d>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<337ae2>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7966,6 +8090,7 @@
     }
    },
    "last_human_commit": "2026-08-10T08:00:19Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-06-05T07:17:24Z",
@@ -7978,7 +8103,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<0c6283>",
+   "owner": "group:<2a6cf2>",
    "owner_kind": "group",
    "repo": "kartverket/backstage-plugin-risk-scorecard-backend",
    "repo_from": "github.com/project-slug",
@@ -7989,11 +8114,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@kartverket/<0c6283> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@kartverket/<2a6cf2> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": "CODEOWNERS agrees: @kartverket/<0c6283>"
+     "reason": "CODEOWNERS agrees: @kartverket/<2a6cf2>"
     },
     "links": {
      "status": "n/a",
@@ -8005,6 +8130,7 @@
     }
    },
    "last_human_commit": "2026-10-20T06:18:34Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-04-10T11:57:23Z",
@@ -8017,7 +8143,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<93e9c4>",
+   "owner": "group:<42c62f>",
    "owner_kind": "group",
    "repo": "open-dxp/system-info-bundle",
    "repo_from": "file location",
@@ -8028,7 +8154,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<93e9c4>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<42c62f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8044,6 +8170,7 @@
     }
    },
    "last_human_commit": "2026-10-21T12:27:10Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-25T16:32:41Z",
@@ -8056,7 +8183,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<93e9c4>",
+   "owner": "group:<42c62f>",
    "owner_kind": "group",
    "repo": "open-dxp/payment-provider-paypal-smart-payment-button-bundle",
    "repo_from": "file location",
@@ -8067,7 +8194,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<93e9c4>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<42c62f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8083,6 +8210,7 @@
     }
    },
    "last_human_commit": "2026-10-21T12:26:08Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-25T16:35:46Z",
@@ -8095,7 +8223,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<93e9c4>",
+   "owner": "group:<42c62f>",
    "owner_kind": "group",
    "repo": "open-dxp/qrcode-bundle",
    "repo_from": "file location",
@@ -8106,7 +8234,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<93e9c4>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<42c62f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8122,6 +8250,7 @@
     }
    },
    "last_human_commit": "2026-10-21T12:26:39Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-25T16:37:42Z",
@@ -8134,7 +8263,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<93e9c4>",
+   "owner": "group:<42c62f>",
    "owner_kind": "group",
    "repo": "open-dxp/google-marketing-bundle",
    "repo_from": "file location",
@@ -8145,7 +8274,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<93e9c4>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<42c62f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8161,6 +8290,7 @@
     }
    },
    "last_human_commit": "2026-10-21T12:24:51Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-25T16:32:46Z",
@@ -8173,7 +8303,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<93e9c4>",
+   "owner": "group:<42c62f>",
    "owner_kind": "group",
    "repo": "open-dxp/perspective-editor-bundle",
    "repo_from": "file location",
@@ -8184,7 +8314,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<93e9c4>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<42c62f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8200,6 +8330,7 @@
     }
    },
    "last_human_commit": "2026-10-21T12:26:31Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-25T16:34:20Z",
@@ -8212,7 +8343,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<93e9c4>",
+   "owner": "group:<42c62f>",
    "owner_kind": "group",
    "repo": "open-dxp/personalization-bundle",
    "repo_from": "file location",
@@ -8223,7 +8354,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<93e9c4>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<42c62f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8239,6 +8370,7 @@
     }
    },
    "last_human_commit": "2026-10-21T12:26:28Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-25T16:34:24Z",
@@ -8251,7 +8383,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<93e9c4>",
+   "owner": "group:<42c62f>",
    "owner_kind": "group",
    "repo": "open-dxp/elasticsearch-client-bundle",
    "repo_from": "file location",
@@ -8262,7 +8394,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<93e9c4>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<42c62f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8278,6 +8410,7 @@
     }
    },
    "last_human_commit": "2026-10-21T12:24:31Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-25T16:35:04Z",
@@ -8290,7 +8423,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<93e9c4>",
+   "owner": "group:<42c62f>",
    "owner_kind": "group",
    "repo": "open-dxp/data-importer-bundle",
    "repo_from": "file location",
@@ -8301,7 +8434,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<93e9c4>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<42c62f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8317,6 +8450,7 @@
     }
    },
    "last_human_commit": "2026-10-21T12:23:42Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-25T16:35:16Z",
@@ -8357,6 +8491,7 @@
     }
    },
    "last_human_commit": "2026-10-21T19:21:57Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Pytest plugin for repo health checks",
@@ -8378,7 +8513,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "experimental",
-   "owner": "group:<01875e>",
+   "owner": "group:<747596>",
    "owner_kind": "group",
    "repo": "openedx/openedx-ledger",
    "repo_from": "file location",
@@ -8389,7 +8524,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @openedx/<01875e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @openedx/<747596>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8405,6 +8540,7 @@
     }
    },
    "last_human_commit": "2026-10-21T21:06:44Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-01-17T18:08:17Z",
@@ -8417,7 +8553,7 @@
    "kind": "Component",
    "type": "governance",
    "lifecycle": "production",
-   "owner": "group:<81a824>",
+   "owner": "group:<fad120>",
    "owner_kind": "group",
    "repo": "openedx/wg-frontend",
    "repo_from": "file location",
@@ -8428,7 +8564,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @openedx/<81a824>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @openedx/<fad120>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8444,6 +8580,7 @@
     }
    },
    "last_human_commit": "2025-10-30T15:16:41Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-10-30T15:16:41Z",
@@ -8483,6 +8620,7 @@
     }
    },
    "last_human_commit": "2026-10-21T23:15:56Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-02-06T10:48:48Z",
@@ -8495,7 +8633,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<78bd01>",
+   "owner": "group:<fd2eaa>",
    "owner_kind": "group",
    "repo": "openedx/edx-submissions",
    "repo_from": "file location",
@@ -8506,7 +8644,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @openedx/<78bd01>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @openedx/<fd2eaa>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8523,6 +8661,7 @@
     }
    },
    "last_human_commit": "2026-10-21T15:50:04Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Submissions API",
@@ -8544,7 +8683,7 @@
    "kind": "Component",
    "type": "support",
    "lifecycle": "production",
-   "owner": "group:<81a824>",
+   "owner": "group:<fad120>",
    "owner_kind": "group",
    "repo": "openedx/public-engineering",
    "repo_from": "file location",
@@ -8555,7 +8694,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @openedx/<81a824>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @openedx/<fad120>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8571,6 +8710,7 @@
     }
    },
    "last_human_commit": "2025-03-05T16:20:54Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2024-12-16T19:54:58Z",
@@ -8583,7 +8723,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<41ea2c>",
+   "owner": "group:<5669c8>",
    "owner_kind": "group",
    "repo": "openedx/frontend-app-discussions",
    "repo_from": "file location",
@@ -8594,7 +8734,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @openedx/<41ea2c>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @openedx/<5669c8>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8611,6 +8751,7 @@
     }
    },
    "last_human_commit": "2026-10-14T15:20:46Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Frontend app discussions",
@@ -8632,7 +8773,7 @@
    "kind": "Component",
    "type": "governance",
    "lifecycle": "production",
-   "owner": "group:<81a824>",
+   "owner": "group:<fad120>",
    "owner_kind": "group",
    "repo": "openedx/wg-maintenance",
    "repo_from": "file location",
@@ -8643,7 +8784,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @openedx/<81a824>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @openedx/<fad120>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8659,6 +8800,7 @@
     }
    },
    "last_human_commit": "2026-10-22T07:19:35Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-04-03T15:00:05Z",
@@ -8671,7 +8813,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "mature",
-   "owner": "group:<7061f4>",
+   "owner": "group:<ee0ba7>",
    "owner_kind": "group",
    "repo": "pantheon-systems/action-package-updater",
    "repo_from": "file location",
@@ -8682,11 +8824,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<7061f4> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<ee0ba7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<7061f4>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<ee0ba7>"
     },
     "links": {
      "status": "n/a",
@@ -8698,6 +8840,7 @@
     }
    },
    "last_human_commit": "2026-07-16T18:42:11Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-24T07:43:14Z",
@@ -8710,7 +8853,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<bc3e78>",
+   "owner": "group:<fde6bb>",
    "owner_kind": "group",
    "repo": "pantheon-systems/terminus-gcdn-plugin",
    "repo_from": "file location",
@@ -8721,11 +8864,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<bc3e78> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<fde6bb> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<bc3e78>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<fde6bb>"
     },
     "links": {
      "status": "n/a",
@@ -8737,6 +8880,7 @@
     }
    },
    "last_human_commit": "2026-09-08T22:51:12Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-24T07:54:17Z",
@@ -8749,7 +8893,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "mature",
-   "owner": "group:<e1fb32>",
+   "owner": "group:<7541f7>",
    "owner_kind": "group",
    "repo": "pantheon-systems/terminus-site-clone-plugin",
    "repo_from": "file location",
@@ -8760,11 +8904,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<e1fb32> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<7541f7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<e1fb32>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<7541f7>"
     },
     "links": {
      "status": "n/a",
@@ -8776,6 +8920,7 @@
     }
    },
    "last_human_commit": "2026-02-10T11:08:55Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-24T07:46:37Z",
@@ -8788,7 +8933,7 @@
    "kind": "Component",
    "type": "gcp-service",
    "lifecycle": "production",
-   "owner": "group:<7061f4>",
+   "owner": "group:<ee0ba7>",
    "owner_kind": "group",
    "repo": "pantheon-systems/wp-redis",
    "repo_from": "github.com/project-slug",
@@ -8799,11 +8944,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<7061f4> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<ee0ba7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<7061f4>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<ee0ba7>"
     },
     "links": {
      "status": "n/a",
@@ -8815,6 +8960,7 @@
     }
    },
    "last_human_commit": "2026-09-24T19:51:07Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-24T07:51:42Z",
@@ -8827,7 +8973,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "mature",
-   "owner": "group:<7061f4>",
+   "owner": "group:<ee0ba7>",
    "owner_kind": "group",
    "repo": "pantheon-systems/terminus-addons-installer-plugin",
    "repo_from": "file location",
@@ -8838,11 +8984,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<7061f4> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<ee0ba7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<7061f4>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<ee0ba7>"
     },
     "links": {
      "status": "n/a",
@@ -8854,6 +9000,7 @@
     }
    },
    "last_human_commit": "2026-04-21T20:19:35Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-09-24T07:37:50Z",
@@ -8866,7 +9013,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "mature",
-   "owner": "group:<e1fb32>",
+   "owner": "group:<7541f7>",
    "owner_kind": "group",
    "repo": "pantheon-systems/docker-php-ci",
    "repo_from": "file location",
@@ -8877,11 +9024,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<e1fb32> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<7541f7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<e1fb32>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<7541f7>"
     },
     "links": {
      "status": "n/a",
@@ -8893,6 +9040,7 @@
     }
    },
    "last_human_commit": "2024-09-23T19:55:58Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2026-09-24T07:49:44Z",
@@ -8905,7 +9053,7 @@
    "kind": "Component",
    "type": "plugin",
    "lifecycle": "experimental",
-   "owner": "group:<7061f4>",
+   "owner": "group:<ee0ba7>",
    "owner_kind": "group",
    "repo": "pantheon-systems/pantheon-content-publisher-drupal",
    "repo_from": "file location",
@@ -8916,11 +9064,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<7061f4> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<ee0ba7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<7061f4>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<ee0ba7>"
     },
     "links": {
      "status": "n/a",
@@ -8932,6 +9080,7 @@
     }
    },
    "last_human_commit": "2026-09-09T18:46:58Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-10-09T11:45:31Z",
@@ -8944,7 +9093,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "experimental",
-   "owner": "group:<e1fb32>",
+   "owner": "group:<7541f7>",
    "owner_kind": "group",
    "repo": "pantheon-systems/terminus-composer-logs-plugin",
    "repo_from": "file location",
@@ -8955,11 +9104,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<e1fb32> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<7541f7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<e1fb32>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<7541f7>"
     },
     "links": {
      "status": "n/a",
@@ -8971,6 +9120,7 @@
     }
    },
    "last_human_commit": "2024-09-23T19:56:52Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2026-09-24T07:56:17Z",
@@ -9010,6 +9160,7 @@
     }
    },
    "last_human_commit": "2026-10-20T19:54:50Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-08-06T17:55:39Z",
@@ -9049,6 +9200,7 @@
     }
    },
    "last_human_commit": "2026-08-06T17:54:42Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-08-06T17:54:42Z",
@@ -9088,6 +9240,7 @@
     }
    },
    "last_human_commit": "2026-06-09T22:50:39Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-06-06T18:00:07Z",
@@ -9127,6 +9280,7 @@
     }
    },
    "last_human_commit": "2026-06-09T22:50:35Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-06-06T18:00:05Z",
@@ -9166,6 +9320,7 @@
     }
    },
    "last_human_commit": "2026-09-11T07:23:40Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-08-06T17:56:02Z",
@@ -9205,6 +9360,7 @@
     }
    },
    "last_human_commit": "2026-08-06T17:54:18Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-08-06T17:54:18Z",
@@ -9244,6 +9400,7 @@
     }
    },
    "last_human_commit": "2026-08-20T20:48:36Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-08-06T17:56:11Z",
@@ -9283,6 +9440,7 @@
     }
    },
    "last_human_commit": "2026-08-06T17:55:49Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-08-06T17:55:49Z",
@@ -9295,7 +9453,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<140f8a>",
+   "owner": "group:<f6b161>",
    "owner_kind": "group",
    "repo": "radiorabe/minio-cloudevents-service",
    "repo_from": "github.com/project-slug",
@@ -9306,7 +9464,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @radiorabe/<140f8a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @radiorabe/<f6b161>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9323,6 +9481,7 @@
     }
    },
    "last_human_commit": null,
+   "repo_archived": false,
    "links": [
     {
      "title": "CloudEvents",
@@ -9344,7 +9503,7 @@
    "kind": "Component",
    "type": "image",
    "lifecycle": "experimental",
-   "owner": "group:<140f8a>",
+   "owner": "group:<f6b161>",
    "owner_kind": "group",
    "repo": "radiorabe/container-image-rabe-s2i-python-minimal",
    "repo_from": "github.com/project-slug",
@@ -9355,7 +9514,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @radiorabe/<140f8a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @radiorabe/<f6b161>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9372,6 +9531,7 @@
     }
    },
    "last_human_commit": "2026-06-15T12:09:33Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Red Hat UBI9 Python 3.12",
@@ -9393,7 +9553,7 @@
    "kind": "Component",
    "type": "image",
    "lifecycle": "experimental",
-   "owner": "group:<140f8a>",
+   "owner": "group:<f6b161>",
    "owner_kind": "group",
    "repo": "radiorabe/container-image-rabe-s2i-core-minimal",
    "repo_from": "github.com/project-slug",
@@ -9404,7 +9564,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @radiorabe/<140f8a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @radiorabe/<f6b161>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9421,6 +9581,7 @@
     }
    },
    "last_human_commit": "2026-06-15T11:42:45Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Red Hat S2I Core",
@@ -9442,7 +9603,7 @@
    "kind": "Component",
    "type": "container",
    "lifecycle": "experimental",
-   "owner": "group:<140f8a>",
+   "owner": "group:<f6b161>",
    "owner_kind": "group",
    "repo": "radiorabe/container-image-nut",
    "repo_from": "github.com/project-slug",
@@ -9453,7 +9614,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @radiorabe/<140f8a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @radiorabe/<f6b161>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9470,6 +9631,7 @@
     }
    },
    "last_human_commit": "2026-06-15T13:20:30Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "Network UPS Tools Homepage",
@@ -9499,7 +9661,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<140f8a>",
+   "owner": "group:<f6b161>",
    "owner_kind": "group",
    "repo": "radiorabe/acr-loader",
    "repo_from": "github.com/project-slug",
@@ -9510,7 +9672,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @radiorabe/<140f8a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @radiorabe/<f6b161>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9526,6 +9688,7 @@
     }
    },
    "last_human_commit": "2026-04-01T20:07:00Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "ownCloud",
@@ -9555,7 +9718,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<140f8a>",
+   "owner": "group:<f6b161>",
    "owner_kind": "group",
    "repo": "radiorabe/nowplaypadgen",
    "repo_from": "github.com/project-slug",
@@ -9566,7 +9729,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @radiorabe/<140f8a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @radiorabe/<f6b161>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9582,6 +9745,7 @@
     }
    },
    "last_human_commit": "2026-03-29T11:40:10Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-12-21T10:26:27Z",
@@ -9594,7 +9758,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<b9867d>",
+   "owner": "group:<79c03d>",
    "owner_kind": "group",
    "repo": "reearth/eslint-config-reearth",
    "repo_from": "github.com/project-slug",
@@ -9605,7 +9769,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @reearth/<b9867d>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @reearth/<79c03d>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9622,6 +9786,7 @@
     }
    },
    "last_human_commit": "2026-06-02T12:59:04Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub",
@@ -9643,7 +9808,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<97c9ba>",
+   "owner": "group:<30e031>",
    "owner_kind": "group",
    "repo": "reearth/hokusai",
    "repo_from": "github.com/project-slug",
@@ -9654,7 +9819,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @reearth/<97c9ba>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @reearth/<30e031>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9671,6 +9836,7 @@
     }
    },
    "last_human_commit": "2026-06-10T12:07:47Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub",
@@ -9700,7 +9866,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<0f3bad>",
+   "owner": "group:<332643>",
    "owner_kind": "group",
    "repo": "reearth/reearth-cms-api",
    "repo_from": "github.com/project-slug",
@@ -9711,11 +9877,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @reearth/<0f3bad>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @reearth/<332643>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<0f3bad>, .github/CODEOWNERS says @<user>",
+     "reason": "disagree: catalog says group:<332643>, .github/CODEOWNERS says @<user>",
      "disagreement": "catalog names a team, CODEOWNERS people"
     },
     "links": {
@@ -9729,6 +9895,7 @@
     }
    },
    "last_human_commit": "2026-06-02T17:13:40Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub",
@@ -9750,7 +9917,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<63359a>",
+   "owner": "group:<563a91>",
    "owner_kind": "group",
    "repo": "reearth/renovate-config",
    "repo_from": "github.com/project-slug",
@@ -9761,7 +9928,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@reearth/<63359a> resolves in .github/CODEOWNERS of reearth/actions (GitHub validates CODEOWNERS teams)"
+     "reason": "@reearth/<563a91> resolves in .github/CODEOWNERS of reearth/actions (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -9778,6 +9945,7 @@
     }
    },
    "last_human_commit": "2026-06-02T16:15:16Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub",
@@ -9799,7 +9967,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<677ab1>",
+   "owner": "group:<7f63ae>",
    "owner_kind": "group",
    "repo": "reearth/fastxml",
    "repo_from": "github.com/project-slug",
@@ -9810,7 +9978,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @reearth/<677ab1>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @reearth/<7f63ae>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9827,6 +9995,7 @@
     }
    },
    "last_human_commit": "2026-10-14T11:46:10Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub",
@@ -9848,7 +10017,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<97c9ba>",
+   "owner": "group:<30e031>",
    "owner_kind": "group",
    "repo": "reearth/reearth-buildings",
    "repo_from": "github.com/project-slug",
@@ -9859,11 +10028,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @reearth/<97c9ba>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @reearth/<30e031>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<97c9ba>, .github/CODEOWNERS says @<user>",
+     "reason": "disagree: catalog says group:<30e031>, .github/CODEOWNERS says @<user>",
      "disagreement": "catalog names a team, CODEOWNERS people"
     },
     "links": {
@@ -9877,6 +10046,7 @@
     }
    },
    "last_human_commit": "2026-09-30T04:56:57Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub",
@@ -9898,7 +10068,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<63359a>",
+   "owner": "group:<563a91>",
    "owner_kind": "group",
    "repo": "reearth/changelog-action",
    "repo_from": "github.com/project-slug",
@@ -9909,7 +10079,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "group:<63359a> is in namespace eukarya-inc, not mapped to a GitHub team"
+     "reason": "group:<563a91> is in namespace eukarya-inc, not mapped to a GitHub team"
     },
     "codeowners": {
      "status": "n/a",
@@ -9926,6 +10096,7 @@
     }
    },
    "last_human_commit": "2026-10-09T13:10:01Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub",
@@ -9947,7 +10118,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<677ab1>",
+   "owner": "group:<7f63ae>",
    "owner_kind": "group",
    "repo": "reearth/draco-oxide",
    "repo_from": "github.com/project-slug",
@@ -9958,7 +10129,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @reearth/<677ab1>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @reearth/<7f63ae>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9975,6 +10146,7 @@
     }
    },
    "last_human_commit": "2026-10-20T08:17:42Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub",
@@ -9996,7 +10168,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<08e63f>",
+   "owner": "group:<fd801e>",
    "owner_kind": "group",
    "repo": "sendbird/sendbird-calls-quickstart-react-native",
    "repo_from": "github.com/project-slug",
@@ -10007,7 +10179,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<08e63f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<fd801e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10023,6 +10195,7 @@
     }
    },
    "last_human_commit": "2023-11-17T02:03:45Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2023-02-10T01:02:00Z",
@@ -10035,7 +10208,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<08e63f>",
+   "owner": "group:<fd801e>",
    "owner_kind": "group",
    "repo": "sendbird/sendbird-chat-ios-spm",
    "repo_from": "github.com/project-slug",
@@ -10046,7 +10219,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<08e63f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<fd801e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10062,6 +10235,7 @@
     }
    },
    "last_human_commit": "2026-06-01T12:09:59Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2023-02-10T04:24:30Z",
@@ -10074,7 +10248,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<b78682>",
+   "owner": "group:<26fcc6>",
    "owner_kind": "group",
    "repo": "sendbird/sb-osc",
    "repo_from": "github.com/project-slug",
@@ -10085,7 +10259,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<b78682>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<26fcc6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10101,6 +10275,7 @@
     }
    },
    "last_human_commit": "2026-10-15T00:25:57Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-05-08T13:03:56Z",
@@ -10113,7 +10288,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<b44649>",
+   "owner": "group:<f3d101>",
    "owner_kind": "group",
    "repo": "sendbird/sendbird-discord-javascript-sample",
    "repo_from": "file location",
@@ -10124,7 +10299,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<b44649>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<f3d101>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10140,6 +10315,7 @@
     }
    },
    "last_human_commit": "2026-09-17T03:23:26Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2023-06-15T01:15:00Z",
@@ -10152,7 +10328,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<08e63f>",
+   "owner": "group:<fd801e>",
    "owner_kind": "group",
    "repo": "sendbird/sendbird-javascript-samples",
    "repo_from": "github.com/project-slug",
@@ -10163,7 +10339,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<08e63f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<fd801e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10179,6 +10355,7 @@
     }
    },
    "last_human_commit": "2024-02-28T05:47:03Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2023-02-13T04:07:50Z",
@@ -10191,7 +10368,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<08e63f>",
+   "owner": "group:<fd801e>",
    "owner_kind": "group",
    "repo": "sendbird/sendbird-chat-widget-flutter",
    "repo_from": "github.com/project-slug",
@@ -10202,7 +10379,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<08e63f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<fd801e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10218,6 +10395,7 @@
     }
    },
    "last_human_commit": "2024-01-31T06:07:08Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2023-09-20T05:19:23Z",
@@ -10230,7 +10408,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<08e63f>",
+   "owner": "group:<fd801e>",
    "owner_kind": "group",
    "repo": "sendbird/sendbird-calls-groupcall-quickstart-react-native",
    "repo_from": "github.com/project-slug",
@@ -10241,7 +10419,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<08e63f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<fd801e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10257,6 +10435,7 @@
     }
    },
    "last_human_commit": "2026-09-14T02:45:08Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2023-02-10T01:02:22Z",
@@ -10269,7 +10448,7 @@
    "kind": "Component",
    "type": "snyk-cli-plugin",
    "lifecycle": "-",
-   "owner": "group:<b591ae>",
+   "owner": "group:<baebb5>",
    "owner_kind": "group",
    "repo": "snyk/snyk-php-plugin",
    "repo_from": "github.com/project-slug",
@@ -10280,11 +10459,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @snyk/<b591ae>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @snyk/<baebb5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<b591ae>, .github/CODEOWNERS says @snyk/<669d3a>",
+     "reason": "disagree: catalog says group:<baebb5>, .github/CODEOWNERS says @snyk/<e2293e>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -10297,6 +10476,7 @@
     }
    },
    "last_human_commit": "2026-09-11T17:32:55Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2026-09-08T08:50:34Z",
@@ -10309,7 +10489,7 @@
    "kind": "Component",
    "type": "external-tooling",
    "lifecycle": "-",
-   "owner": "group:<d5d288>",
+   "owner": "group:<65d6c0>",
    "owner_kind": "group",
    "repo": "snyk/leaky-vessels-static-detector",
    "repo_from": "github.com/project-slug",
@@ -10320,11 +10500,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@snyk/<d5d288> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@snyk/<65d6c0> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @<user>, @snyk/<d5d288>, @snyk/<900585>"
+     "reason": ".github/CODEOWNERS agrees: @<user>, @snyk/<65d6c0>, @snyk/<ea8299>"
     },
     "links": {
      "status": "n/a",
@@ -10336,6 +10516,7 @@
     }
    },
    "last_human_commit": "2026-10-20T17:46:11Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2024-02-02T15:34:00Z",
@@ -10348,7 +10529,7 @@
    "kind": "Component",
    "type": "snyk-cli-plugin",
    "lifecycle": "-",
-   "owner": "group:<b591ae>",
+   "owner": "group:<baebb5>",
    "owner_kind": "group",
    "repo": "snyk/gradle-plugin",
    "repo_from": "github.com/project-slug",
@@ -10359,11 +10540,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @snyk/<b591ae>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @snyk/<baebb5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<b591ae>, .github/CODEOWNERS says @snyk/<669d3a>",
+     "reason": "disagree: catalog says group:<baebb5>, .github/CODEOWNERS says @snyk/<e2293e>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -10376,6 +10557,7 @@
     }
    },
    "last_human_commit": "2026-09-11T17:39:13Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2026-09-08T08:55:59Z",
@@ -10388,7 +10570,7 @@
    "kind": "Component",
    "type": "external-library",
    "lifecycle": "-",
-   "owner": "group:<b591ae>",
+   "owner": "group:<baebb5>",
    "owner_kind": "group",
    "repo": "snyk/snyk-go-parser",
    "repo_from": "github.com/project-slug",
@@ -10399,11 +10581,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @snyk/<b591ae>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @snyk/<baebb5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<b591ae>, .github/CODEOWNERS says @snyk/<669d3a>",
+     "reason": "disagree: catalog says group:<baebb5>, .github/CODEOWNERS says @snyk/<e2293e>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -10416,6 +10598,7 @@
     }
    },
    "last_human_commit": "2026-09-11T17:33:29Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2026-09-08T08:50:09Z",
@@ -10428,7 +10611,7 @@
    "kind": "Component",
    "type": "external-library",
    "lifecycle": "-",
-   "owner": "group:<b591ae>",
+   "owner": "group:<baebb5>",
    "owner_kind": "group",
    "repo": "snyk/go-deps-resolver",
    "repo_from": "github.com/project-slug",
@@ -10439,11 +10622,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @snyk/<b591ae>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @snyk/<baebb5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<b591ae>, .github/CODEOWNERS says @snyk/<669d3a>",
+     "reason": "disagree: catalog says group:<baebb5>, .github/CODEOWNERS says @snyk/<e2293e>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -10456,6 +10639,7 @@
     }
    },
    "last_human_commit": "2026-09-11T17:39:07Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2026-09-11T11:28:35Z",
@@ -10468,7 +10652,7 @@
    "kind": "Component",
    "type": "external-tooling",
    "lifecycle": "-",
-   "owner": "group:<d5d288>",
+   "owner": "group:<65d6c0>",
    "owner_kind": "group",
    "repo": "snyk/socketsleuth",
    "repo_from": "file location",
@@ -10479,11 +10663,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@snyk/<d5d288> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@snyk/<65d6c0> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @<user>, @snyk/<d5d288>, @snyk/<900585>"
+     "reason": ".github/CODEOWNERS agrees: @<user>, @snyk/<65d6c0>, @snyk/<ea8299>"
     },
     "links": {
      "status": "n/a",
@@ -10495,6 +10679,7 @@
     }
    },
    "last_human_commit": "2026-10-20T20:03:02Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2023-09-27T17:19:29Z",
@@ -10507,7 +10692,7 @@
    "kind": "Component",
    "type": "snyk-cli-plugin",
    "lifecycle": "-",
-   "owner": "group:<752ba7>",
+   "owner": "group:<8546d1>",
    "owner_kind": "group",
    "repo": "snyk/cli-extension-agent-scan",
    "repo_from": "file location",
@@ -10518,11 +10703,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@snyk/<752ba7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@snyk/<8546d1> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @<user>, @snyk/<752ba7>"
+     "reason": ".github/CODEOWNERS agrees: @<user>, @snyk/<8546d1>"
     },
     "links": {
      "status": "n/a",
@@ -10534,6 +10719,7 @@
     }
    },
    "last_human_commit": "2026-09-21T10:18:31Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-03-11T08:50:56Z",
@@ -10546,7 +10732,7 @@
    "kind": "Component",
    "type": "snyk-cli-plugin",
    "lifecycle": "-",
-   "owner": "group:<d338d6>",
+   "owner": "group:<80dbc7>",
    "owner_kind": "group",
    "repo": "snyk/cli-extension-os-flows",
    "repo_from": "file location",
@@ -10557,11 +10743,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @snyk/<d338d6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @snyk/<80dbc7>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<d338d6>, .github/CODEOWNERS says @snyk/<bcfd4e>",
+     "reason": "disagree: catalog says group:<80dbc7>, .github/CODEOWNERS says @snyk/<c0fee7>",
      "disagreement": "different team names"
     },
     "links": {
@@ -10574,6 +10760,7 @@
     }
    },
    "last_human_commit": "2026-10-20T16:19:42Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-05-23T13:37:21Z",
@@ -10586,7 +10773,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "development",
-   "owner": "group:<7d6fc3>",
+   "owner": "group:<88eccd>",
    "owner_kind": "group",
    "repo": "sourcefuse/terraform-aws-arc-ec2",
    "repo_from": "github.com/project-slug",
@@ -10597,7 +10784,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<7d6fc3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<88eccd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10614,6 +10801,7 @@
     }
    },
    "last_human_commit": "2026-06-24T10:46:28Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "ARC Docs",
@@ -10643,7 +10831,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<7d6fc3>",
+   "owner": "group:<88eccd>",
    "owner_kind": "group",
    "repo": "sourcefuse/terraform-k8s-app",
    "repo_from": "github.com/project-slug",
@@ -10654,7 +10842,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<7d6fc3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<88eccd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10670,6 +10858,7 @@
     }
    },
    "last_human_commit": "2023-04-04T17:17:46Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2022-08-03T20:50:46Z",
@@ -10682,7 +10871,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "development",
-   "owner": "group:<7d6fc3>",
+   "owner": "group:<88eccd>",
    "owner_kind": "group",
    "repo": "sourcefuse/terraform-aws-arc-cloudfront",
    "repo_from": "github.com/project-slug",
@@ -10693,7 +10882,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<7d6fc3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<88eccd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10710,6 +10899,7 @@
     }
    },
    "last_human_commit": "2026-06-24T10:27:07Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "ARC Docs",
@@ -10739,7 +10929,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "development",
-   "owner": "group:<7d6fc3>",
+   "owner": "group:<88eccd>",
    "owner_kind": "group",
    "repo": "sourcefuse/terraform-aws-arc-ec2",
    "repo_from": "github.com/project-slug",
@@ -10750,7 +10940,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<7d6fc3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<88eccd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10767,6 +10957,7 @@
     }
    },
    "last_human_commit": "2026-06-24T10:46:28Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "ARC Docs",
@@ -10796,7 +10987,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "unknown",
-   "owner": "group:<75c48f>",
+   "owner": "group:<96e239>",
    "owner_kind": "group",
    "repo": "sourcefuse/loopback4-microservice-catalog",
    "repo_from": "github.com/project-slug",
@@ -10807,11 +10998,11 @@
     },
     "owner": {
      "status": "warn",
-     "reason": "GitHub cannot resolve @sourcefuse/<75c48f> in the CODEOWNERS files that name it (deleted, renamed, secret, or without write access)"
+     "reason": "GitHub cannot resolve @sourcefuse/<96e239> in the CODEOWNERS files that name it (deleted, renamed, secret, or without write access)"
     },
     "codeowners": {
      "status": "drift",
-     "reason": ".github/CODEOWNERS line 5 names owners GitHub cannot resolve: @sourcefuse/<75c48f>",
+     "reason": ".github/CODEOWNERS line 5 names owners GitHub cannot resolve: @sourcefuse/<96e239>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -10825,6 +11016,7 @@
     }
    },
    "last_human_commit": "2026-10-14T05:42:51Z",
+   "repo_archived": false,
    "links": [],
    "status": "drift",
    "catalog_file_last_commit": "2024-06-28T08:37:31Z",
@@ -10837,7 +11029,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<7d6fc3>",
+   "owner": "group:<88eccd>",
    "owner_kind": "group",
    "repo": "sourcefuse/terraform-aws-ref-arch-db",
    "repo_from": "github.com/project-slug",
@@ -10848,7 +11040,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<7d6fc3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<88eccd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10865,6 +11057,7 @@
     }
    },
    "last_human_commit": "2026-06-24T10:41:05Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "ARC Docs",
@@ -10894,7 +11087,7 @@
    "kind": "Component",
    "type": "component",
    "lifecycle": "production",
-   "owner": "group:<7d6fc3>",
+   "owner": "group:<88eccd>",
    "owner_kind": "group",
    "repo": "sourcefuse/loopback4-authorization",
    "repo_from": "github.com/project-slug",
@@ -10905,7 +11098,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<7d6fc3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<88eccd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10922,6 +11115,7 @@
     }
    },
    "last_human_commit": "2026-08-19T07:41:13Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "NPM Package",
@@ -10951,7 +11145,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<55eef2>",
+   "owner": "group:<0b6b76>",
    "owner_kind": "group",
    "repo": "sourcefuse/backstage",
    "repo_from": "github.com/project-slug",
@@ -10962,7 +11156,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<55eef2>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<0b6b76>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10979,6 +11173,7 @@
     }
    },
    "last_human_commit": "2026-03-14T16:37:02Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "GitHub Repository",
@@ -11000,7 +11195,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": null,
-   "owner": "group:<f2e2ac>",
+   "owner": "group:<875e00>",
    "owner_kind": "group",
    "repo": "spotify/confidence-sdk-python",
    "repo_from": "file location",
@@ -11011,7 +11206,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @spotify/<f2e2ac>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @spotify/<875e00>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
@@ -11029,6 +11224,7 @@
     }
    },
    "last_human_commit": "2026-06-16T14:53:23Z",
+   "repo_archived": false,
    "links": [],
    "status": "drift",
    "catalog_file_last_commit": "2024-05-29T12:14:54Z",
@@ -11068,6 +11264,7 @@
     }
    },
    "last_human_commit": "2024-12-16T13:16:33Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2023-08-30T23:49:38Z",
@@ -11080,7 +11277,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": null,
-   "owner": "group:<f2e2ac>",
+   "owner": "group:<875e00>",
    "owner_kind": "group",
    "repo": "spotify/confidence-resolver",
    "repo_from": "file location",
@@ -11091,7 +11288,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @spotify/<f2e2ac>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @spotify/<875e00>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11107,6 +11304,7 @@
     }
    },
    "last_human_commit": "2026-10-07T08:40:47Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2025-11-05T12:40:31Z",
@@ -11119,7 +11317,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": null,
-   "owner": "group:<16635e>",
+   "owner": "group:<afba75>",
    "owner_kind": "group",
    "repo": "spotify/vispana",
    "repo_from": "file location",
@@ -11130,7 +11328,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @spotify/<16635e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @spotify/<afba75>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11146,6 +11344,7 @@
     }
    },
    "last_human_commit": "2025-07-02T19:28:45Z",
+   "repo_archived": false,
    "links": [],
    "status": "warn",
    "catalog_file_last_commit": "2024-11-28T13:30:26Z",
@@ -11158,7 +11357,7 @@
    "kind": "Component",
    "type": "cli",
    "lifecycle": "experimental",
-   "owner": "group:<daa771>",
+   "owner": "group:<f73edc>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/MemorySnapshotDataTools",
    "repo_from": "github.com/project-slug",
@@ -11169,11 +11368,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Unity-Technologies/<daa771> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@Unity-Technologies/<f73edc> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @Unity-Technologies/<daa771>"
+     "reason": ".github/CODEOWNERS agrees: @Unity-Technologies/<f73edc>"
     },
     "links": {
      "status": "n/a",
@@ -11185,6 +11384,7 @@
     }
    },
    "last_human_commit": "2026-06-10T14:00:38Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-06-03T19:19:24Z",
@@ -11197,7 +11397,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "production",
-   "owner": "group:<7e5121>",
+   "owner": "group:<12b6b0>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/HDR-Calibration-Sample",
    "repo_from": "github.com/project-slug",
@@ -11208,7 +11408,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Unity-Technologies/<7e5121>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Unity-Technologies/<12b6b0>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11224,6 +11424,7 @@
     }
    },
    "last_human_commit": "2026-02-17T14:23:18Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-02-17T14:23:18Z",
@@ -11236,7 +11437,7 @@
    "kind": "Component",
    "type": "unity-package",
    "lifecycle": "experimental",
-   "owner": "group:<3674e7>",
+   "owner": "group:<5f28e9>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/boat-attack-water",
    "repo_from": "github.com/project-slug",
@@ -11247,7 +11448,7 @@
     },
     "owner": {
      "status": "warn",
-     "reason": "GitHub cannot resolve @Unity-Technologies/<3674e7> in the CODEOWNERS files that name it (deleted, renamed, secret, or without write access)"
+     "reason": "GitHub cannot resolve @Unity-Technologies/<5f28e9> in the CODEOWNERS files that name it (deleted, renamed, secret, or without write access)"
     },
     "codeowners": {
      "status": "n/a",
@@ -11264,6 +11465,7 @@
     }
    },
    "last_human_commit": "2023-10-04T09:20:59Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "#boat-attack",
@@ -11285,7 +11487,7 @@
    "kind": "Component",
    "type": "unity-package",
    "lifecycle": "production",
-   "owner": "group:<abf8f7>",
+   "owner": "group:<dad8cf>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/RTCatmullClarkSubdivision",
    "repo_from": "github.com/project-slug",
@@ -11296,7 +11498,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Unity-Technologies/<abf8f7> resolves in .github/CODEOWNERS of Unity-Technologies/pixyz-scheduler (GitHub validates CODEOWNERS teams)"
+     "reason": "@Unity-Technologies/<dad8cf> resolves in .github/CODEOWNERS of Unity-Technologies/pixyz-scheduler (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -11313,6 +11515,7 @@
     }
    },
    "last_human_commit": "2025-07-25T07:45:46Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "#labs-gpu-subd",
@@ -11334,7 +11537,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "pre-production",
-   "owner": "group:<61c17d>",
+   "owner": "group:<91c783>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/com.unity.services.samples.relationships",
    "repo_from": "github.com/project-slug",
@@ -11345,11 +11548,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Unity-Technologies/<61c17d>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Unity-Technologies/<91c783>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": "CODEOWNERS line 2 names owners GitHub cannot resolve: @Unity-Technologies/<ec8364>",
+     "reason": "CODEOWNERS line 2 names owners GitHub cannot resolve: @Unity-Technologies/<24d3ae>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -11363,6 +11566,7 @@
     }
    },
    "last_human_commit": "2025-10-23T19:34:58Z",
+   "repo_archived": false,
    "links": [],
    "status": "drift",
    "catalog_file_last_commit": "2025-02-20T20:45:05Z",
@@ -11375,7 +11579,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "pre-production",
-   "owner": "group:<17f8e6>",
+   "owner": "group:<cedb1a>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/pixyz-sdk-samples",
    "repo_from": "github.com/project-slug",
@@ -11386,7 +11590,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Unity-Technologies/<17f8e6> resolves in .github/CODEOWNERS of Unity-Technologies/com.unity.usd-toolkit (GitHub validates CODEOWNERS teams)"
+     "reason": "@Unity-Technologies/<cedb1a> resolves in .github/CODEOWNERS of Unity-Technologies/com.unity.usd-toolkit (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -11402,6 +11606,7 @@
     }
    },
    "last_human_commit": "2025-10-29T05:25:43Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2025-03-05T09:57:10Z",
@@ -11414,7 +11619,7 @@
    "kind": "Component",
    "type": "unity-package",
    "lifecycle": "production",
-   "owner": "group:<577deb>",
+   "owner": "group:<b4abba>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/mesh-to-sdf",
    "repo_from": "github.com/project-slug",
@@ -11425,7 +11630,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Unity-Technologies/<577deb>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Unity-Technologies/<b4abba>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11442,6 +11647,7 @@
     }
    },
    "last_human_commit": "2023-08-09T13:29:58Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "#marketing-demo-team",
@@ -11463,7 +11669,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "production",
-   "owner": "group:<c5450b>",
+   "owner": "group:<ecd8cd>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/sentis-samples",
    "repo_from": "github.com/project-slug",
@@ -11474,11 +11680,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Unity-Technologies/<c5450b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Unity-Technologies/<ecd8cd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": "CODEOWNERS line 2 names owners GitHub cannot resolve: @Unity-Technologies/<70cf4b>",
+     "reason": "CODEOWNERS line 2 names owners GitHub cannot resolve: @Unity-Technologies/<0f7517>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -11493,6 +11699,7 @@
     }
    },
    "last_human_commit": "2026-08-12T19:10:50Z",
+   "repo_archived": false,
    "links": [
     {
      "title": "#devs-inference-engine",
@@ -11514,7 +11721,7 @@
    "kind": "Component",
    "type": "backend-api",
    "lifecycle": "maintenance",
-   "owner": "group:<c6a239>",
+   "owner": "group:<edf8d5>",
    "owner_kind": "group",
    "repo": "vtex-apps/b2b-organizations-graphql",
    "repo_from": "github.com/project-slug",
@@ -11525,11 +11732,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<c6a239>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<edf8d5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": ".github/CODEOWNERS line 3 names owners GitHub cannot resolve: @vtex-apps/<01e636>",
+     "reason": ".github/CODEOWNERS line 3 names owners GitHub cannot resolve: @vtex-apps/<229715>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -11543,6 +11750,7 @@
     }
    },
    "last_human_commit": "2026-10-05T19:58:17Z",
+   "repo_archived": false,
    "links": [],
    "status": "drift",
    "catalog_file_last_commit": "2026-05-13T17:00:38Z",
@@ -11555,7 +11763,7 @@
    "kind": "Component",
    "type": "frontend-ui",
    "lifecycle": "maintenance",
-   "owner": "group:<c6a239>",
+   "owner": "group:<edf8d5>",
    "owner_kind": "group",
    "repo": "vtex-apps/b2b-newstore-theme",
    "repo_from": "github.com/project-slug",
@@ -11566,7 +11774,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<c6a239>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<edf8d5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11582,6 +11790,7 @@
     }
    },
    "last_human_commit": "2025-09-24T19:45:26Z",
+   "repo_archived": false,
    "links": [],
    "status": "drift",
    "catalog_file_last_commit": "2026-05-13T17:37:30Z",
@@ -11594,7 +11803,7 @@
    "kind": "Component",
    "type": "frontend-ui",
    "lifecycle": "maintenance",
-   "owner": "group:<c6a239>",
+   "owner": "group:<edf8d5>",
    "owner_kind": "group",
    "repo": "vtex-apps/sku-list",
    "repo_from": "github.com/project-slug",
@@ -11605,7 +11814,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<c6a239>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<edf8d5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11621,6 +11830,7 @@
     }
    },
    "last_human_commit": "2026-09-22T14:59:18Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-05-13T17:01:18Z",
@@ -11633,7 +11843,7 @@
    "kind": "Component",
    "type": "backend-api",
    "lifecycle": "maintenance",
-   "owner": "group:<c6a239>",
+   "owner": "group:<edf8d5>",
    "owner_kind": "group",
    "repo": "vtex-apps/storefront-permissions",
    "repo_from": "github.com/project-slug",
@@ -11644,7 +11854,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<c6a239>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<edf8d5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11660,6 +11870,7 @@
     }
    },
    "last_human_commit": "2026-10-07T19:09:54Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-05-13T17:36:28Z",
@@ -11672,7 +11883,7 @@
    "kind": "Component",
    "type": "frontend-ui",
    "lifecycle": "maintenance",
-   "owner": "group:<c6a239>",
+   "owner": "group:<edf8d5>",
    "owner_kind": "group",
    "repo": "vtex-apps/product-comparison",
    "repo_from": "github.com/project-slug",
@@ -11683,7 +11894,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<c6a239>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<edf8d5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11699,6 +11910,7 @@
     }
    },
    "last_human_commit": "2026-05-13T17:53:51Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-05-13T17:00:29Z",
@@ -11711,7 +11923,7 @@
    "kind": "Component",
    "type": "frontend-ui",
    "lifecycle": "maintenance",
-   "owner": "group:<c6a239>",
+   "owner": "group:<edf8d5>",
    "owner_kind": "group",
    "repo": "vtex-apps/b2b-approved-message",
    "repo_from": "github.com/project-slug",
@@ -11722,7 +11934,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<c6a239>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<edf8d5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11738,6 +11950,7 @@
     }
    },
    "last_human_commit": "2026-05-13T17:54:02Z",
+   "repo_archived": false,
    "links": [],
    "status": "ok",
    "catalog_file_last_commit": "2026-05-13T17:01:17Z",
@@ -11750,7 +11963,7 @@
    "kind": "Component",
    "type": "frontend-ui",
    "lifecycle": "maintenance",
-   "owner": "group:<c6a239>",
+   "owner": "group:<edf8d5>",
    "owner_kind": "group",
    "repo": "vtex-apps/b2b-organizations",
    "repo_from": "github.com/project-slug",
@@ -11761,11 +11974,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<c6a239>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<edf8d5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": ".github/CODEOWNERS line 3 names owners GitHub cannot resolve: @vtex-apps/<01e636>",
+     "reason": ".github/CODEOWNERS line 3 names owners GitHub cannot resolve: @vtex-apps/<229715>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -11779,6 +11992,7 @@
     }
    },
    "last_human_commit": "2026-09-23T17:20:07Z",
+   "repo_archived": false,
    "links": [],
    "status": "drift",
    "catalog_file_last_commit": "2026-05-13T17:40:46Z",
@@ -11791,7 +12005,7 @@
    "kind": "Component",
    "type": "frontend-ui",
    "lifecycle": "maintenance",
-   "owner": "group:<c6a239>",
+   "owner": "group:<edf8d5>",
    "owner_kind": "group",
    "repo": "vtex-apps/b2b-quotes",
    "repo_from": "github.com/project-slug",
@@ -11802,11 +12016,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<c6a239>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<edf8d5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": ".github/CODEOWNERS line 3 names owners GitHub cannot resolve: @vtex-apps/<01e636>",
+     "reason": ".github/CODEOWNERS line 3 names owners GitHub cannot resolve: @vtex-apps/<229715>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -11820,6 +12034,7 @@
     }
    },
    "last_human_commit": "2026-10-07T16:46:02Z",
+   "repo_archived": false,
    "links": [],
    "status": "drift",
    "catalog_file_last_commit": "2026-05-13T17:00:34Z",

@@ -178,6 +178,7 @@ class CoverageAndExitCodes(unittest.TestCase):
         self.assertEqual(drift.exit_code([ok_entry], {"unparsed": 1}), 1)  # a file that does not parse fails CI
         self.assertEqual(drift.exit_code([ok_entry], {"errors": 1}), 2)    # an entry that could not be checked
         self.assertEqual(drift.exit_code([], {}), 2)                       # nothing was checked at all
+        self.assertEqual(drift.exit_code([ok_entry], {"api_failures": 1}), 2)  # a 401 or 5xx from GitHub
 
     def test_unreadable_validation_never_says_ok(self):
         from fake_world import WORLD
@@ -196,6 +197,17 @@ class CoverageAndExitCodes(unittest.TestCase):
         self.assertEqual(e["checks"]["repo"]["status"], "drift")
         self.assertEqual(e["checks"]["codeowners"]["status"], "ok")  # CODEOWNERS read from the file's repository
         self.assertEqual(e["checks"]["lifecycle"]["status"], "ok")
+
+    def test_codeowners_lines_with_syntax_errors_are_skipped(self):
+        from fake_world import WORLD, content
+        w = dict(WORLD)
+        # GitHub skips line 2 (invalid syntax), so the catch-all rule on line 1 is what applies
+        w[key(f"/repos/{ORG}/payments-api/contents/.github/CODEOWNERS", {"ref": "main"})] = \
+            (200, content("* @acme-fixture/payments\ncatalog-info.yaml @acme-fixture/other @@bad\n"))
+        w[key(f"/repos/{ORG}/payments-api/codeowners/errors", {"ref": "main"})] = \
+            (200, {"errors": [{"kind": "Invalid owner", "line": 2, "source": "catalog-info.yaml @acme-fixture/other @@bad", "message": "Invalid owner on line 2"}]})
+        e, _, _ = run_fixture(world=w)
+        self.assertEqual(e["payments-api"]["checks"]["codeowners"]["status"], "ok")
 
     def test_groups_in_other_namespaces_are_not_mapped(self):
         gh = FakeGitHub()

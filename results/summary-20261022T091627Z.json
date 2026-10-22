@@ -1,9 +1,9 @@
 {
  "source_run": {
-  "started_at": "2026-10-22T08:58:28+00:00",
-  "finished_at": "2026-10-22T08:58:49+00:00",
+  "started_at": "2026-10-22T09:16:27+00:00",
+  "finished_at": "2026-10-22T09:16:46+00:00",
   "stale_days": 365,
-  "api_calls": 35,
+  "api_calls": 30,
   "link_requests": 0
  },
  "file_counts": {

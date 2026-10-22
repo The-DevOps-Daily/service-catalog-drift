@@ -88,6 +88,7 @@ class GitHub:
         self.verbose = verbose
         self.calls = 0
         self.cache_hits = 0
+        self.failures = 0  # answers that mean the run itself is broken: 401 or 5xx after retries
         self.first_fetch = None
         self.last_fetch = None
         self._last_search = 0.0
@@ -165,6 +166,8 @@ class GitHub:
             if status >= 500 and attempt < 5:
                 time.sleep(2 ** attempt)
                 continue
+            if status == 401 or status >= 500:
+                self.failures += 1
             keep = {k: headers[k] for k in ("location", "link", "x-ratelimit-remaining") if k in headers}
             resp = Response(url, status, keep, body, fetched_at)
             if self.verbose:

@@ -168,6 +168,15 @@ class LinkChecker:
             if r.status == 200:
                 return {"result": OK, "reason": "exists on GitHub", "status": 200, "checked_at": r.fetched_at}
             if r.status == 404:
+                # blob/release/v1/README.md can mean ref "release" or ref "release/v1": only call
+                # the file dead if no longer ref made of the next path segments exists.
+                segments = file_path.strip("/").split("/")
+                for i in range(1, min(3, len(segments))):
+                    longer = ref + "/" + "/".join(segments[:i])
+                    lr = self.gh.get(f"{base}/commits/{urllib.parse.quote(longer, safe='')}", {"per_page": 1})
+                    if lr.status == 200:
+                        return {"result": UNVERIFIABLE, "reason": "ambiguous ref (a longer ref with a slash exists)",
+                                "status": 404, "checked_at": r.fetched_at}
                 return {"result": DEAD, "reason": "file not found on GitHub at that ref", "status": 404,
                         "checked_at": r.fetched_at}
             return {"result": UNVERIFIABLE, "reason": f"GitHub API answered {r.status}", "status": r.status}
