@@ -1,9 +1,17 @@
 """Check that a catalog link still answers, without sending credentials.
 
-Links to github.com files and repositories are checked through the GitHub API
-(the token goes only to api.github.com). Every other link gets a HEAD, then a
-GET if HEAD is not answered with 2xx or 3xx, with no Authorization header and
-no cookies. Private and loopback addresses are skipped unless allowed.
+Links come from catalog files that anyone can write, so the checker treats them
+as untrusted:
+
+- Links to github.com files and repositories are checked through the GitHub
+  API (the token goes only to api.github.com). Owner and repository names are
+  validated and every path segment is quoted; anything else is reported as an
+  invalid reference and not fetched.
+- Every other link gets a HEAD, then a GET if HEAD is not answered with 2xx or
+  3xx, with no Authorization header and no cookies. The host name is resolved
+  once, every address must be a public (global) address, and the connection
+  goes to that pinned address, with the original name in the Host header and
+  in TLS SNI. Each redirect hop is resolved and checked the same way.
 """
 
 import hashlib
@@ -16,9 +24,7 @@ import socket
 import ssl
 import threading
 import time
-import urllib.error
 import urllib.parse
-import urllib.request
 
 from ghapi import HERE, USER_AGENT, now_iso
 
@@ -29,26 +35,69 @@ MAX_REDIRECTS = 5
 # Outcome classes. Only "dead" counts as drift; the rest cannot prove anything.
 OK, DEAD, UNVERIFIABLE, SKIPPED = "ok", "dead", "unverifiable", "skipped"
 
-
-class _NoRedirect(urllib.request.HTTPRedirectHandler):
-    def redirect_request(self, req, fp, code, msg, headers, newurl):
-        return None
-
-
-_opener = urllib.request.build_opener(_NoRedirect, urllib.request.HTTPSHandler(context=ssl.create_default_context()))
-
 GITHUB_FILE = re.compile(r"^/([^/]+)/([^/]+)/(blob|tree)/([^/]+)/?(.*)$")
 GITHUB_REPO = re.compile(r"^/([^/]+)/([^/]+?)(?:\.git)?(?:/(.*))?/?$")
 # github.com paths that are not owner/repo
 GITHUB_RESERVED = {"orgs", "settings", "marketplace", "apps", "features", "enterprise", "sponsors",
                    "topics", "collections", "search", "notifications", "login", "about", "pricing"}
+GITHUB_NAME = re.compile(r"^[A-Za-z0-9_.-]{1,100}$")
 
 
-def is_private_host(host):
-    """True if every address the host resolves to is private, loopback or link-local."""
-    infos = socket.getaddrinfo(host, None)
-    addrs = {ipaddress.ip_address(i[4][0].split("%")[0]) for i in infos}
-    return any(a.is_private or a.is_loopback or a.is_link_local or a.is_reserved or a.is_multicast for a in addrs)
+def valid_github_name(name):
+    """An owner or repository name that is safe to put in an API path."""
+    return bool(name) and name not in (".", "..") and bool(GITHUB_NAME.match(name))
+
+
+def quote_path(path):
+    """Quote each segment of a file path, or return None if a segment is empty, . or .."""
+    segments = path.strip("/").split("/")
+    if any(s in ("", ".", "..") for s in segments):
+        return None
+    return "/".join(urllib.parse.quote(s, safe="") for s in segments)
+
+
+def resolve_public(host, allow_private=False):
+    """Resolve once. Return (ip, None) if every address is global, else (None, reason)."""
+    try:
+        infos = socket.getaddrinfo(host, None, type=socket.SOCK_STREAM)
+    except (socket.gaierror, UnicodeError, OSError):
+        return None, "does not resolve in public DNS"
+    addrs = []
+    for info in infos:
+        try:
+            addrs.append(ipaddress.ip_address(info[4][0].split("%")[0]))
+        except ValueError:
+            return None, "unexpected address in DNS answer"
+    if not addrs:
+        return None, "does not resolve in public DNS"
+    if not allow_private and not all(a.is_global for a in addrs):
+        return None, "resolves to a non-public address, not checked"
+    addrs.sort(key=lambda a: a.version)  # IPv4 first
+    return str(addrs[0]), None
+
+
+class PinnedHTTPConnection(http.client.HTTPConnection):
+    """Connects to a given IP; the Host header still carries the original name."""
+
+    def __init__(self, host, ip, port, timeout):
+        super().__init__(host, port, timeout=timeout)
+        self.pinned_ip = ip
+
+    def connect(self):
+        self.sock = socket.create_connection((self.pinned_ip, self.port), self.timeout)
+
+
+class PinnedHTTPSConnection(http.client.HTTPSConnection):
+    """Connects to a given IP; SNI and certificate checks use the original name."""
+
+    def __init__(self, host, ip, port, timeout, context):
+        super().__init__(host, port, timeout=timeout, context=context)
+        self.pinned_ip = ip
+        self.tls_context = context
+
+    def connect(self):
+        sock = socket.create_connection((self.pinned_ip, self.port), self.timeout)
+        self.sock = self.tls_context.wrap_socket(sock, server_hostname=self.host)
 
 
 class LinkChecker:
@@ -61,6 +110,7 @@ class LinkChecker:
         self.full_access_orgs = {o.lower() for o in full_access_orgs}
         self._last_hit = {}
         self._lock = threading.Lock()
+        self._tls = ssl.create_default_context()
         self.requests = 0
         os.makedirs(cache_dir, exist_ok=True)
 
@@ -86,13 +136,22 @@ class LinkChecker:
 
     def _check_github(self, parsed):
         path = urllib.parse.unquote(parsed.path)
+        invalid = {"result": DEAD, "reason": "not a valid GitHub reference, not fetched", "status": None}
         m = GITHUB_FILE.match(path)
         if m:
             owner, repo, _, ref, file_path = m.groups()
             if owner.lower() in GITHUB_RESERVED:
                 return None
-            api = f"/repos/{owner}/{repo}/contents/{urllib.parse.quote(file_path.rstrip('/'))}"
-            r = self.gh.get(api, {"ref": ref}) if file_path else self.gh.get(f"/repos/{owner}/{repo}/branches/{urllib.parse.quote(ref, safe='')}")
+            if not (valid_github_name(owner) and valid_github_name(repo)) or ref in (".", ".."):
+                return invalid
+            base = f"/repos/{owner}/{repo}"
+            if file_path.strip("/"):
+                quoted = quote_path(file_path)
+                if quoted is None:
+                    return invalid
+                r = self.gh.get(f"{base}/contents/{quoted}", {"ref": ref})
+            else:
+                r = self.gh.get(f"{base}/branches/{urllib.parse.quote(ref, safe='')}")
             if r.status == 200:
                 return {"result": OK, "reason": "exists on GitHub", "status": 200, "checked_at": r.fetched_at}
             if r.status == 404:
@@ -101,6 +160,8 @@ class LinkChecker:
         m = GITHUB_REPO.match(path)
         if m and m.group(1).lower() not in GITHUB_RESERVED:
             owner, repo, rest = m.groups()
+            if not (valid_github_name(owner) and valid_github_name(repo)):
+                return invalid
             r = self.gh.get(f"/repos/{owner}/{repo}")
             if r.status == 200:
                 if rest and rest.split("/")[0] == "wiki" and not (r.json() or {}).get("has_wiki", True):
@@ -113,6 +174,8 @@ class LinkChecker:
             return {"result": UNVERIFIABLE, "reason": f"GitHub API answered {r.status}", "status": r.status}
         parts = [p for p in path.split("/") if p]
         if len(parts) == 1 and parts[0].lower() not in GITHUB_RESERVED:
+            if not valid_github_name(parts[0]):
+                return invalid
             r = self.gh.get(f"/users/{parts[0]}")
             if r.status in (200, 404):
                 return {"result": OK if r.status == 200 else DEAD,
@@ -156,50 +219,51 @@ class LinkChecker:
                 time.sleep(wait)
             self._last_hit[host] = time.monotonic()
 
+    def _connection(self, scheme, host, ip, port):
+        if scheme == "https":
+            return PinnedHTTPSConnection(host, ip, port, TIMEOUT, self._tls)
+        return PinnedHTTPConnection(host, ip, port, TIMEOUT)
+
     def _request(self, url, method):
         parsed = urllib.parse.urlsplit(url)
         host = parsed.hostname.lower()
         try:
-            private = is_private_host(host)
-        except (socket.gaierror, UnicodeError):
-            return None, "does not resolve in public DNS"
-        if private and not self.allow_private:
-            return None, "private or internal address, not checked"
+            port = parsed.port or (443 if parsed.scheme == "https" else 80)
+        except ValueError:
+            return None, "invalid URL (port)"
+        ip, err = resolve_public(host, self.allow_private)
+        if err:
+            return None, err
         self._pace(host)
-        req = urllib.request.Request(url, method=method, headers={
-            "User-Agent": USER_AGENT,
-            "Accept": "text/html,application/xhtml+xml,*/*;q=0.8",
-        })
+        target = (parsed.path or "/") + (f"?{parsed.query}" if parsed.query else "")
+        conn = self._connection(parsed.scheme, host, ip, port)
         self.requests += 1
         try:
-            with _opener.open(req, timeout=TIMEOUT) as r:
-                if method == "GET":
-                    r.read(65536)
-                return (r.status, dict(r.headers)), None
-        except urllib.error.HTTPError as e:
-            return (e.code, dict(e.headers or {})), None
-        except ssl.SSLError as e:
+            conn.request(method, target, headers={
+                "User-Agent": USER_AGENT,
+                "Accept": "text/html,application/xhtml+xml,*/*;q=0.8",
+            })
+            r = conn.getresponse()
+            if method == "GET":
+                r.read(65536)
+            return (r.status, dict(r.getheaders())), None
+        except (ssl.SSLError, ssl.CertificateError) as e:
             return None, f"TLS error ({type(e).__name__})"
         except (http.client.InvalidURL, ValueError) as e:
             return None, f"invalid URL ({type(e).__name__})"
-        except http.client.HTTPException as e:
+        except (socket.timeout, TimeoutError):
+            return None, "timed out"
+        except (http.client.HTTPException, OSError) as e:
             return None, f"connection failed ({type(e).__name__})"
-        except (urllib.error.URLError, socket.timeout, TimeoutError, ConnectionError, OSError) as e:
-            reason = getattr(e, "reason", e)
-            if isinstance(reason, ssl.SSLError) or "CERTIFICATE" in str(reason).upper():
-                return None, "TLS error"
-            if isinstance(reason, socket.gaierror):
-                return None, "does not resolve in public DNS"
-            if "timed out" in str(reason).lower():
-                return None, "timed out"
-            return None, f"connection failed ({type(reason).__name__})"
+        finally:
+            conn.close()
 
     def _follow(self, url, method):
         hops = []
         for _ in range(MAX_REDIRECTS + 1):
             resp, err = self._request(url, method)
             if err:
-                return None, err, hops
+                return None, (f"redirect target {err}" if hops else err), hops
             status, headers = resp
             if status in (301, 302, 303, 307, 308):
                 loc = {k.lower(): v for k, v in headers.items()}.get("location")
@@ -209,7 +273,7 @@ class LinkChecker:
                 if urllib.parse.urlsplit(nxt).scheme not in ("http", "https"):
                     return status, None, hops
                 hops.append(status)
-                url = nxt
+                url = nxt  # the next hop is resolved and checked again in _request
                 continue
             return status, None, hops
         return 399, None, hops  # still redirecting after MAX_REDIRECTS: count as 3xx
@@ -221,7 +285,7 @@ class LinkChecker:
             if g_status is not None or status is None:
                 status, err, hops = g_status, g_err, g_hops
         if status is None:
-            transient = err in ("timed out",) or err.startswith("connection failed")
+            transient = err == "timed out" or err.startswith("connection failed")
             return {"result": UNVERIFIABLE, "reason": err, "transient": transient}
         out = {"status": status, "redirects": len(hops)}
         if 200 <= status < 400:

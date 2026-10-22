@@ -156,7 +156,7 @@ def main():
     print(f"{len(allrepos)} repos: {user_owned} personal, {forks} forks, {sum(orgs.values())} in {len(orgs)} orgs; "
           f"{len(eligible)} orgs with >= {args.min_repos}, {len(kept)} kept; "
           f"sampled {len(files)} files from {len(chosen)} orgs")
-    print(f"wrote {out} ({gh.calls} API calls)")
+    print(f"wrote {os.path.relpath(out)} ({gh.calls} API calls)")
 
 
 if __name__ == "__main__":

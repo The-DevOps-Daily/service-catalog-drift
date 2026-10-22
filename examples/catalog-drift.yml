@@ -26,6 +26,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           repository: The-DevOps-Daily/service-catalog-drift
+          ref: main # pin this to a commit SHA you have read
           path: .catalog-drift
       - uses: actions/setup-python@v6
         with:
@@ -34,4 +35,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.CATALOG_DRIFT_TOKEN || github.token }}
           REPO: ${{ github.repository }}
-        run: python .catalog-drift/drift.py catalog-info.yaml --repo "$REPO" --no-org-search
+        run: python .catalog-drift/drift.py catalog-info.yaml --repo "$REPO" --check-links --no-org-search

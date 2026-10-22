@@ -22,7 +22,7 @@ from datetime import datetime, timezone
 
 import catalog
 from ghapi import GitHub, now_iso
-from links import DEAD, OK, SKIPPED, UNVERIFIABLE, LinkChecker
+from links import DEAD, OK, SKIPPED, UNVERIFIABLE, LinkChecker, quote_path, valid_github_name
 
 LIFECYCLES = {"experimental", "production", "deprecated"}
 CHECKS = ("owner", "repo", "codeowners", "links", "lifecycle")
@@ -176,6 +176,10 @@ class Checker:
         if ref["kind"] not in ("group", "user"):
             return result("warn", f"owner {shown} is not a group or a user")
         name = ref["name"]
+        if not valid_github_name(org):
+            return result("unverifiable", "no valid GitHub organization to check the owner against")
+        if ref["kind"] == "group" and not valid_github_name(name):
+            return result("unverifiable", f"{shown} is not a valid GitHub team name, not looked up")
         full = self.full_access(org)
         if ref["kind"] == "user":
             if not catalog.is_github_login(name):
@@ -202,12 +206,12 @@ class Checker:
         # group
         team = self.r.team(org, name)
         if full:
-            t = self.gh.get(f"/orgs/{org}/teams/{urllib.parse.quote(name)}")
+            t = self.gh.get(f"/orgs/{org}/teams/{urllib.parse.quote(name, safe='')}")
             if t.status == 404:
                 return result("drift", f"no team {team}")
             if t.status != 200:
                 return result("unverifiable", f"team lookup answered {t.status}")
-            mem = self.gh.get(f"/orgs/{org}/teams/{urllib.parse.quote(name)}/members", {"per_page": 1})
+            mem = self.gh.get(f"/orgs/{org}/teams/{urllib.parse.quote(name, safe='')}/members", {"per_page": 1})
             if mem.status == 200 and mem.json() == []:
                 return result("drift", f"team {team} has no members")
             return result("ok", f"team {team} exists")
@@ -308,6 +312,11 @@ class Checker:
     def check_links(self, urls):
         if not urls:
             return result("n/a", "no links"), []
+        if self.links is None:
+            # Links are written by whoever wrote the catalog file: fetching them is opt-in.
+            details = [{"title": u.get("title"), "kind": u["kind"], "url": self.r.url(u["url"]),
+                        "result": "not checked", "reason": "--check-links is off"} for u in urls]
+            return result("n/a", f"{len(urls)} links not checked (--check-links is off)"), details
         details, dead, unver = [], [], []
         for u in urls:
             res = self.links.check(u["url"])
@@ -432,17 +441,24 @@ def _owners_on_line(line):
     return {o.lower() for o in line.split()[1:] if o.startswith("@")}
 
 
+def valid_slug(slug):
+    """owner/repo that is safe to put in an API path (no '..', no other characters)."""
+    parts = slug.split("/") if isinstance(slug, str) else []
+    return len(parts) == 2 and all(valid_github_name(p) for p in parts)
+
+
 def repo_slug(ann, source_repo):
+    """The repository an entry points at. Values from the file are validated, never trusted."""
     slug = ann.get("github.com/project-slug")
-    if isinstance(slug, str) and re.fullmatch(r"[\w.-]+/[\w.-]+", slug.strip()):
+    if isinstance(slug, str) and valid_slug(slug.strip()):
         return slug.strip(), "github.com/project-slug"
     for key in ("backstage.io/source-location", "backstage.io/managed-by-location"):
         v = ann.get(key)
         if isinstance(v, str):
-            m = re.search(r"github\.com/([\w.-]+)/([\w.-]+?)(?:\.git)?(?:/|$)", v)
-            if m:
+            m = re.search(r"github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+?)(?:\.git)?(?:/|$)", v)
+            if m and valid_slug(f"{m.group(1)}/{m.group(2)}"):
                 return f"{m.group(1)}/{m.group(2)}", key
-    if source_repo:
+    if source_repo and valid_slug(source_repo):
         return source_repo, "file location"
     return None, None
 
@@ -498,7 +514,11 @@ def load_sample(gh, sample_file):
     with open(sample_file) as f:
         sample = json.load(f)
     for s in sample["files"]:
-        r = gh.get(f"/repos/{s['repo']}/contents/{urllib.parse.quote(s['path'])}")
+        quoted = quote_path(s["path"])
+        if not valid_slug(s["repo"]) or quoted is None:
+            yield {"repo": s["repo"], "path": s["path"], "text": None, "error": "invalid repository or path"}
+            continue
+        r = gh.get(f"/repos/{s['repo']}/contents/{quoted}")
         if r.status != 200:
             yield {"repo": s["repo"], "path": s["path"], "text": None, "error": f"file not readable ({r.status})"}
             continue
@@ -615,7 +635,10 @@ def main(argv=None):
     ap.add_argument("--kinds", default="Component", help="entity kinds to check (comma separated)")
     ap.add_argument("--stale-days", type=int, default=365)
     ap.add_argument("--redact", action="store_true", help="replace user logins, emails and link paths in the output")
-    ap.add_argument("--allow-private", action="store_true", help="also check links on private addresses")
+    ap.add_argument("--check-links", action="store_true",
+                    help="also fetch metadata.links and URL annotations (HEAD/GET to the hosts they name)")
+    ap.add_argument("--allow-private", action="store_true",
+                    help="with --check-links, also contact hosts on private or internal addresses")
     ap.add_argument("--json", help="write the full result to this file")
     ap.add_argument("--quiet", action="store_true", help="print only entries with drift or warnings")
     ap.add_argument("--fail-on", choices=("drift", "warn"), default="drift")
@@ -633,7 +656,10 @@ def main(argv=None):
     if not gh.token:
         print("no GitHub token: set GITHUB_TOKEN or log in with gh", file=sys.stderr)
         return 2
-    links = LinkChecker(gh, use_cache=not args.no_cache, allow_private=args.allow_private)
+    if args.repo and not valid_slug(args.repo):
+        ap.error("--repo must be owner/repo")
+    links = LinkChecker(gh, use_cache=not args.no_cache, allow_private=args.allow_private) \
+        if args.check_links else None
     checker = Checker(gh, links, stale_days=args.stale_days, redact=args.redact,
                       org_search=not args.no_org_search, users_are_logins=args.users_are_github_logins)
     kinds = {k.strip().lower() for k in args.kinds.split(",")}
@@ -657,7 +683,8 @@ def main(argv=None):
                 "stale_days": args.stale_days,
                 "api_calls": gh.calls,
                 "api_cache_hits": gh.cache_hits,
-                "link_requests": links.requests,
+                "link_requests": links.requests if links else 0,
+                "check_links": links is not None,
                 "file_counts": counts,
                 "files": file_log,
                 "entries": entries,

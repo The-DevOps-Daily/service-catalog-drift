@@ -1,24 +1,25 @@
 {
- "started_at": "2026-10-22T08:00:34+00:00",
- "finished_at": "2026-10-22T08:00:52+00:00",
+ "started_at": "2026-10-22T08:10:16+00:00",
+ "finished_at": "2026-10-22T08:13:51+00:00",
  "github_responses_fetched": {
   "first": "2026-10-22T07:30:53+00:00",
-  "last": "2026-10-22T08:00:51+00:00"
+  "last": "2026-10-22T08:13:51+00:00"
  },
  "links_checked": {
-  "first": "2026-10-22T07:31:54+00:00",
-  "last": "2026-10-22T07:52:41+00:00"
+  "first": "2026-10-22T07:34:27+00:00",
+  "last": "2026-10-22T08:13:51+00:00"
  },
- "code_sha256": "b076997d0a49efb28b4960c25277ce9b005b340aa62d4c0c7248e0b95493f731",
+ "code_sha256": "3f283cc99bece42c68a9e0b345bc306023d5526054b37e45bf33f8d7868f8e38",
  "input_sha256": "19e0e14e387f01a3cb00e8f07f50dd8d3746fe755f33191c5e60f8acfca1dd1a",
  "args": {
   "repo": null,
-  "sample": "/home/biliev/projects/service-catalog-drift/sample/sample-2026-10-22.json",
+  "sample": "sample/sample-2026-10-22.json",
   "kinds": "Component",
   "stale_days": 365,
   "redact": true,
+  "check_links": true,
   "allow_private": false,
-  "json": "/home/biliev/projects/service-catalog-drift/results/run-20261022T080029Z.json",
+  "json": "results/run-20261022T081013Z.json",
   "quiet": true,
   "fail_on": "drift",
   "no_cache": false,
@@ -28,8 +29,9 @@
  },
  "stale_days": 365,
  "api_calls": 30,
- "api_cache_hits": 1679,
- "link_requests": 0,
+ "api_cache_hits": 1678,
+ "link_requests": 166,
+ "check_links": true,
  "file_counts": {
   "read": 238,
   "templates": 1,
@@ -1967,7 +1969,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "experimental",
-   "owner": "group:<c03952>",
+   "owner": "group:<8fab61>",
    "owner_kind": "group",
    "repo": "bcgov/raven",
    "repo_from": "github.com/project-slug",
@@ -1978,11 +1980,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @bcgov/<c03952>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @bcgov/<8fab61>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<c03952>, .github/CODEOWNERS says @<user>, @<user>",
+     "reason": "disagree: catalog says group:<8fab61>, .github/CODEOWNERS says @<user>, @<user>",
      "disagreement": "catalog names a team, CODEOWNERS people"
     },
     "links": {
@@ -2007,7 +2009,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<7a356b>",
+   "owner": "group:<89d888>",
    "owner_kind": "group",
    "repo": "bcgov/drop-docs",
    "repo_from": "github.com/project-slug",
@@ -2018,7 +2020,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @bcgov/<7a356b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @bcgov/<89d888>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2046,7 +2048,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "experimental",
-   "owner": "group:<e3f282>",
+   "owner": "group:<1638ce>",
    "owner_kind": "group",
    "repo": "bcgov/bcdg",
    "repo_from": "github.com/project-slug",
@@ -2057,7 +2059,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@bcgov/<e3f282> resolves in .github/CODEOWNERS of bcgov/mobile-developer-guide (GitHub validates CODEOWNERS teams)"
+     "reason": "@bcgov/<1638ce> resolves in .github/CODEOWNERS of bcgov/mobile-developer-guide (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -2085,7 +2087,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<58fd5d>",
+   "owner": "group:<2c279e>",
    "owner_kind": "group",
    "repo": "bcgov/design-system",
    "repo_from": "github.com/project-slug",
@@ -2096,11 +2098,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @bcgov/<58fd5d>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @bcgov/<2c279e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<58fd5d>, .github/CODEOWNERS says @bcgov/<fda7ca>",
+     "reason": "disagree: catalog says group:<2c279e>, .github/CODEOWNERS says @bcgov/<e6487b>",
      "disagreement": "different team names"
     },
     "links": {
@@ -2125,7 +2127,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "experimental",
-   "owner": "group:<5a0afd>",
+   "owner": "group:<2a400d>",
    "owner_kind": "group",
    "repo": "bcgov/demo-coco-docs",
    "repo_from": "github.com/project-slug",
@@ -2136,7 +2138,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @bcgov/<5a0afd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @bcgov/<2a400d>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2164,7 +2166,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<e33379>",
+   "owner": "group:<60be9a>",
    "owner_kind": "group",
    "repo": "bcgov/platform-developer-docs",
    "repo_from": "github.com/project-slug",
@@ -2175,7 +2177,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@bcgov/<e33379> resolves in .github/CODEOWNERS of bcgov/platform-services-sre (GitHub validates CODEOWNERS teams)"
+     "reason": "@bcgov/<60be9a> resolves in .github/CODEOWNERS of bcgov/platform-services-sre (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -2203,7 +2205,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<fcb8dc>",
+   "owner": "group:<9f4806>",
    "owner_kind": "group",
    "repo": "broadinstitute/.github",
    "repo_from": "github.com/project-slug",
@@ -2214,11 +2216,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@broadinstitute/<fcb8dc> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@broadinstitute/<9f4806> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<fcb8dc>"
+     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<9f4806>"
     },
     "links": {
      "status": "n/a",
@@ -2242,7 +2244,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<fcb8dc>",
+   "owner": "group:<9f4806>",
    "owner_kind": "group",
    "repo": "broadinstitute/python-cert_manager",
    "repo_from": "github.com/project-slug",
@@ -2253,11 +2255,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@broadinstitute/<fcb8dc> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@broadinstitute/<9f4806> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<fcb8dc>"
+     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<9f4806>"
     },
     "links": {
      "status": "n/a",
@@ -2281,7 +2283,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<a3e53b>",
+   "owner": "group:<89c288>",
    "owner_kind": "group",
    "repo": "broadinstitute/kubernetes-netbox",
    "repo_from": "github.com/project-slug",
@@ -2292,11 +2294,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@broadinstitute/<a3e53b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@broadinstitute/<89c288> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<fcb8dc>, @broadinstitute/<a3e53b>"
+     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<9f4806>, @broadinstitute/<89c288>"
     },
     "links": {
      "status": "n/a",
@@ -2320,7 +2322,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<446adb>",
+   "owner": "group:<ff0f41>",
    "owner_kind": "group",
    "repo": "broadinstitute/bibt-gcp-iam",
    "repo_from": "github.com/project-slug",
@@ -2331,11 +2333,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @broadinstitute/<446adb>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @broadinstitute/<ff0f41>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<446adb>, .github/CODEOWNERS says @broadinstitute/<de017e>",
+     "reason": "disagree: catalog says group:<ff0f41>, .github/CODEOWNERS says @broadinstitute/<1a19ab>",
      "disagreement": "different team names"
     },
     "links": {
@@ -2355,7 +2357,7 @@
      "url": "https://bibt-gcp-iam.broadinstitute.org/<path cce1651f6d>",
      "result": "unverifiable",
      "reason": "does not resolve in public DNS",
-     "checked_at": "2026-10-22T07:31:54+00:00"
+     "checked_at": "2026-10-22T08:10:18+00:00"
     }
    ],
    "status": "warn",
@@ -2369,7 +2371,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<fcb8dc>",
+   "owner": "group:<9f4806>",
    "owner_kind": "group",
    "repo": "broadinstitute/backstage",
    "repo_from": "github.com/project-slug",
@@ -2380,11 +2382,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@broadinstitute/<fcb8dc> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@broadinstitute/<9f4806> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<fcb8dc>"
+     "reason": ".github/CODEOWNERS agrees: @broadinstitute/<9f4806>"
     },
     "links": {
      "status": "ok",
@@ -2403,7 +2405,7 @@
      "url": "https://backstage.broadinstitute.org/<path 8d355af2ee>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:31:59+00:00"
+     "checked_at": "2026-10-22T08:10:18+00:00"
     }
    ],
    "status": "ok",
@@ -2417,7 +2419,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<446adb>",
+   "owner": "group:<ff0f41>",
    "owner_kind": "group",
    "repo": "broadinstitute/bibt-gcp-secrets",
    "repo_from": "github.com/project-slug",
@@ -2428,11 +2430,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @broadinstitute/<446adb>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @broadinstitute/<ff0f41>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<446adb>, .github/CODEOWNERS says @broadinstitute/<de017e>",
+     "reason": "disagree: catalog says group:<ff0f41>, .github/CODEOWNERS says @broadinstitute/<1a19ab>",
      "disagreement": "different team names"
     },
     "links": {
@@ -2452,7 +2454,7 @@
      "url": "https://bibt-gcp-secrets.broadinstitute.org/<path bc47942992>",
      "result": "unverifiable",
      "reason": "does not resolve in public DNS",
-     "checked_at": "2026-10-22T07:32:03+00:00"
+     "checked_at": "2026-10-22T08:10:19+00:00"
     }
    ],
    "status": "warn",
@@ -2466,7 +2468,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<bf3db9>",
+   "owner": "group:<a990bd>",
    "owner_kind": "group",
    "repo": "broadinstitute/puppet-sentinelone_agent",
    "repo_from": "github.com/project-slug",
@@ -2477,11 +2479,11 @@
     },
     "owner": {
      "status": "drift",
-     "reason": "GitHub cannot resolve @broadinstitute/<bf3db9> in .github/CODEOWNERS of broadinstitute/bitstore-app (team deleted, renamed, secret, or without write access)"
+     "reason": "GitHub cannot resolve @broadinstitute/<a990bd> in .github/CODEOWNERS of broadinstitute/bitstore-app (team deleted, renamed, secret, or without write access)"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<bf3db9>, .github/CODEOWNERS says @broadinstitute/<2b5fc4>",
+     "reason": "disagree: catalog says group:<a990bd>, .github/CODEOWNERS says @broadinstitute/<3a325d>",
      "disagreement": "different team names"
     },
     "links": {
@@ -2506,7 +2508,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<446adb>",
+   "owner": "group:<ff0f41>",
    "owner_kind": "group",
    "repo": "broadinstitute/bibt-sentinelone",
    "repo_from": "github.com/project-slug",
@@ -2517,11 +2519,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @broadinstitute/<446adb>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @broadinstitute/<ff0f41>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<446adb>, .github/CODEOWNERS says @broadinstitute/<de017e>",
+     "reason": "disagree: catalog says group:<ff0f41>, .github/CODEOWNERS says @broadinstitute/<1a19ab>",
      "disagreement": "different team names"
     },
     "links": {
@@ -2546,7 +2548,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<a7b70f>",
+   "owner": "group:<5bfae3>",
    "owner_kind": "group",
    "repo": "cds-snc/cds-superset-docs",
    "repo_from": "github.com/project-slug",
@@ -2557,11 +2559,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cds-snc/<a7b70f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cds-snc/<5bfae3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<a7b70f>, .github/CODEOWNERS says @cds-snc/<a17171>",
+     "reason": "disagree: catalog says group:<5bfae3>, .github/CODEOWNERS says @cds-snc/<012c9a>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -2586,7 +2588,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<6c684f>",
+   "owner": "group:<3511d9>",
    "owner_kind": "group",
    "repo": "cds-snc/dns",
    "repo_from": "file location",
@@ -2597,11 +2599,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@cds-snc/<6c684f> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@cds-snc/<3511d9> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @cds-snc/<6c684f>, @<user>"
+     "reason": ".github/CODEOWNERS agrees: @cds-snc/<3511d9>, @<user>"
     },
     "links": {
      "status": "n/a",
@@ -2625,7 +2627,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<a7b70f>",
+   "owner": "group:<5bfae3>",
    "owner_kind": "group",
    "repo": "cds-snc/data-lake",
    "repo_from": "github.com/project-slug",
@@ -2636,11 +2638,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cds-snc/<a7b70f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cds-snc/<5bfae3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<a7b70f>, .github/CODEOWNERS says @cds-snc/<a17171>",
+     "reason": "disagree: catalog says group:<5bfae3>, .github/CODEOWNERS says @cds-snc/<012c9a>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -2665,7 +2667,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "experimental",
-   "owner": "group:<6c684f>",
+   "owner": "group:<3511d9>",
    "owner_kind": "group",
    "repo": "cds-snc/sentinel-forward-data-action",
    "repo_from": "file location",
@@ -2676,7 +2678,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@cds-snc/<6c684f> resolves in .github/CODEOWNERS of cds-snc/dns (GitHub validates CODEOWNERS teams)"
+     "reason": "@cds-snc/<3511d9> resolves in .github/CODEOWNERS of cds-snc/dns (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -2704,7 +2706,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<0ac039>",
+   "owner": "group:<ad6ddb>",
    "owner_kind": "group",
    "repo": "cds-snc/cds-website-cms",
    "repo_from": "github.com/project-slug",
@@ -2715,7 +2717,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cds-snc/<0ac039>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cds-snc/<ad6ddb>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2738,7 +2740,7 @@
      "url": "https://strapi.cdssandbox.xyz/<path 16995eb2b3>",
      "result": "unverifiable",
      "reason": "HTTP 403: needs login or blocks automated requests",
-     "checked_at": "2026-10-22T07:32:57+00:00"
+     "checked_at": "2026-10-22T08:10:21+00:00"
     }
    ],
    "status": "warn",
@@ -2752,7 +2754,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "experimental",
-   "owner": "group:<31f4a6>",
+   "owner": "group:<58db1a>",
    "owner_kind": "group",
    "repo": "cds-snc/forms-terraform",
    "repo_from": "file location",
@@ -2763,7 +2765,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cds-snc/<31f4a6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cds-snc/<58db1a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2791,7 +2793,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "experimental",
-   "owner": "group:<795902>",
+   "owner": "group:<0e2394>",
    "owner_kind": "group",
    "repo": "cds-snc/platform-forms-client",
    "repo_from": "file location",
@@ -2802,7 +2804,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cds-snc/<795902>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cds-snc/<0e2394>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2830,7 +2832,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "experimental",
-   "owner": "group:<795902>",
+   "owner": "group:<0e2394>",
    "owner_kind": "group",
    "repo": "cds-snc/.github",
    "repo_from": "file location",
@@ -2841,7 +2843,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cds-snc/<795902>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cds-snc/<0e2394>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2869,7 +2871,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<847964>",
+   "owner": "group:<810061>",
    "owner_kind": "group",
    "repo": "Clever/mongo-lock-go",
    "repo_from": "file location",
@@ -2880,7 +2882,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Clever/<847964>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Clever/<810061>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2908,7 +2910,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<847964>",
+   "owner": "group:<810061>",
    "owner_kind": "group",
    "repo": "Clever/components",
    "repo_from": "file location",
@@ -2919,7 +2921,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Clever/<847964>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Clever/<810061>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -2947,7 +2949,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<00c2b9>",
+   "owner": "group:<e1e109>",
    "owner_kind": "group",
    "repo": "Clever/go-utils",
    "repo_from": "file location",
@@ -2958,7 +2960,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Clever/<00c2b9> resolves in .github/CODEOWNERS of Clever/microplane (GitHub validates CODEOWNERS teams)"
+     "reason": "@Clever/<e1e109> resolves in .github/CODEOWNERS of Clever/microplane (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -2986,7 +2988,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<847964>",
+   "owner": "group:<810061>",
    "owner_kind": "group",
    "repo": "Clever/connect-session-compress",
    "repo_from": "file location",
@@ -2997,7 +2999,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Clever/<847964>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Clever/<810061>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3025,7 +3027,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<847964>",
+   "owner": "group:<810061>",
    "owner_kind": "group",
    "repo": "Clever/writable-stream-parallel",
    "repo_from": "file location",
@@ -3036,7 +3038,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Clever/<847964>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Clever/<810061>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3064,7 +3066,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<847964>",
+   "owner": "group:<810061>",
    "owner_kind": "group",
    "repo": "Clever/go-redis-reservation",
    "repo_from": "file location",
@@ -3075,7 +3077,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Clever/<847964>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Clever/<810061>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3103,7 +3105,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<00c2b9>",
+   "owner": "group:<e1e109>",
    "owner_kind": "group",
    "repo": "Clever/launch-gen",
    "repo_from": "file location",
@@ -3114,11 +3116,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Clever/<00c2b9> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@Clever/<e1e109> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @Clever/<00c2b9>"
+     "reason": ".github/CODEOWNERS agrees: @Clever/<e1e109>"
     },
     "links": {
      "status": "n/a",
@@ -3142,7 +3144,7 @@
    "kind": "Component",
    "type": "unknown",
    "lifecycle": "production",
-   "owner": "group:<00c2b9>",
+   "owner": "group:<e1e109>",
    "owner_kind": "group",
    "repo": "Clever/ci-scripts",
    "repo_from": "file location",
@@ -3153,11 +3155,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Clever/<00c2b9> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@Clever/<e1e109> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @Clever/<00c2b9>"
+     "reason": ".github/CODEOWNERS agrees: @Clever/<e1e109>"
     },
     "links": {
      "status": "n/a",
@@ -3181,7 +3183,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<33004b>",
+   "owner": "group:<9d93fd>",
    "owner_kind": "group",
    "repo": "contentful/browserslist-config",
    "repo_from": "github.com/project-slug",
@@ -3192,11 +3194,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<33004b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<9d93fd> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<33004b>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<9d93fd>"
     },
     "links": {
      "status": "n/a",
@@ -3220,7 +3222,7 @@
    "kind": "Component",
    "type": "cli",
    "lifecycle": "production",
-   "owner": "group:<9cd86b>",
+   "owner": "group:<9d992b>",
    "owner_kind": "group",
    "repo": "contentful/contentful-import",
    "repo_from": "github.com/project-slug",
@@ -3231,11 +3233,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<9cd86b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<9d992b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<9cd86b>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<9d992b>"
     },
     "links": {
      "status": "n/a",
@@ -3259,7 +3261,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<9cd86b>",
+   "owner": "group:<9d992b>",
    "owner_kind": "group",
    "repo": "contentful/ui-extensions-sdk",
    "repo_from": "github.com/project-slug",
@@ -3270,11 +3272,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<9cd86b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<9d992b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<9cd86b>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<9d992b>"
     },
     "links": {
      "status": "n/a",
@@ -3298,7 +3300,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<9cd86b>",
+   "owner": "group:<9d992b>",
    "owner_kind": "group",
    "repo": "contentful/contentful.swift",
    "repo_from": "github.com/project-slug",
@@ -3309,11 +3311,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<9cd86b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<9d992b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<9cd86b>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<9d992b>"
     },
     "links": {
      "status": "n/a",
@@ -3337,7 +3339,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<9cd86b>",
+   "owner": "group:<9d992b>",
    "owner_kind": "group",
    "repo": "contentful/contentful-batch-libs",
    "repo_from": "github.com/project-slug",
@@ -3348,11 +3350,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<9cd86b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<9d992b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<9cd86b>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<9d992b>"
     },
     "links": {
      "status": "n/a",
@@ -3376,7 +3378,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<9cd86b>",
+   "owner": "group:<9d992b>",
    "owner_kind": "group",
    "repo": "contentful/contentful-core.php",
    "repo_from": "github.com/project-slug",
@@ -3387,11 +3389,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<9cd86b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<9d992b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<9cd86b>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<9d992b>"
     },
     "links": {
      "status": "n/a",
@@ -3415,7 +3417,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<9cd86b>",
+   "owner": "group:<9d992b>",
    "owner_kind": "group",
    "repo": "contentful/integration-frontend-toolkit",
    "repo_from": "github.com/project-slug",
@@ -3426,11 +3428,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<9cd86b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<9d992b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<9cd86b>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<9d992b>"
     },
     "links": {
      "status": "n/a",
@@ -3454,7 +3456,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<9cd86b>",
+   "owner": "group:<9d992b>",
    "owner_kind": "group",
    "repo": "contentful/contentful-management.py",
    "repo_from": "github.com/project-slug",
@@ -3465,11 +3467,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@contentful/<9cd86b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@contentful/<9d992b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @contentful/<9cd86b>"
+     "reason": ".github/CODEOWNERS agrees: @contentful/<9d992b>"
     },
     "links": {
      "status": "n/a",
@@ -3493,7 +3495,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<ef3fec>",
+   "owner": "group:<055320>",
    "owner_kind": "group",
    "repo": "cultureamp/terraform-provider-schemaregistry",
    "repo_from": "github.com/project-slug",
@@ -3504,11 +3506,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@cultureamp/<ef3fec> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@cultureamp/<055320> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @cultureamp/<ef3fec>"
+     "reason": ".github/CODEOWNERS agrees: @cultureamp/<055320>"
     },
     "links": {
      "status": "ok",
@@ -3549,7 +3551,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "development",
-   "owner": "group:<e3f282>",
+   "owner": "group:<1638ce>",
    "owner_kind": "group",
    "repo": "cultureamp/changelog-github",
    "repo_from": "file location",
@@ -3560,7 +3562,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cultureamp/<e3f282>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cultureamp/<1638ce>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3588,7 +3590,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<4d9105>",
+   "owner": "group:<a51506>",
    "owner_kind": "group",
    "repo": "cultureamp/deploy-templates-buildkite-plugin",
    "repo_from": "file location",
@@ -3599,11 +3601,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@cultureamp/<4d9105> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@cultureamp/<a51506> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @cultureamp/<4d9105>"
+     "reason": ".github/CODEOWNERS agrees: @cultureamp/<a51506>"
     },
     "links": {
      "status": "ok",
@@ -3636,7 +3638,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<b6a7e5>",
+   "owner": "group:<813ebb>",
    "owner_kind": "group",
    "repo": "cultureamp/kaizen-design-system",
    "repo_from": "github.com/project-slug",
@@ -3647,11 +3649,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cultureamp/<b6a7e5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cultureamp/<813ebb>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": "CODEOWNERS line 4 names owners GitHub cannot resolve: @cultureamp/<26ccd2>",
+     "reason": "CODEOWNERS line 4 names owners GitHub cannot resolve: @cultureamp/<057621>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -3680,7 +3682,7 @@
      "url": "https://cultureamp.design/<path 4c983eb51f>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:34:48+00:00"
+     "checked_at": "2026-10-22T08:10:23+00:00"
     },
     {
      "title": "Storybook",
@@ -3688,7 +3690,7 @@
      "url": "https://cultureamp.design/<path 642625a6c6>",
      "result": "dead",
      "reason": "HTTP 404",
-     "checked_at": "2026-10-22T07:34:50+00:00"
+     "checked_at": "2026-10-22T08:10:25+00:00"
     },
     {
      "title": "Figma UI Kit",
@@ -3696,7 +3698,7 @@
      "url": "https://www.figma.com/<path 7e7df179ec>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:34:53+00:00"
+     "checked_at": "2026-10-22T08:10:29+00:00"
     },
     {
      "title": "Confluence Documentation",
@@ -3704,7 +3706,7 @@
      "url": "https://cultureamp.atlassian.net/<path ed057cc63e>",
      "result": "ok",
      "reason": "HTTP 202 after redirect",
-     "checked_at": "2026-10-22T07:34:56+00:00"
+     "checked_at": "2026-10-22T08:10:31+00:00"
     }
    ],
    "status": "drift",
@@ -3718,7 +3720,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<e3f282>",
+   "owner": "group:<1638ce>",
    "owner_kind": "group",
    "repo": "cultureamp/elm-css-modules-plugin",
    "repo_from": "github.com/project-slug",
@@ -3729,7 +3731,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @cultureamp/<e3f282>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @cultureamp/<1638ce>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3757,7 +3759,7 @@
    "kind": "Component",
    "type": "frontend",
    "lifecycle": "alpha",
-   "owner": "group:<48f1da>",
+   "owner": "group:<9bdc84>",
    "owner_kind": "group",
    "repo": "defra/coreai-techspike-document-analysis",
    "repo_from": "github.com/project-slug",
@@ -3768,7 +3770,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<48f1da>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<9bdc84>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3799,7 +3801,7 @@
      "url": "https://dev.azure.com/<path 9e509379b3>",
      "result": "ok",
      "reason": "HTTP 203 after redirect",
-     "checked_at": "2026-10-22T07:35:08+00:00"
+     "checked_at": "2026-10-22T08:10:33+00:00"
     },
     {
      "title": "SonarCloud Analysis",
@@ -3807,7 +3809,7 @@
      "url": "https://sonarcloud.io/<path c8f4e2c41e>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:35:09+00:00"
+     "checked_at": "2026-10-22T08:10:34+00:00"
     },
     {
      "title": "Snyk Analysis",
@@ -3815,7 +3817,7 @@
      "url": "https://snyk.io/<path 203cc89c89>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:35:13+00:00"
+     "checked_at": "2026-10-22T08:10:35+00:00"
     },
     {
      "title": "Azure Portal - Defra Dev",
@@ -3823,7 +3825,7 @@
      "url": "https://portal.azure.com/<path 32ce33097e>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:14+00:00"
+     "checked_at": "2026-10-22T08:10:36+00:00"
     },
     {
      "title": "Azure Portal - Defra",
@@ -3831,7 +3833,7 @@
      "url": "https://portal.azure.com/<path e79b24c77d>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:16+00:00"
+     "checked_at": "2026-10-22T08:10:38+00:00"
     },
     {
      "title": "SND3",
@@ -3839,7 +3841,7 @@
      "url": "https://coreai-techspike-document-analysis.snd3.adp.defra.gov.uk/<path e957cff448>",
      "result": "unverifiable",
      "reason": "does not resolve in public DNS",
-     "checked_at": "2026-10-22T07:35:27+00:00"
+     "checked_at": "2026-10-22T08:10:48+00:00"
     },
     {
      "title": "DEV1",
@@ -3847,7 +3849,7 @@
      "url": "https://coreai-techspike-document-analysis.dev1.adp.defra.gov.uk/<path 9073613172>",
      "result": "unverifiable",
      "reason": "does not resolve in public DNS",
-     "checked_at": "2026-10-22T07:35:37+00:00"
+     "checked_at": "2026-10-22T08:10:57+00:00"
     },
     {
      "title": "TST1",
@@ -3855,7 +3857,7 @@
      "url": "https://coreai-techspike-document-analysis.tst1.adp.defra.gov.uk/<path 4d72c9fa89>",
      "result": "unverifiable",
      "reason": "does not resolve in public DNS",
-     "checked_at": "2026-10-22T07:35:47+00:00"
+     "checked_at": "2026-10-22T08:11:07+00:00"
     },
     {
      "title": "PRE1",
@@ -3863,7 +3865,7 @@
      "url": "https://coreai-techspike-document-analysis.pre1.adp.defra.gov.uk/<path 3f1ddf7c32>",
      "result": "unverifiable",
      "reason": "does not resolve in public DNS",
-     "checked_at": "2026-10-22T07:35:55+00:00"
+     "checked_at": "2026-10-22T08:11:14+00:00"
     }
    ],
    "status": "warn",
@@ -3877,7 +3879,7 @@
    "kind": "Component",
    "type": "backend",
    "lifecycle": "alpha",
-   "owner": "group:<48f1da>",
+   "owner": "group:<9bdc84>",
    "owner_kind": "group",
    "repo": "defra/coreai-mcu-document-processor",
    "repo_from": "github.com/project-slug",
@@ -3888,7 +3890,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<48f1da>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<9bdc84>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -3919,7 +3921,7 @@
      "url": "https://dev.azure.com/<path 9e509379b3>",
      "result": "ok",
      "reason": "HTTP 203 after redirect",
-     "checked_at": "2026-10-22T07:35:08+00:00"
+     "checked_at": "2026-10-22T08:10:33+00:00"
     },
     {
      "title": "SonarCloud Analysis",
@@ -3927,7 +3929,7 @@
      "url": "https://sonarcloud.io/<path e15f427c7e>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:36:00+00:00"
+     "checked_at": "2026-10-22T08:11:14+00:00"
     },
     {
      "title": "Snyk Analysis",
@@ -3935,7 +3937,7 @@
      "url": "https://snyk.io/<path 3fa8cb1414>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:36:04+00:00"
+     "checked_at": "2026-10-22T08:11:15+00:00"
     },
     {
      "title": "Azure Portal - Defra Dev",
@@ -3943,7 +3945,7 @@
      "url": "https://portal.azure.com/<path 32ce33097e>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:14+00:00"
+     "checked_at": "2026-10-22T08:10:36+00:00"
     },
     {
      "title": "Azure Portal - Defra",
@@ -3951,7 +3953,7 @@
      "url": "https://portal.azure.com/<path e79b24c77d>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:16+00:00"
+     "checked_at": "2026-10-22T08:10:38+00:00"
     }
    ],
    "status": "warn",
@@ -3965,7 +3967,7 @@
    "kind": "Component",
    "type": "backend",
    "lifecycle": "discovery",
-   "owner": "group:<3ecb0a>",
+   "owner": "group:<0c3a42>",
    "owner_kind": "group",
    "repo": "defra/rpa-mit-manual-templates-api",
    "repo_from": "github.com/project-slug",
@@ -3976,7 +3978,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<3ecb0a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<0c3a42>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -4007,7 +4009,7 @@
      "url": "https://dev.azure.com/<path c8aad80882>",
      "result": "ok",
      "reason": "HTTP 203 after redirect",
-     "checked_at": "2026-10-22T07:36:10+00:00"
+     "checked_at": "2026-10-22T08:11:17+00:00"
     },
     {
      "title": "SonarCloud Analysis",
@@ -4015,7 +4017,7 @@
      "url": "https://sonarcloud.io/<path 72668eb10d>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:36:10+00:00"
+     "checked_at": "2026-10-22T08:11:17+00:00"
     },
     {
      "title": "Snyk Analysis",
@@ -4023,7 +4025,7 @@
      "url": "https://snyk.io/<path e0a527ff4f>",
      "result": "dead",
      "reason": "HTTP 404",
-     "checked_at": "2026-10-22T07:36:12+00:00"
+     "checked_at": "2026-10-22T08:11:19+00:00"
     },
     {
      "title": "Azure Portal - Defra Dev",
@@ -4031,7 +4033,7 @@
      "url": "https://portal.azure.com/<path 32ce33097e>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:14+00:00"
+     "checked_at": "2026-10-22T08:10:36+00:00"
     },
     {
      "title": "Azure Portal - Defra",
@@ -4039,7 +4041,7 @@
      "url": "https://portal.azure.com/<path e79b24c77d>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:16+00:00"
+     "checked_at": "2026-10-22T08:10:38+00:00"
     }
    ],
    "status": "drift",
@@ -4053,7 +4055,7 @@
    "kind": "Component",
    "type": "backend",
    "lifecycle": "alpha",
-   "owner": "group:<48f1da>",
+   "owner": "group:<9bdc84>",
    "owner_kind": "group",
    "repo": "defra/coreai-techspike-document-analysis-api",
    "repo_from": "github.com/project-slug",
@@ -4064,7 +4066,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<48f1da>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<9bdc84>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -4095,7 +4097,7 @@
      "url": "https://dev.azure.com/<path 9e509379b3>",
      "result": "ok",
      "reason": "HTTP 203 after redirect",
-     "checked_at": "2026-10-22T07:35:08+00:00"
+     "checked_at": "2026-10-22T08:10:33+00:00"
     },
     {
      "title": "SonarCloud Analysis",
@@ -4103,7 +4105,7 @@
      "url": "https://sonarcloud.io/<path 2ee25427c9>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:36:16+00:00"
+     "checked_at": "2026-10-22T08:11:19+00:00"
     },
     {
      "title": "Snyk Analysis",
@@ -4111,7 +4113,7 @@
      "url": "https://snyk.io/<path 7dc8fc0487>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:36:36+00:00"
+     "checked_at": "2026-10-22T08:11:20+00:00"
     },
     {
      "title": "Azure Portal - Defra Dev",
@@ -4119,7 +4121,7 @@
      "url": "https://portal.azure.com/<path 32ce33097e>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:14+00:00"
+     "checked_at": "2026-10-22T08:10:36+00:00"
     },
     {
      "title": "Azure Portal - Defra",
@@ -4127,7 +4129,7 @@
      "url": "https://portal.azure.com/<path e79b24c77d>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:16+00:00"
+     "checked_at": "2026-10-22T08:10:38+00:00"
     }
    ],
    "status": "warn",
@@ -4141,7 +4143,7 @@
    "kind": "Component",
    "type": "backend",
    "lifecycle": "discovery",
-   "owner": "group:<48f1da>",
+   "owner": "group:<9bdc84>",
    "owner_kind": "group",
    "repo": "defra/coreai-mcu-backend",
    "repo_from": "github.com/project-slug",
@@ -4152,7 +4154,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<48f1da>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<9bdc84>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -4183,7 +4185,7 @@
      "url": "https://dev.azure.com/<path 9e509379b3>",
      "result": "ok",
      "reason": "HTTP 203 after redirect",
-     "checked_at": "2026-10-22T07:35:08+00:00"
+     "checked_at": "2026-10-22T08:10:33+00:00"
     },
     {
      "title": "SonarCloud Analysis",
@@ -4191,7 +4193,7 @@
      "url": "https://sonarcloud.io/<path ebc994467d>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:36:41+00:00"
+     "checked_at": "2026-10-22T08:11:20+00:00"
     },
     {
      "title": "Snyk Analysis",
@@ -4199,7 +4201,7 @@
      "url": "https://snyk.io/<path dd578d5e2b>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:36:42+00:00"
+     "checked_at": "2026-10-22T08:11:22+00:00"
     },
     {
      "title": "Azure Portal - Defra Dev",
@@ -4207,7 +4209,7 @@
      "url": "https://portal.azure.com/<path 32ce33097e>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:14+00:00"
+     "checked_at": "2026-10-22T08:10:36+00:00"
     },
     {
      "title": "Azure Portal - Defra",
@@ -4215,7 +4217,7 @@
      "url": "https://portal.azure.com/<path e79b24c77d>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:16+00:00"
+     "checked_at": "2026-10-22T08:10:38+00:00"
     }
    ],
    "status": "warn",
@@ -4229,7 +4231,7 @@
    "kind": "Component",
    "type": "backend",
    "lifecycle": "alpha",
-   "owner": "group:<48f1da>",
+   "owner": "group:<9bdc84>",
    "owner_kind": "group",
    "repo": "defra/coreai-mcu-email-processor",
    "repo_from": "github.com/project-slug",
@@ -4240,7 +4242,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<48f1da>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<9bdc84>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -4271,7 +4273,7 @@
      "url": "https://dev.azure.com/<path 9e509379b3>",
      "result": "ok",
      "reason": "HTTP 203 after redirect",
-     "checked_at": "2026-10-22T07:35:08+00:00"
+     "checked_at": "2026-10-22T08:10:33+00:00"
     },
     {
      "title": "SonarCloud Analysis",
@@ -4279,7 +4281,7 @@
      "url": "https://sonarcloud.io/<path b8f1c05d4d>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:36:46+00:00"
+     "checked_at": "2026-10-22T08:11:22+00:00"
     },
     {
      "title": "Snyk Analysis",
@@ -4287,7 +4289,7 @@
      "url": "https://snyk.io/<path 6545183c68>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:36:47+00:00"
+     "checked_at": "2026-10-22T08:11:24+00:00"
     },
     {
      "title": "Azure Portal - Defra Dev",
@@ -4295,7 +4297,7 @@
      "url": "https://portal.azure.com/<path 32ce33097e>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:14+00:00"
+     "checked_at": "2026-10-22T08:10:36+00:00"
     },
     {
      "title": "Azure Portal - Defra",
@@ -4303,7 +4305,7 @@
      "url": "https://portal.azure.com/<path e79b24c77d>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:16+00:00"
+     "checked_at": "2026-10-22T08:10:38+00:00"
     }
    ],
    "status": "warn",
@@ -4317,7 +4319,7 @@
    "kind": "Component",
    "type": "backend",
    "lifecycle": "alpha",
-   "owner": "group:<48f1da>",
+   "owner": "group:<9bdc84>",
    "owner_kind": "group",
    "repo": "defra/coreai-mcu-responses",
    "repo_from": "github.com/project-slug",
@@ -4328,7 +4330,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<48f1da>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<9bdc84>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -4359,7 +4361,7 @@
      "url": "https://dev.azure.com/<path 9e509379b3>",
      "result": "ok",
      "reason": "HTTP 203 after redirect",
-     "checked_at": "2026-10-22T07:35:08+00:00"
+     "checked_at": "2026-10-22T08:10:33+00:00"
     },
     {
      "title": "SonarCloud Analysis",
@@ -4367,7 +4369,7 @@
      "url": "https://sonarcloud.io/<path dd78ddf82e>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:36:52+00:00"
+     "checked_at": "2026-10-22T08:11:25+00:00"
     },
     {
      "title": "Snyk Analysis",
@@ -4375,7 +4377,7 @@
      "url": "https://snyk.io/<path d901c61eb6>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:36:56+00:00"
+     "checked_at": "2026-10-22T08:11:25+00:00"
     },
     {
      "title": "Azure Portal - Defra Dev",
@@ -4383,7 +4385,7 @@
      "url": "https://portal.azure.com/<path 32ce33097e>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:14+00:00"
+     "checked_at": "2026-10-22T08:10:36+00:00"
     },
     {
      "title": "Azure Portal - Defra",
@@ -4391,7 +4393,7 @@
      "url": "https://portal.azure.com/<path e79b24c77d>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:16+00:00"
+     "checked_at": "2026-10-22T08:10:38+00:00"
     }
    ],
    "status": "warn",
@@ -4405,7 +4407,7 @@
    "kind": "Component",
    "type": "frontend",
    "lifecycle": "discovery",
-   "owner": "group:<48f1da>",
+   "owner": "group:<9bdc84>",
    "owner_kind": "group",
    "repo": "defra/crai-jaf-frontend",
    "repo_from": "github.com/project-slug",
@@ -4416,7 +4418,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @defra/<48f1da>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @defra/<9bdc84>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -4447,7 +4449,7 @@
      "url": "https://dev.azure.com/<path 65036afca5>",
      "result": "ok",
      "reason": "HTTP 203 after redirect",
-     "checked_at": "2026-10-22T07:37:01+00:00"
+     "checked_at": "2026-10-22T08:11:27+00:00"
     },
     {
      "title": "SonarCloud Analysis",
@@ -4455,7 +4457,7 @@
      "url": "https://sonarcloud.io/<path fccd78aa70>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:37:02+00:00"
+     "checked_at": "2026-10-22T08:11:27+00:00"
     },
     {
      "title": "Snyk Analysis",
@@ -4463,7 +4465,7 @@
      "url": "https://snyk.io/<path f75a5a3de0>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:37:04+00:00"
+     "checked_at": "2026-10-22T08:11:28+00:00"
     },
     {
      "title": "Azure Portal - Defra Dev",
@@ -4471,7 +4473,7 @@
      "url": "https://portal.azure.com/<path 32ce33097e>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:14+00:00"
+     "checked_at": "2026-10-22T08:10:36+00:00"
     },
     {
      "title": "Azure Portal - Defra",
@@ -4479,7 +4481,7 @@
      "url": "https://portal.azure.com/<path e79b24c77d>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:35:16+00:00"
+     "checked_at": "2026-10-22T08:10:38+00:00"
     },
     {
      "title": "SND3",
@@ -4487,7 +4489,7 @@
      "url": "https://crai-jaf-frontend.snd3.adp.defra.gov.uk/<path 0bbec25aab>",
      "result": "unverifiable",
      "reason": "does not resolve in public DNS",
-     "checked_at": "2026-10-22T07:37:13+00:00"
+     "checked_at": "2026-10-22T08:11:39+00:00"
     },
     {
      "title": "DEV1",
@@ -4495,7 +4497,7 @@
      "url": "https://crai-jaf-frontend.dev1.adp.defra.gov.uk/<path 91463b05c8>",
      "result": "unverifiable",
      "reason": "does not resolve in public DNS",
-     "checked_at": "2026-10-22T07:37:23+00:00"
+     "checked_at": "2026-10-22T08:11:50+00:00"
     },
     {
      "title": "TST1",
@@ -4503,7 +4505,7 @@
      "url": "https://crai-jaf-frontend.tst1.adp.defra.gov.uk/<path f198e9f4cd>",
      "result": "unverifiable",
      "reason": "does not resolve in public DNS",
-     "checked_at": "2026-10-22T07:37:30+00:00"
+     "checked_at": "2026-10-22T08:11:59+00:00"
     },
     {
      "title": "PRE1",
@@ -4511,7 +4513,7 @@
      "url": "https://crai-jaf-frontend.pre1.adp.defra.gov.uk/<path 7a96a34ee8>",
      "result": "unverifiable",
      "reason": "does not resolve in public DNS",
-     "checked_at": "2026-10-22T07:37:38+00:00"
+     "checked_at": "2026-10-22T08:12:07+00:00"
     }
    ],
    "status": "warn",
@@ -4561,7 +4563,7 @@
      "url": "https://galaxy.ansible.com/<path f6bf954d06>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:37:43+00:00"
+     "checked_at": "2026-10-22T08:12:08+00:00"
     },
     {
      "title": "Automation Hub",
@@ -4569,7 +4571,7 @@
      "url": "https://console.redhat.com/<path 6458cb802d>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:37:46+00:00"
+     "checked_at": "2026-10-22T08:12:10+00:00"
     },
     {
      "title": "Contact Technical Support",
@@ -4627,7 +4629,7 @@
      "url": "https://galaxy.ansible.com/<path 4385e8ee44>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:37:51+00:00"
+     "checked_at": "2026-10-22T08:12:11+00:00"
     },
     {
      "title": "Automation Hub",
@@ -4635,7 +4637,7 @@
      "url": "https://console.redhat.com/<path 8b7dc521b3>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:37:53+00:00"
+     "checked_at": "2026-10-22T08:12:12+00:00"
     },
     {
      "title": "Contact Technical Support",
@@ -4691,7 +4693,7 @@
      "url": "https://galaxy.ansible.com/<path a4977c4479>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:37:57+00:00"
+     "checked_at": "2026-10-22T08:12:13+00:00"
     },
     {
      "title": "Automation Hub",
@@ -4699,7 +4701,7 @@
      "url": "https://console.redhat.com/<path a0e1229647>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:38:56+00:00"
+     "checked_at": "2026-10-22T08:12:14+00:00"
     },
     {
      "title": "Contact Technical Support",
@@ -4755,7 +4757,7 @@
      "url": "https://pypi.org/<path 7e785b6b4e>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:39:01+00:00"
+     "checked_at": "2026-10-22T08:12:14+00:00"
     },
     {
      "title": "Contact Technical Support",
@@ -4811,7 +4813,7 @@
      "url": "https://galaxy.ansible.com/<path 8f93ef5a55>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:39:06+00:00"
+     "checked_at": "2026-10-22T08:12:15+00:00"
     },
     {
      "title": "Automation Hub",
@@ -4819,7 +4821,7 @@
      "url": "https://console.redhat.com/<path e1fe023d8a>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:39:08+00:00"
+     "checked_at": "2026-10-22T08:12:16+00:00"
     },
     {
      "title": "Contact Technical Support",
@@ -4877,7 +4879,7 @@
      "url": "https://galaxy.ansible.com/<path 3a8d3fdd22>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:39:12+00:00"
+     "checked_at": "2026-10-22T08:12:17+00:00"
     },
     {
      "title": "Automation Hub",
@@ -4885,7 +4887,7 @@
      "url": "https://console.redhat.com/<path 15cf147811>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:39:14+00:00"
+     "checked_at": "2026-10-22T08:12:18+00:00"
     },
     {
      "title": "Contact Technical Support",
@@ -4941,7 +4943,7 @@
      "url": "https://pypi.org/<path 964e6f0ea8>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:39:18+00:00"
+     "checked_at": "2026-10-22T08:12:19+00:00"
     },
     {
      "title": "Contact Technical Support",
@@ -4999,7 +5001,7 @@
      "url": "https://dell.github.io/<path 2078fc67a9>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:39:22+00:00"
+     "checked_at": "2026-10-22T08:12:19+00:00"
     },
     {
      "title": "Contact Technical Support",
@@ -5021,7 +5023,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<9f5251>",
+   "owner": "group:<6a0446>",
    "owner_kind": "group",
    "repo": "DiamondLightSource/aa-edit-data",
    "repo_from": "file location",
@@ -5032,7 +5034,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @DiamondLightSource/<9f5251>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @DiamondLightSource/<6a0446>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5060,7 +5062,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<642a6b>",
+   "owner": "group:<dd58e0>",
    "owner_kind": "group",
    "repo": "DiamondLightSource/cryoem-monitor",
    "repo_from": "github.com/project-slug",
@@ -5071,7 +5073,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @DiamondLightSource/<642a6b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @DiamondLightSource/<dd58e0>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5138,7 +5140,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "unknown",
-   "owner": "group:<f9a8fd>",
+   "owner": "group:<5545af>",
    "owner_kind": "group",
    "repo": "DiamondLightSource/flask-ispyb-logistics",
    "repo_from": "github.com/project-slug",
@@ -5149,7 +5151,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @DiamondLightSource/<f9a8fd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @DiamondLightSource/<5545af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5172,7 +5174,7 @@
      "url": "https://dewar-logistics.diamond.ac.uk/<path bbf5dc75ec>",
      "result": "unverifiable",
      "reason": "does not resolve in public DNS",
-     "checked_at": "2026-10-22T07:39:44+00:00"
+     "checked_at": "2026-10-22T08:12:20+00:00"
     }
    ],
    "status": "ok",
@@ -5186,7 +5188,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<b52d7e>",
+   "owner": "group:<595d6f>",
    "owner_kind": "group",
    "repo": "DiamondLightSource/dls-dependency-tree",
    "repo_from": "file location",
@@ -5197,7 +5199,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @DiamondLightSource/<b52d7e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @DiamondLightSource/<595d6f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5225,7 +5227,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "unknown",
-   "owner": "group:<642a6b>",
+   "owner": "group:<dd58e0>",
    "owner_kind": "group",
    "repo": "DiamondLightSource/polspex",
    "repo_from": "github.com/project-slug",
@@ -5236,7 +5238,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @DiamondLightSource/<642a6b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @DiamondLightSource/<dd58e0>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5303,7 +5305,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<c87294>",
+   "owner": "group:<58153e>",
    "owner_kind": "group",
    "repo": "dwp/ui-atw-claim-counter-sign",
    "repo_from": "file location",
@@ -5314,7 +5316,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<c87294>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<58153e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5337,7 +5339,7 @@
      "url": "https://gitlab.com/<path 2fe8cdccef>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:40:05+00:00"
+     "checked_at": "2026-10-22T08:12:22+00:00"
     },
     {
      "title": "Change Log",
@@ -5345,7 +5347,7 @@
      "url": "https://gitlab.com/<path 5ae3a0c52c>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:40:08+00:00"
+     "checked_at": "2026-10-22T08:12:26+00:00"
     }
    ],
    "status": "ok",
@@ -5359,7 +5361,7 @@
    "kind": "Component",
    "type": "prototype",
    "lifecycle": "experimental",
-   "owner": "group:<ffbbb6>",
+   "owner": "group:<44ed4f>",
    "owner_kind": "group",
    "repo": "dwp/blank-prototype-kit",
    "repo_from": "file location",
@@ -5370,7 +5372,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<ffbbb6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<44ed4f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5393,7 +5395,7 @@
      "url": "https://gitlab.com/<path 8aea99d6c7>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:40:14+00:00"
+     "checked_at": "2026-10-22T08:12:30+00:00"
     }
    ],
    "status": "ok",
@@ -5407,7 +5409,7 @@
    "kind": "Component",
    "type": "prototype",
    "lifecycle": "experimental",
-   "owner": "group:<ffbbb6>",
+   "owner": "group:<44ed4f>",
    "owner_kind": "group",
    "repo": "dwp/prototype-residency-test",
    "repo_from": "file location",
@@ -5418,7 +5420,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<ffbbb6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<44ed4f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5441,7 +5443,7 @@
      "url": "https://gitlab.com/<path 31a307189d>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:40:19+00:00"
+     "checked_at": "2026-10-22T08:12:34+00:00"
     }
    ],
    "status": "ok",
@@ -5455,7 +5457,7 @@
    "kind": "Component",
    "type": "prototype",
    "lifecycle": "experimental",
-   "owner": "group:<ffbbb6>",
+   "owner": "group:<44ed4f>",
    "owner_kind": "group",
    "repo": "dwp/atw-payment-claims-grant",
    "repo_from": "file location",
@@ -5466,7 +5468,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<ffbbb6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<44ed4f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5489,7 +5491,7 @@
      "url": "https://gitlab.com/<path 3415df52ee>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:40:25+00:00"
+     "checked_at": "2026-10-22T08:12:38+00:00"
     }
    ],
    "status": "ok",
@@ -5503,7 +5505,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<c87294>",
+   "owner": "group:<58153e>",
    "owner_kind": "group",
    "repo": "dwp/ms-atw-claim",
    "repo_from": "file location",
@@ -5514,7 +5516,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<c87294>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<58153e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5537,7 +5539,7 @@
      "url": "https://gitlab.com/<path 9dd1bcea9f>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:40:30+00:00"
+     "checked_at": "2026-10-22T08:12:42+00:00"
     },
     {
      "title": "Change Log",
@@ -5545,7 +5547,7 @@
      "url": "https://gitlab.com/<path 73a8687621>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:40:32+00:00"
+     "checked_at": "2026-10-22T08:12:44+00:00"
     }
    ],
    "status": "ok",
@@ -5559,7 +5561,7 @@
    "kind": "Component",
    "type": "prototype",
    "lifecycle": "experimental",
-   "owner": "group:<ffbbb6>",
+   "owner": "group:<44ed4f>",
    "owner_kind": "group",
    "repo": "dwp/attendance-allowance",
    "repo_from": "file location",
@@ -5570,7 +5572,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<ffbbb6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<44ed4f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5593,7 +5595,7 @@
      "url": "https://gitlab.com/<path b363100022>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:40:37+00:00"
+     "checked_at": "2026-10-22T08:12:48+00:00"
     }
    ],
    "status": "ok",
@@ -5607,7 +5609,7 @@
    "kind": "Component",
    "type": "prototype",
    "lifecycle": "experimental",
-   "owner": "group:<ffbbb6>",
+   "owner": "group:<44ed4f>",
    "owner_kind": "group",
    "repo": "dwp/service-strategy-prototype",
    "repo_from": "file location",
@@ -5618,7 +5620,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<ffbbb6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<44ed4f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5641,7 +5643,7 @@
      "url": "https://gitlab.com/<path 6e121a36b5>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:40:43+00:00"
+     "checked_at": "2026-10-22T08:12:52+00:00"
     }
    ],
    "status": "warn",
@@ -5655,7 +5657,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<c87294>",
+   "owner": "group:<58153e>",
    "owner_kind": "group",
    "repo": "dwp/ms-atw-claim-to-pdf",
    "repo_from": "file location",
@@ -5666,7 +5668,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @dwp/<c87294>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @dwp/<58153e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5689,7 +5691,7 @@
      "url": "https://gitlab.com/<path 024279f4a4>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:40:48+00:00"
+     "checked_at": "2026-10-22T08:12:54+00:00"
     },
     {
      "title": "Change Log",
@@ -5697,7 +5699,7 @@
      "url": "https://gitlab.com/<path 10611a5ab2>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:40:50+00:00"
+     "checked_at": "2026-10-22T08:12:56+00:00"
     }
    ],
    "status": "warn",
@@ -5711,7 +5713,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<e65bbf>",
+   "owner": "group:<680e87>",
    "owner_kind": "group",
    "repo": "eduNEXT/atlas-ansible-utils",
    "repo_from": "file location",
@@ -5722,11 +5724,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@eduNEXT/<e65bbf> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@eduNEXT/<680e87> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @eduNEXT/<e65bbf>"
+     "reason": ".github/CODEOWNERS agrees: @eduNEXT/<680e87>"
     },
     "links": {
      "status": "n/a",
@@ -5750,7 +5752,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<2993bd>",
+   "owner": "group:<3ee997>",
    "owner_kind": "group",
    "repo": "elastic/cli",
    "repo_from": "file location",
@@ -5761,7 +5763,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@elastic/<2993bd> resolves in CODEOWNERS of elastic/cursor-plugins (GitHub validates CODEOWNERS teams)"
+     "reason": "@elastic/<3ee997> resolves in CODEOWNERS of elastic/cursor-plugins (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "drift",
@@ -5791,7 +5793,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<d14df8>",
+   "owner": "group:<79dc7e>",
    "owner_kind": "group",
    "repo": "elastic/go-lookslike",
    "repo_from": "file location",
@@ -5802,7 +5804,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @elastic/<d14df8>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @elastic/<79dc7e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5830,7 +5832,7 @@
    "kind": "Component",
    "type": "application",
    "lifecycle": "production",
-   "owner": "group:<3f6f0e>",
+   "owner": "group:<b6d4dc>",
    "owner_kind": "group",
    "repo": "elastic/rally-tracks",
    "repo_from": "github.com/project-slug",
@@ -5841,7 +5843,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@elastic/<3f6f0e> resolves in .github/CODEOWNERS of elastic/rally (GitHub validates CODEOWNERS teams)"
+     "reason": "@elastic/<b6d4dc> resolves in .github/CODEOWNERS of elastic/rally (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -5869,7 +5871,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "production",
-   "owner": "group:<1e8871>",
+   "owner": "group:<a4164b>",
    "owner_kind": "group",
    "repo": "equinor/armada",
    "repo_from": "github.com/project-slug",
@@ -5880,7 +5882,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<1e8871>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<a4164b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5908,7 +5910,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<cd4040>",
+   "owner": "group:<d8f9fa>",
    "owner_kind": "group",
    "repo": "equinor/radix-cost-allocation",
    "repo_from": "github.com/project-slug",
@@ -5919,7 +5921,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<cd4040>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<d8f9fa>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5947,7 +5949,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<1e8871>",
+   "owner": "group:<a4164b>",
    "owner_kind": "group",
    "repo": "equinor/sara-thermal-reading",
    "repo_from": "github.com/project-slug",
@@ -5958,7 +5960,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<1e8871>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<a4164b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -5986,7 +5988,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<1e8871>",
+   "owner": "group:<a4164b>",
    "owner_kind": "group",
    "repo": "equinor/sara-utilities",
    "repo_from": "github.com/project-slug",
@@ -5997,7 +5999,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<1e8871>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<a4164b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6025,18 +6027,18 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<1e8871>",
+   "owner": "group:<a4164b>",
    "owner_kind": "group",
    "repo": "equinor/isar",
    "repo_from": "github.com/project-slug",
    "checks": {
     "repo": {
      "status": "ok",
-     "reason": "equinor/isar active (0 days since a human commit)"
+     "reason": "equinor/isar active (1 days since a human commit)"
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<1e8871>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<a4164b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6064,7 +6066,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<1e8871>",
+   "owner": "group:<a4164b>",
    "owner_kind": "group",
    "repo": "equinor/flotilla",
    "repo_from": "github.com/project-slug",
@@ -6075,7 +6077,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<1e8871>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<a4164b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6098,7 +6100,7 @@
      "url": "https://flotilla.dev.robotics.equinor.com/<path e9028eb9f2>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:42:02+00:00"
+     "checked_at": "2026-10-22T08:12:58+00:00"
     },
     {
      "title": "Flotilla Frontend Staging",
@@ -6106,7 +6108,7 @@
      "url": "https://flotilla.staging.robotics.equinor.com/<path fe063a6415>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:42:02+00:00"
+     "checked_at": "2026-10-22T08:12:58+00:00"
     },
     {
      "title": "Flotilla Frontend Prod",
@@ -6114,7 +6116,7 @@
      "url": "https://flotilla.robotics.equinor.com/<path 04a9bd986b>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:42:03+00:00"
+     "checked_at": "2026-10-22T08:12:59+00:00"
     }
    ],
    "status": "ok",
@@ -6128,7 +6130,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<1e8871>",
+   "owner": "group:<a4164b>",
    "owner_kind": "group",
    "repo": "equinor/flotilla",
    "repo_from": "github.com/project-slug",
@@ -6139,7 +6141,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<1e8871>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<a4164b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6162,7 +6164,7 @@
      "url": "https://flotilla.dev.robotics.equinor.com/<path 35646575b7>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:42:04+00:00"
+     "checked_at": "2026-10-22T08:13:00+00:00"
     },
     {
      "title": "Flotilla Backend Staging",
@@ -6170,7 +6172,7 @@
      "url": "https://flotilla.staging.robotics.equinor.com/<path 22850909a9>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:42:05+00:00"
+     "checked_at": "2026-10-22T08:13:01+00:00"
     },
     {
      "title": "Flotilla Backend Prod",
@@ -6178,7 +6180,7 @@
      "url": "https://flotilla.robotics.equinor.com/<path edafc3669d>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:42:06+00:00"
+     "checked_at": "2026-10-22T08:13:02+00:00"
     }
    ],
    "status": "ok",
@@ -6192,7 +6194,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<1e8871>",
+   "owner": "group:<a4164b>",
    "owner_kind": "group",
    "repo": "equinor/flotilla",
    "repo_from": "github.com/project-slug",
@@ -6203,7 +6205,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<1e8871>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<a4164b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6231,7 +6233,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<0f11fe>",
+   "owner": "group:<1045f8>",
    "owner_kind": "group",
    "repo": "equinor/rvmsharp",
    "repo_from": "github.com/project-slug",
@@ -6242,7 +6244,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<0f11fe>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<1045f8>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6270,7 +6272,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<137717>",
+   "owner": "group:<d27b1a>",
    "owner_kind": "group",
    "repo": "equinor/appsec",
    "repo_from": "github.com/project-slug",
@@ -6281,7 +6283,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @equinor/<137717>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @equinor/<d27b1a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6304,7 +6306,7 @@
      "url": "https://appsec.equinor.com/<path 0a13b9502b>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:42:18+00:00"
+     "checked_at": "2026-10-22T08:13:03+00:00"
     }
    ],
    "status": "ok",
@@ -6318,7 +6320,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<26d92d>",
+   "owner": "group:<c1c71b>",
    "owner_kind": "group",
    "repo": "grafana/synthetic-monitoring-app",
    "repo_from": "github.com/project-slug",
@@ -6329,11 +6331,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@grafana/<26d92d> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@grafana/<c1c71b> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": "CODEOWNERS agrees: @grafana/<26d92d>"
+     "reason": "CODEOWNERS agrees: @grafana/<c1c71b>"
     },
     "links": {
      "status": "n/a",
@@ -6357,7 +6359,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<5710e5>",
+   "owner": "group:<b37967>",
    "owner_kind": "group",
    "repo": "grafana/xk6-sql-driver-postgres",
    "repo_from": "github.com/project-slug",
@@ -6368,11 +6370,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @grafana/<5710e5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @grafana/<b37967>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<5710e5>, CODEOWNERS says @grafana/<18f729>",
+     "reason": "disagree: catalog says group:<b37967>, CODEOWNERS says @grafana/<caab97>",
      "disagreement": "different team names"
     },
     "links": {
@@ -6397,7 +6399,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<18f729>",
+   "owner": "group:<caab97>",
    "owner_kind": "group",
    "repo": "grafana/k6-jslib-utils",
    "repo_from": "github.com/project-slug",
@@ -6408,11 +6410,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@grafana/<18f729> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@grafana/<caab97> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": "CODEOWNERS agrees: @grafana/<18f729>"
+     "reason": "CODEOWNERS agrees: @grafana/<caab97>"
     },
     "links": {
      "status": "n/a",
@@ -6436,7 +6438,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<5e172c>",
+   "owner": "group:<264294>",
    "owner_kind": "group",
    "repo": "grafana/xk6-environment",
    "repo_from": "github.com/project-slug",
@@ -6447,11 +6449,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @grafana/<5e172c>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @grafana/<264294>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<5e172c>, CODEOWNERS says @<user>",
+     "reason": "disagree: catalog says group:<264294>, CODEOWNERS says @<user>",
      "disagreement": "catalog names a team, CODEOWNERS people"
     },
     "links": {
@@ -6476,7 +6478,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<a42266>",
+   "owner": "group:<4dbee2>",
    "owner_kind": "group",
    "repo": "grafana/cloudcost-exporter",
    "repo_from": "github.com/project-slug",
@@ -6487,11 +6489,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@grafana/<a42266> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@grafana/<4dbee2> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": "CODEOWNERS agrees: @grafana/<a42266>"
+     "reason": "CODEOWNERS agrees: @grafana/<4dbee2>"
     },
     "links": {
      "status": "ok",
@@ -6510,7 +6512,7 @@
      "url": "https://grafana.slack.com/<path 52ca27c9e8>",
      "result": "unverifiable",
      "reason": "HTTP 403: needs login or blocks automated requests",
-     "checked_at": "2026-10-22T07:42:45+00:00"
+     "checked_at": "2026-10-22T08:13:07+00:00"
     },
     {
      "title": "Internal Slack Channel",
@@ -6518,7 +6520,7 @@
      "url": "https://raintank-corp.slack.com/<path c30b888903>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:42:48+00:00"
+     "checked_at": "2026-10-22T08:13:09+00:00"
     }
    ],
    "status": "ok",
@@ -6532,7 +6534,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<5710e5>",
+   "owner": "group:<b37967>",
    "owner_kind": "group",
    "repo": "grafana/xk6-kubernetes",
    "repo_from": "github.com/project-slug",
@@ -6543,11 +6545,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @grafana/<5710e5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @grafana/<b37967>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<5710e5>, CODEOWNERS says @grafana/<18f729>",
+     "reason": "disagree: catalog says group:<b37967>, CODEOWNERS says @grafana/<caab97>",
      "disagreement": "different team names"
     },
     "links": {
@@ -6572,7 +6574,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<7617d2>",
+   "owner": "group:<00da43>",
    "owner_kind": "group",
    "repo": "grafana/run-k6-action",
    "repo_from": "github.com/project-slug",
@@ -6583,11 +6585,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @grafana/<7617d2>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @grafana/<00da43>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<7617d2>, CODEOWNERS says @grafana/<18f729>",
+     "reason": "disagree: catalog says group:<00da43>, CODEOWNERS says @grafana/<caab97>",
      "disagreement": "different team names"
     },
     "links": {
@@ -6612,7 +6614,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "production",
-   "owner": "group:<7617d2>",
+   "owner": "group:<00da43>",
    "owner_kind": "group",
    "repo": "grafana/openapi-to-k6",
    "repo_from": "github.com/project-slug",
@@ -6623,11 +6625,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @grafana/<7617d2>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @grafana/<00da43>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<7617d2>, CODEOWNERS says @grafana/<8d6d8e>",
+     "reason": "disagree: catalog says group:<00da43>, CODEOWNERS says @grafana/<1fee87>",
      "disagreement": "different team names"
     },
     "links": {
@@ -6652,7 +6654,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<38534a>",
+   "owner": "group:<09d902>",
    "owner_kind": "group",
    "repo": "hmcts/cms-template",
    "repo_from": "github.com/project-slug",
@@ -6663,7 +6665,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<38534a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<09d902>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6686,7 +6688,7 @@
      "url": "https://hmcts-reform.slack.com/<path 67d8a1262e>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:43:09+00:00"
+     "checked_at": "2026-10-22T08:13:12+00:00"
     }
    ],
    "status": "ok",
@@ -6700,7 +6702,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<c99846>",
+   "owner": "group:<1b0bb2>",
    "owner_kind": "group",
    "repo": "hmcts/probate-submit-service",
    "repo_from": "github.com/project-slug",
@@ -6711,11 +6713,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<c99846>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<1b0bb2>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<c99846>, .github/CODEOWNERS says @hmcts/<9f7fb5>",
+     "reason": "disagree: catalog says group:<1b0bb2>, .github/CODEOWNERS says @hmcts/<eeb40a>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -6735,7 +6737,7 @@
      "url": "https://hmcts-reform.slack.com/<path 88aadc6d32>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:43:15+00:00"
+     "checked_at": "2026-10-22T08:13:14+00:00"
     }
    ],
    "status": "warn",
@@ -6749,7 +6751,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<811e78>",
+   "owner": "group:<cf2cc9>",
    "owner_kind": "group",
    "repo": "hmcts/em-stitching-api",
    "repo_from": "github.com/project-slug",
@@ -6760,7 +6762,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<811e78>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<cf2cc9>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6783,7 +6785,7 @@
      "url": "https://hmcts-reform.slack.com/<path 89c84432d6>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:43:22+00:00"
+     "checked_at": "2026-10-22T08:13:16+00:00"
     }
    ],
    "status": "ok",
@@ -6797,7 +6799,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<95dae2>",
+   "owner": "group:<cdabd1>",
    "owner_kind": "group",
    "repo": "hmcts/plum-test",
    "repo_from": "github.com/project-slug",
@@ -6808,11 +6810,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<95dae2>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<cdabd1>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": ".github/CODEOWNERS line 1 names owners GitHub cannot resolve: @hmcts/<417d40>, @hmcts/<5b6946>",
+     "reason": ".github/CODEOWNERS line 1 names owners GitHub cannot resolve: @hmcts/<089d14>, @hmcts/<2a24a6>",
      "unknown_teams": 2,
      "unknown_users": 0
     },
@@ -6833,7 +6835,7 @@
      "url": "https://hmcts-reform.slack.com/<path f59254119d>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:43:29+00:00"
+     "checked_at": "2026-10-22T08:13:18+00:00"
     }
    ],
    "status": "drift",
@@ -6847,7 +6849,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<269b1d>",
+   "owner": "group:<8f9ebd>",
    "owner_kind": "group",
    "repo": "hmcts/wa-task-batch-service",
    "repo_from": "github.com/project-slug",
@@ -6858,7 +6860,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<269b1d>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<8f9ebd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6881,7 +6883,7 @@
      "url": "https://hmcts-reform.slack.com/<path 5fa9abb8fd>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:43:35+00:00"
+     "checked_at": "2026-10-22T08:13:20+00:00"
     }
    ],
    "status": "ok",
@@ -6895,7 +6897,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<a6631f>",
+   "owner": "group:<1a59ff>",
    "owner_kind": "group",
    "repo": "hmcts/nfdiv-frontend",
    "repo_from": "github.com/project-slug",
@@ -6906,7 +6908,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<a6631f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<1a59ff>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6929,7 +6931,7 @@
      "url": "https://hmcts-reform.slack.com/<path a06d77371e>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:43:42+00:00"
+     "checked_at": "2026-10-22T08:13:22+00:00"
     }
    ],
    "status": "ok",
@@ -6943,7 +6945,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<269b1d>",
+   "owner": "group:<8f9ebd>",
    "owner_kind": "group",
    "repo": "hmcts/wa-task-management-api",
    "repo_from": "github.com/project-slug",
@@ -6954,7 +6956,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @hmcts/<269b1d>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @hmcts/<8f9ebd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -6977,7 +6979,7 @@
      "url": "https://hmcts-reform.slack.com/<path 5fa9abb8fd>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:43:35+00:00"
+     "checked_at": "2026-10-22T08:13:20+00:00"
     }
    ],
    "status": "ok",
@@ -6991,7 +6993,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<025407>",
+   "owner": "group:<de48f7>",
    "owner_kind": "group",
    "repo": "invoca/process_settings",
    "repo_from": "github.com/project-slug",
@@ -7002,11 +7004,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@invoca/<025407> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@invoca/<de48f7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @Invoca/<025407>"
+     "reason": ".github/CODEOWNERS agrees: @Invoca/<de48f7>"
     },
     "links": {
      "status": "n/a",
@@ -7030,7 +7032,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<025407>",
+   "owner": "group:<de48f7>",
    "owner_kind": "group",
    "repo": "Invoca/parameter_substitution",
    "repo_from": "github.com/project-slug",
@@ -7041,7 +7043,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Invoca/<025407> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
+     "reason": "@Invoca/<de48f7> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -7069,7 +7071,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<025407>",
+   "owner": "group:<de48f7>",
    "owner_kind": "group",
    "repo": "Invoca/invoca-utils",
    "repo_from": "github.com/project-slug",
@@ -7080,11 +7082,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Invoca/<025407> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@Invoca/<de48f7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @Invoca/<025407>"
+     "reason": ".github/CODEOWNERS agrees: @Invoca/<de48f7>"
     },
     "links": {
      "status": "n/a",
@@ -7108,7 +7110,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<025407>",
+   "owner": "group:<de48f7>",
    "owner_kind": "group",
    "repo": "invoca/yard-to_mkdocs",
    "repo_from": "github.com/project-slug",
@@ -7119,7 +7121,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Invoca/<025407> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
+     "reason": "@Invoca/<de48f7> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -7147,7 +7149,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<025407>",
+   "owner": "group:<de48f7>",
    "owner_kind": "group",
    "repo": "Invoca/integer-obfuscator",
    "repo_from": "github.com/project-slug",
@@ -7158,7 +7160,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Invoca/<025407> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
+     "reason": "@Invoca/<de48f7> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -7186,7 +7188,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<025407>",
+   "owner": "group:<de48f7>",
    "owner_kind": "group",
    "repo": "invoca/declare_schema",
    "repo_from": "github.com/project-slug",
@@ -7197,11 +7199,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@invoca/<025407> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@invoca/<de48f7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @Invoca/<025407>"
+     "reason": ".github/CODEOWNERS agrees: @Invoca/<de48f7>"
     },
     "links": {
      "status": "n/a",
@@ -7225,7 +7227,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<025407>",
+   "owner": "group:<de48f7>",
    "owner_kind": "group",
    "repo": "invoca/mock_redis_lua_extension",
    "repo_from": "github.com/project-slug",
@@ -7236,7 +7238,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Invoca/<025407> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
+     "reason": "@Invoca/<de48f7> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -7264,7 +7266,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<025407>",
+   "owner": "group:<de48f7>",
    "owner_kind": "group",
    "repo": "Invoca/escalate",
    "repo_from": "github.com/project-slug",
@@ -7275,7 +7277,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Invoca/<025407> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
+     "reason": "@Invoca/<de48f7> resolves in .github/CODEOWNERS of Invoca/declare_schema (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -7303,7 +7305,7 @@
    "kind": "Component",
    "type": "theme",
    "lifecycle": "production",
-   "owner": "group:<ffe1b3>",
+   "owner": "group:<015282>",
    "owner_kind": "group",
    "repo": "Kajabi/theme-cornerstone-product",
    "repo_from": "github.com/project-slug",
@@ -7314,7 +7316,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<ffe1b3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<015282>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7342,7 +7344,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<526708>",
+   "owner": "group:<6c0d12>",
    "owner_kind": "group",
    "repo": "Kajabi/sage-lib",
    "repo_from": "file location",
@@ -7353,7 +7355,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<526708>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<6c0d12>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7381,7 +7383,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "production",
-   "owner": "group:<526708>",
+   "owner": "group:<6c0d12>",
    "owner_kind": "group",
    "repo": "Kajabi/sage-lib",
    "repo_from": "github.com/project-slug",
@@ -7392,7 +7394,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<526708>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<6c0d12>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7420,7 +7422,7 @@
    "kind": "Component",
    "type": "theme",
    "lifecycle": "production",
-   "owner": "group:<ffe1b3>",
+   "owner": "group:<015282>",
    "owner_kind": "group",
    "repo": "Kajabi/theme-cornerstone-site",
    "repo_from": "github.com/project-slug",
@@ -7431,7 +7433,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<ffe1b3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<015282>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7459,7 +7461,7 @@
    "kind": "Component",
    "type": "gem",
    "lifecycle": "production",
-   "owner": "group:<ed0f53>",
+   "owner": "group:<cfc00b>",
    "owner_kind": "group",
    "repo": "Kajabi/s3_sign",
    "repo_from": "github.com/project-slug",
@@ -7470,7 +7472,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Kajabi/<ed0f53> resolves in .github/CODEOWNERS of Kajabi/sage-lib (GitHub validates CODEOWNERS teams)"
+     "reason": "@Kajabi/<cfc00b> resolves in .github/CODEOWNERS of Kajabi/sage-lib (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -7498,7 +7500,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "experimental",
-   "owner": "group:<526708>",
+   "owner": "group:<6c0d12>",
    "owner_kind": "group",
    "repo": "Kajabi/vskajabi",
    "repo_from": "github.com/project-slug",
@@ -7509,7 +7511,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<526708>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<6c0d12>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7537,7 +7539,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "experimental",
-   "owner": "group:<526708>",
+   "owner": "group:<6c0d12>",
    "owner_kind": "group",
    "repo": "Kajabi/dss-challenge",
    "repo_from": "file location",
@@ -7548,7 +7550,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<526708>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<6c0d12>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7576,7 +7578,7 @@
    "kind": "Component",
    "type": "theme",
    "lifecycle": "production",
-   "owner": "group:<ffe1b3>",
+   "owner": "group:<015282>",
    "owner_kind": "group",
    "repo": "Kajabi/theme-cornerstone-email",
    "repo_from": "github.com/project-slug",
@@ -7587,7 +7589,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<ffe1b3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<015282>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7610,7 +7612,7 @@
      "url": "https://themes.kajabi.com/<path c96ac2561c>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:44:57+00:00"
+     "checked_at": "2026-10-22T08:13:23+00:00"
     }
    ],
    "status": "warn",
@@ -7624,7 +7626,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<526708>",
+   "owner": "group:<6c0d12>",
    "owner_kind": "group",
    "repo": "Kajabi/pine",
    "repo_from": "github.com/project-slug",
@@ -7635,11 +7637,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Kajabi/<526708>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Kajabi/<6c0d12>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<526708>, .github/CODEOWNERS says @Kajabi/<e14e1b>",
+     "reason": "disagree: catalog says group:<6c0d12>, .github/CODEOWNERS says @Kajabi/<95969d>",
      "disagreement": "different team names"
     },
     "links": {
@@ -7664,7 +7666,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<3cdfb9>",
+   "owner": "group:<9a86b8>",
    "owner_kind": "group",
    "repo": "kartverket/Geonorge.Endringslogg",
    "repo_from": "file location",
@@ -7675,7 +7677,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<3cdfb9>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<9a86b8>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7703,7 +7705,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<0a2cc6>",
+   "owner": "group:<e1f392>",
    "owner_kind": "group",
    "repo": "kartverket/prodspek_fkb_arealbruk",
    "repo_from": "file location",
@@ -7714,7 +7716,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<0a2cc6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<e1f392>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7742,7 +7744,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<0a2cc6>",
+   "owner": "group:<e1f392>",
    "owner_kind": "group",
    "repo": "kartverket/prodspek_fkb_veg",
    "repo_from": "file location",
@@ -7753,7 +7755,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<0a2cc6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<e1f392>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7781,7 +7783,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "development",
-   "owner": "group:<151e68>",
+   "owner": "group:<00b9e6>",
    "owner_kind": "group",
    "repo": "kartverket/kv-deltashare-examples",
    "repo_from": "file location",
@@ -7792,7 +7794,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<151e68>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<00b9e6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7820,7 +7822,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<0a2cc6>",
+   "owner": "group:<e1f392>",
    "owner_kind": "group",
    "repo": "kartverket/prodspek_arealplan",
    "repo_from": "file location",
@@ -7831,7 +7833,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<0a2cc6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<e1f392>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7859,7 +7861,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<0a2cc6>",
+   "owner": "group:<e1f392>",
    "owner_kind": "group",
    "repo": "kartverket/standard_fkb_generell_del",
    "repo_from": "file location",
@@ -7870,7 +7872,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<0a2cc6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<e1f392>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7898,7 +7900,7 @@
    "kind": "Component",
    "type": "documentation",
    "lifecycle": "production",
-   "owner": "group:<b9e242>",
+   "owner": "group:<8da959>",
    "owner_kind": "group",
    "repo": "kartverket/ALB_Best_Practice_Manual",
    "repo_from": "file location",
@@ -7909,7 +7911,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @kartverket/<b9e242>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @kartverket/<8da959>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -7937,7 +7939,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<dda22d>",
+   "owner": "group:<78a04c>",
    "owner_kind": "group",
    "repo": "kartverket/backstage-plugin-risk-scorecard-backend",
    "repo_from": "github.com/project-slug",
@@ -7948,11 +7950,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@kartverket/<dda22d> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@kartverket/<78a04c> resolves in CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": "CODEOWNERS agrees: @kartverket/<dda22d>"
+     "reason": "CODEOWNERS agrees: @kartverket/<78a04c>"
     },
     "links": {
      "status": "n/a",
@@ -7976,7 +7978,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<617c95>",
+   "owner": "group:<8ff094>",
    "owner_kind": "group",
    "repo": "open-dxp/system-info-bundle",
    "repo_from": "file location",
@@ -7987,7 +7989,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<617c95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<8ff094>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8015,7 +8017,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<617c95>",
+   "owner": "group:<8ff094>",
    "owner_kind": "group",
    "repo": "open-dxp/payment-provider-paypal-smart-payment-button-bundle",
    "repo_from": "file location",
@@ -8026,7 +8028,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<617c95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<8ff094>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8054,7 +8056,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<617c95>",
+   "owner": "group:<8ff094>",
    "owner_kind": "group",
    "repo": "open-dxp/qrcode-bundle",
    "repo_from": "file location",
@@ -8065,7 +8067,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<617c95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<8ff094>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8093,7 +8095,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<617c95>",
+   "owner": "group:<8ff094>",
    "owner_kind": "group",
    "repo": "open-dxp/google-marketing-bundle",
    "repo_from": "file location",
@@ -8104,7 +8106,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<617c95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<8ff094>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8132,7 +8134,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<617c95>",
+   "owner": "group:<8ff094>",
    "owner_kind": "group",
    "repo": "open-dxp/perspective-editor-bundle",
    "repo_from": "file location",
@@ -8143,7 +8145,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<617c95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<8ff094>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8171,7 +8173,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<617c95>",
+   "owner": "group:<8ff094>",
    "owner_kind": "group",
    "repo": "open-dxp/personalization-bundle",
    "repo_from": "file location",
@@ -8182,7 +8184,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<617c95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<8ff094>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8210,7 +8212,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<617c95>",
+   "owner": "group:<8ff094>",
    "owner_kind": "group",
    "repo": "open-dxp/elasticsearch-client-bundle",
    "repo_from": "file location",
@@ -8221,7 +8223,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<617c95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<8ff094>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8249,7 +8251,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<617c95>",
+   "owner": "group:<8ff094>",
    "owner_kind": "group",
    "repo": "open-dxp/data-importer-bundle",
    "repo_from": "file location",
@@ -8260,7 +8262,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @open-dxp/<617c95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @open-dxp/<8ff094>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8336,7 +8338,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "experimental",
-   "owner": "group:<f67d1d>",
+   "owner": "group:<b0ce26>",
    "owner_kind": "group",
    "repo": "openedx/openedx-ledger",
    "repo_from": "file location",
@@ -8347,7 +8349,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @openedx/<f67d1d>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @openedx/<b0ce26>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8375,7 +8377,7 @@
    "kind": "Component",
    "type": "governance",
    "lifecycle": "production",
-   "owner": "group:<e8a0ab>",
+   "owner": "group:<cb6af6>",
    "owner_kind": "group",
    "repo": "openedx/wg-frontend",
    "repo_from": "file location",
@@ -8386,7 +8388,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @openedx/<e8a0ab>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @openedx/<cb6af6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8453,7 +8455,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<b565de>",
+   "owner": "group:<2e8f83>",
    "owner_kind": "group",
    "repo": "openedx/edx-submissions",
    "repo_from": "file location",
@@ -8464,7 +8466,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @openedx/<b565de>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @openedx/<2e8f83>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8501,7 +8503,7 @@
    "kind": "Component",
    "type": "support",
    "lifecycle": "production",
-   "owner": "group:<e8a0ab>",
+   "owner": "group:<cb6af6>",
    "owner_kind": "group",
    "repo": "openedx/public-engineering",
    "repo_from": "file location",
@@ -8512,7 +8514,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @openedx/<e8a0ab>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @openedx/<cb6af6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8540,7 +8542,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<cc5055>",
+   "owner": "group:<b8778d>",
    "owner_kind": "group",
    "repo": "openedx/frontend-app-discussions",
    "repo_from": "file location",
@@ -8551,7 +8553,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @openedx/<cc5055>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @openedx/<b8778d>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8588,7 +8590,7 @@
    "kind": "Component",
    "type": "governance",
    "lifecycle": "production",
-   "owner": "group:<e8a0ab>",
+   "owner": "group:<cb6af6>",
    "owner_kind": "group",
    "repo": "openedx/wg-maintenance",
    "repo_from": "file location",
@@ -8599,7 +8601,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @openedx/<e8a0ab>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @openedx/<cb6af6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -8627,7 +8629,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "mature",
-   "owner": "group:<d51be7>",
+   "owner": "group:<f5889d>",
    "owner_kind": "group",
    "repo": "pantheon-systems/action-package-updater",
    "repo_from": "file location",
@@ -8638,11 +8640,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<d51be7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<f5889d> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<d51be7>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<f5889d>"
     },
     "links": {
      "status": "n/a",
@@ -8666,7 +8668,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<2530d4>",
+   "owner": "group:<0d2527>",
    "owner_kind": "group",
    "repo": "pantheon-systems/terminus-gcdn-plugin",
    "repo_from": "file location",
@@ -8677,11 +8679,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<2530d4> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<0d2527> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<2530d4>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<0d2527>"
     },
     "links": {
      "status": "n/a",
@@ -8705,7 +8707,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "mature",
-   "owner": "group:<e3f282>",
+   "owner": "group:<1638ce>",
    "owner_kind": "group",
    "repo": "pantheon-systems/terminus-site-clone-plugin",
    "repo_from": "file location",
@@ -8716,11 +8718,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<e3f282> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<1638ce> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<e3f282>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<1638ce>"
     },
     "links": {
      "status": "n/a",
@@ -8744,7 +8746,7 @@
    "kind": "Component",
    "type": "gcp-service",
    "lifecycle": "production",
-   "owner": "group:<d51be7>",
+   "owner": "group:<f5889d>",
    "owner_kind": "group",
    "repo": "pantheon-systems/wp-redis",
    "repo_from": "github.com/project-slug",
@@ -8755,11 +8757,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<d51be7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<f5889d> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<d51be7>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<f5889d>"
     },
     "links": {
      "status": "n/a",
@@ -8783,7 +8785,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "mature",
-   "owner": "group:<d51be7>",
+   "owner": "group:<f5889d>",
    "owner_kind": "group",
    "repo": "pantheon-systems/terminus-addons-installer-plugin",
    "repo_from": "file location",
@@ -8794,11 +8796,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<d51be7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<f5889d> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<d51be7>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<f5889d>"
     },
     "links": {
      "status": "n/a",
@@ -8822,7 +8824,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "mature",
-   "owner": "group:<e3f282>",
+   "owner": "group:<1638ce>",
    "owner_kind": "group",
    "repo": "pantheon-systems/docker-php-ci",
    "repo_from": "file location",
@@ -8833,11 +8835,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<e3f282> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<1638ce> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<e3f282>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<1638ce>"
     },
     "links": {
      "status": "n/a",
@@ -8861,7 +8863,7 @@
    "kind": "Component",
    "type": "plugin",
    "lifecycle": "experimental",
-   "owner": "group:<d51be7>",
+   "owner": "group:<f5889d>",
    "owner_kind": "group",
    "repo": "pantheon-systems/pantheon-content-publisher-drupal",
    "repo_from": "file location",
@@ -8872,11 +8874,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<d51be7> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<f5889d> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<d51be7>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<f5889d>"
     },
     "links": {
      "status": "n/a",
@@ -8900,7 +8902,7 @@
    "kind": "Component",
    "type": "tool",
    "lifecycle": "experimental",
-   "owner": "group:<e3f282>",
+   "owner": "group:<1638ce>",
    "owner_kind": "group",
    "repo": "pantheon-systems/terminus-composer-logs-plugin",
    "repo_from": "file location",
@@ -8911,11 +8913,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@pantheon-systems/<e3f282> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@pantheon-systems/<1638ce> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<e3f282>"
+     "reason": ".github/CODEOWNERS agrees: @pantheon-systems/<1638ce>"
     },
     "links": {
      "status": "n/a",
@@ -9251,7 +9253,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<0fdb95>",
+   "owner": "group:<211059>",
    "owner_kind": "group",
    "repo": "radiorabe/minio-cloudevents-service",
    "repo_from": "github.com/project-slug",
@@ -9262,7 +9264,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @radiorabe/<0fdb95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @radiorabe/<211059>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9285,7 +9287,7 @@
      "url": "https://cloudevents.io/<path 8c862d06e3>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:48:07+00:00"
+     "checked_at": "2026-10-22T08:13:27+00:00"
     }
    ],
    "status": "warn",
@@ -9299,7 +9301,7 @@
    "kind": "Component",
    "type": "image",
    "lifecycle": "experimental",
-   "owner": "group:<0fdb95>",
+   "owner": "group:<211059>",
    "owner_kind": "group",
    "repo": "radiorabe/container-image-rabe-s2i-python-minimal",
    "repo_from": "github.com/project-slug",
@@ -9310,7 +9312,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @radiorabe/<0fdb95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @radiorabe/<211059>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9333,7 +9335,7 @@
      "url": "https://catalog.redhat.com/<path 7db45757a6>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:48:14+00:00"
+     "checked_at": "2026-10-22T08:13:28+00:00"
     }
    ],
    "status": "ok",
@@ -9347,7 +9349,7 @@
    "kind": "Component",
    "type": "image",
    "lifecycle": "experimental",
-   "owner": "group:<0fdb95>",
+   "owner": "group:<211059>",
    "owner_kind": "group",
    "repo": "radiorabe/container-image-rabe-s2i-core-minimal",
    "repo_from": "github.com/project-slug",
@@ -9358,7 +9360,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @radiorabe/<0fdb95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @radiorabe/<211059>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9381,7 +9383,7 @@
      "url": "https://catalog.redhat.com/<path 5317b51725>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:48:19+00:00"
+     "checked_at": "2026-10-22T08:13:32+00:00"
     }
    ],
    "status": "warn",
@@ -9395,7 +9397,7 @@
    "kind": "Component",
    "type": "container",
    "lifecycle": "experimental",
-   "owner": "group:<0fdb95>",
+   "owner": "group:<211059>",
    "owner_kind": "group",
    "repo": "radiorabe/container-image-nut",
    "repo_from": "github.com/project-slug",
@@ -9406,7 +9408,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @radiorabe/<0fdb95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @radiorabe/<211059>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9429,7 +9431,7 @@
      "url": "https://networkupstools.org/<path e242493008>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:48:24+00:00"
+     "checked_at": "2026-10-22T08:13:32+00:00"
     },
     {
      "title": "RaBe Wiki Documentation",
@@ -9437,7 +9439,7 @@
      "url": "https://wiki.rabe.ch/<path f032bb5540>",
      "result": "unverifiable",
      "reason": "HTTP 403: needs login or blocks automated requests",
-     "checked_at": "2026-10-22T07:48:25+00:00"
+     "checked_at": "2026-10-22T08:13:33+00:00"
     }
    ],
    "status": "ok",
@@ -9451,7 +9453,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<0fdb95>",
+   "owner": "group:<211059>",
    "owner_kind": "group",
    "repo": "radiorabe/acr-loader",
    "repo_from": "github.com/project-slug",
@@ -9462,7 +9464,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @radiorabe/<0fdb95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @radiorabe/<211059>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9485,7 +9487,7 @@
      "url": "https://share.rabe.ch/<path 02fd03559a>",
      "result": "unverifiable",
      "reason": "HTTP 403: needs login or blocks automated requests",
-     "checked_at": "2026-10-22T07:48:31+00:00"
+     "checked_at": "2026-10-22T08:13:34+00:00"
     },
     {
      "title": "MinIO Bucket",
@@ -9493,7 +9495,7 @@
      "url": "https://minio.service.int.rabe.ch/<path 71ff9336bb>",
      "result": "unverifiable",
      "reason": "does not resolve in public DNS",
-     "checked_at": "2026-10-22T07:48:31+00:00"
+     "checked_at": "2026-10-22T08:13:35+00:00"
     }
    ],
    "status": "ok",
@@ -9507,7 +9509,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<0fdb95>",
+   "owner": "group:<211059>",
    "owner_kind": "group",
    "repo": "radiorabe/nowplaypadgen",
    "repo_from": "github.com/project-slug",
@@ -9518,7 +9520,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @radiorabe/<0fdb95>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @radiorabe/<211059>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9546,7 +9548,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<b32dbc>",
+   "owner": "group:<9999da>",
    "owner_kind": "group",
    "repo": "reearth/eslint-config-reearth",
    "repo_from": "github.com/project-slug",
@@ -9557,7 +9559,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @reearth/<b32dbc>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @reearth/<9999da>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9594,7 +9596,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "experimental",
-   "owner": "group:<193328>",
+   "owner": "group:<f413a3>",
    "owner_kind": "group",
    "repo": "reearth/hokusai",
    "repo_from": "github.com/project-slug",
@@ -9605,7 +9607,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @reearth/<193328>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @reearth/<f413a3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9636,7 +9638,7 @@
      "url": "https://reearth.github.io/<path 82c8502c36>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:48:50+00:00"
+     "checked_at": "2026-10-22T08:13:35+00:00"
     }
    ],
    "status": "ok",
@@ -9650,7 +9652,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<478ad4>",
+   "owner": "group:<6c41d8>",
    "owner_kind": "group",
    "repo": "reearth/reearth-cms-api",
    "repo_from": "github.com/project-slug",
@@ -9661,11 +9663,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @reearth/<478ad4>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @reearth/<6c41d8>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<478ad4>, .github/CODEOWNERS says @<user>",
+     "reason": "disagree: catalog says group:<6c41d8>, .github/CODEOWNERS says @<user>",
      "disagreement": "catalog names a team, CODEOWNERS people"
     },
     "links": {
@@ -9699,7 +9701,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<3772b6>",
+   "owner": "group:<5859f1>",
    "owner_kind": "group",
    "repo": "reearth/renovate-config",
    "repo_from": "github.com/project-slug",
@@ -9710,7 +9712,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@reearth/<3772b6> resolves in .github/CODEOWNERS of reearth/actions (GitHub validates CODEOWNERS teams)"
+     "reason": "@reearth/<5859f1> resolves in .github/CODEOWNERS of reearth/actions (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -9747,7 +9749,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<e1327a>",
+   "owner": "group:<d18c1b>",
    "owner_kind": "group",
    "repo": "reearth/fastxml",
    "repo_from": "github.com/project-slug",
@@ -9758,7 +9760,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @reearth/<e1327a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @reearth/<d18c1b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9795,7 +9797,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<193328>",
+   "owner": "group:<f413a3>",
    "owner_kind": "group",
    "repo": "reearth/reearth-buildings",
    "repo_from": "github.com/project-slug",
@@ -9806,11 +9808,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @reearth/<193328>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @reearth/<f413a3>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<193328>, .github/CODEOWNERS says @<user>",
+     "reason": "disagree: catalog says group:<f413a3>, .github/CODEOWNERS says @<user>",
      "disagreement": "catalog names a team, CODEOWNERS people"
     },
     "links": {
@@ -9844,7 +9846,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<3772b6>",
+   "owner": "group:<5859f1>",
    "owner_kind": "group",
    "repo": "reearth/changelog-action",
    "repo_from": "github.com/project-slug",
@@ -9855,7 +9857,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@reearth/<3772b6> resolves in .github/CODEOWNERS of reearth/actions (GitHub validates CODEOWNERS teams)"
+     "reason": "@reearth/<5859f1> resolves in .github/CODEOWNERS of reearth/actions (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -9892,7 +9894,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<e1327a>",
+   "owner": "group:<d18c1b>",
    "owner_kind": "group",
    "repo": "reearth/draco-oxide",
    "repo_from": "github.com/project-slug",
@@ -9903,7 +9905,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @reearth/<e1327a>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @reearth/<d18c1b>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9940,7 +9942,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<1df5f8>",
+   "owner": "group:<da97af>",
    "owner_kind": "group",
    "repo": "sendbird/sendbird-calls-quickstart-react-native",
    "repo_from": "github.com/project-slug",
@@ -9951,7 +9953,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<1df5f8>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<da97af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -9979,7 +9981,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<1df5f8>",
+   "owner": "group:<da97af>",
    "owner_kind": "group",
    "repo": "sendbird/sendbird-chat-ios-spm",
    "repo_from": "github.com/project-slug",
@@ -9990,7 +9992,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<1df5f8>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<da97af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10018,7 +10020,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<c0e9e4>",
+   "owner": "group:<634fdd>",
    "owner_kind": "group",
    "repo": "sendbird/sb-osc",
    "repo_from": "github.com/project-slug",
@@ -10029,7 +10031,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<c0e9e4>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<634fdd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10057,7 +10059,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<fba885>",
+   "owner": "group:<80dbd0>",
    "owner_kind": "group",
    "repo": "sendbird/sendbird-discord-javascript-sample",
    "repo_from": "file location",
@@ -10068,7 +10070,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<fba885>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<80dbd0>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10096,7 +10098,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<1df5f8>",
+   "owner": "group:<da97af>",
    "owner_kind": "group",
    "repo": "sendbird/sendbird-javascript-samples",
    "repo_from": "github.com/project-slug",
@@ -10107,7 +10109,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<1df5f8>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<da97af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10135,7 +10137,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<1df5f8>",
+   "owner": "group:<da97af>",
    "owner_kind": "group",
    "repo": "sendbird/sendbird-chat-widget-flutter",
    "repo_from": "github.com/project-slug",
@@ -10146,7 +10148,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<1df5f8>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<da97af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10174,7 +10176,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": "production",
-   "owner": "group:<1df5f8>",
+   "owner": "group:<da97af>",
    "owner_kind": "group",
    "repo": "sendbird/sendbird-calls-groupcall-quickstart-react-native",
    "repo_from": "github.com/project-slug",
@@ -10185,7 +10187,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sendbird/<1df5f8>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sendbird/<da97af>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10213,7 +10215,7 @@
    "kind": "Component",
    "type": "snyk-cli-plugin",
    "lifecycle": "-",
-   "owner": "group:<9fd9ec>",
+   "owner": "group:<0bf102>",
    "owner_kind": "group",
    "repo": "snyk/snyk-php-plugin",
    "repo_from": "github.com/project-slug",
@@ -10224,11 +10226,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @snyk/<9fd9ec>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @snyk/<0bf102>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<9fd9ec>, .github/CODEOWNERS says @snyk/<9085fd>",
+     "reason": "disagree: catalog says group:<0bf102>, .github/CODEOWNERS says @snyk/<71ecbe>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -10253,7 +10255,7 @@
    "kind": "Component",
    "type": "external-tooling",
    "lifecycle": "-",
-   "owner": "group:<1be669>",
+   "owner": "group:<1f6d13>",
    "owner_kind": "group",
    "repo": "snyk/leaky-vessels-static-detector",
    "repo_from": "github.com/project-slug",
@@ -10264,11 +10266,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@snyk/<1be669> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@snyk/<1f6d13> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @<user>, @snyk/<1be669>, @snyk/<273c50>"
+     "reason": ".github/CODEOWNERS agrees: @<user>, @snyk/<1f6d13>, @snyk/<4b79f7>"
     },
     "links": {
      "status": "n/a",
@@ -10292,7 +10294,7 @@
    "kind": "Component",
    "type": "snyk-cli-plugin",
    "lifecycle": "-",
-   "owner": "group:<9fd9ec>",
+   "owner": "group:<0bf102>",
    "owner_kind": "group",
    "repo": "snyk/gradle-plugin",
    "repo_from": "github.com/project-slug",
@@ -10303,11 +10305,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @snyk/<9fd9ec>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @snyk/<0bf102>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<9fd9ec>, .github/CODEOWNERS says @snyk/<9085fd>",
+     "reason": "disagree: catalog says group:<0bf102>, .github/CODEOWNERS says @snyk/<71ecbe>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -10332,7 +10334,7 @@
    "kind": "Component",
    "type": "external-library",
    "lifecycle": "-",
-   "owner": "group:<9fd9ec>",
+   "owner": "group:<0bf102>",
    "owner_kind": "group",
    "repo": "snyk/snyk-go-parser",
    "repo_from": "github.com/project-slug",
@@ -10343,11 +10345,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @snyk/<9fd9ec>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @snyk/<0bf102>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<9fd9ec>, .github/CODEOWNERS says @snyk/<9085fd>",
+     "reason": "disagree: catalog says group:<0bf102>, .github/CODEOWNERS says @snyk/<71ecbe>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -10372,7 +10374,7 @@
    "kind": "Component",
    "type": "external-library",
    "lifecycle": "-",
-   "owner": "group:<9fd9ec>",
+   "owner": "group:<0bf102>",
    "owner_kind": "group",
    "repo": "snyk/go-deps-resolver",
    "repo_from": "github.com/project-slug",
@@ -10383,11 +10385,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @snyk/<9fd9ec>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @snyk/<0bf102>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<9fd9ec>, .github/CODEOWNERS says @snyk/<9085fd>",
+     "reason": "disagree: catalog says group:<0bf102>, .github/CODEOWNERS says @snyk/<71ecbe>",
      "disagreement": "one team name contains the other"
     },
     "links": {
@@ -10412,7 +10414,7 @@
    "kind": "Component",
    "type": "external-tooling",
    "lifecycle": "-",
-   "owner": "group:<1be669>",
+   "owner": "group:<1f6d13>",
    "owner_kind": "group",
    "repo": "snyk/socketsleuth",
    "repo_from": "file location",
@@ -10423,11 +10425,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@snyk/<1be669> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@snyk/<1f6d13> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @<user>, @snyk/<1be669>, @snyk/<273c50>"
+     "reason": ".github/CODEOWNERS agrees: @<user>, @snyk/<1f6d13>, @snyk/<4b79f7>"
     },
     "links": {
      "status": "n/a",
@@ -10451,7 +10453,7 @@
    "kind": "Component",
    "type": "snyk-cli-plugin",
    "lifecycle": "-",
-   "owner": "group:<ba8c1a>",
+   "owner": "group:<753979>",
    "owner_kind": "group",
    "repo": "snyk/cli-extension-agent-scan",
    "repo_from": "file location",
@@ -10462,11 +10464,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@snyk/<ba8c1a> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@snyk/<753979> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @<user>, @snyk/<ba8c1a>"
+     "reason": ".github/CODEOWNERS agrees: @<user>, @snyk/<753979>"
     },
     "links": {
      "status": "n/a",
@@ -10490,7 +10492,7 @@
    "kind": "Component",
    "type": "snyk-cli-plugin",
    "lifecycle": "-",
-   "owner": "group:<c68b27>",
+   "owner": "group:<d50842>",
    "owner_kind": "group",
    "repo": "snyk/cli-extension-os-flows",
    "repo_from": "file location",
@@ -10501,11 +10503,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @snyk/<c68b27>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @snyk/<d50842>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "warn",
-     "reason": "disagree: catalog says group:<c68b27>, .github/CODEOWNERS says @snyk/<af7498>",
+     "reason": "disagree: catalog says group:<d50842>, .github/CODEOWNERS says @snyk/<3a8d8a>",
      "disagreement": "different team names"
     },
     "links": {
@@ -10530,7 +10532,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "development",
-   "owner": "group:<5a3757>",
+   "owner": "group:<dea331>",
    "owner_kind": "group",
    "repo": "sourcefuse/terraform-aws-arc-ec2",
    "repo_from": "github.com/project-slug",
@@ -10541,7 +10543,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<5a3757>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<dea331>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10564,7 +10566,7 @@
      "url": "https://sourcefuse.github.io/<path 3fadbd944c>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:50:46+00:00"
+     "checked_at": "2026-10-22T08:13:38+00:00"
     },
     {
      "title": "ARC DB Docs",
@@ -10572,7 +10574,7 @@
      "url": "https://sourcefuse.github.io/<path 6f59ca81c6>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:50:47+00:00"
+     "checked_at": "2026-10-22T08:13:38+00:00"
     }
    ],
    "status": "warn",
@@ -10586,7 +10588,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<5a3757>",
+   "owner": "group:<dea331>",
    "owner_kind": "group",
    "repo": "sourcefuse/terraform-k8s-app",
    "repo_from": "github.com/project-slug",
@@ -10597,7 +10599,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<5a3757>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<dea331>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10625,7 +10627,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "development",
-   "owner": "group:<5a3757>",
+   "owner": "group:<dea331>",
    "owner_kind": "group",
    "repo": "sourcefuse/terraform-aws-arc-cloudfront",
    "repo_from": "github.com/project-slug",
@@ -10636,7 +10638,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<5a3757>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<dea331>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10659,7 +10661,7 @@
      "url": "https://sourcefuse.github.io/<path 3fadbd944c>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:50:46+00:00"
+     "checked_at": "2026-10-22T08:13:38+00:00"
     },
     {
      "title": "ARC Cloudfront Docs",
@@ -10667,7 +10669,7 @@
      "url": "https://sourcefuse.github.io/<path 1c309e690b>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:50:56+00:00"
+     "checked_at": "2026-10-22T08:13:39+00:00"
     }
    ],
    "status": "ok",
@@ -10681,7 +10683,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "development",
-   "owner": "group:<5a3757>",
+   "owner": "group:<dea331>",
    "owner_kind": "group",
    "repo": "sourcefuse/terraform-aws-arc-ec2",
    "repo_from": "github.com/project-slug",
@@ -10692,7 +10694,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<5a3757>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<dea331>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10715,7 +10717,7 @@
      "url": "https://sourcefuse.github.io/<path 3fadbd944c>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:50:46+00:00"
+     "checked_at": "2026-10-22T08:13:38+00:00"
     },
     {
      "title": "ARC DB Docs",
@@ -10723,7 +10725,7 @@
      "url": "https://sourcefuse.github.io/<path 6f59ca81c6>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:50:47+00:00"
+     "checked_at": "2026-10-22T08:13:38+00:00"
     }
    ],
    "status": "ok",
@@ -10737,7 +10739,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "unknown",
-   "owner": "group:<427332>",
+   "owner": "group:<bb6e4d>",
    "owner_kind": "group",
    "repo": "sourcefuse/loopback4-microservice-catalog",
    "repo_from": "github.com/project-slug",
@@ -10748,11 +10750,11 @@
     },
     "owner": {
      "status": "drift",
-     "reason": "GitHub cannot resolve @sourcefuse/<427332> in .github/CODEOWNERS of this repository (team deleted, renamed, secret, or without write access)"
+     "reason": "GitHub cannot resolve @sourcefuse/<bb6e4d> in .github/CODEOWNERS of this repository (team deleted, renamed, secret, or without write access)"
     },
     "codeowners": {
      "status": "drift",
-     "reason": ".github/CODEOWNERS line 5 names owners GitHub cannot resolve: @sourcefuse/<427332>",
+     "reason": ".github/CODEOWNERS line 5 names owners GitHub cannot resolve: @sourcefuse/<bb6e4d>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -10778,7 +10780,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": "production",
-   "owner": "group:<5a3757>",
+   "owner": "group:<dea331>",
    "owner_kind": "group",
    "repo": "sourcefuse/terraform-aws-ref-arch-db",
    "repo_from": "github.com/project-slug",
@@ -10789,7 +10791,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<5a3757>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<dea331>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10812,7 +10814,7 @@
      "url": "https://sourcefuse.github.io/<path 3fadbd944c>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:50:46+00:00"
+     "checked_at": "2026-10-22T08:13:38+00:00"
     },
     {
      "title": "ARC DB Docs",
@@ -10820,7 +10822,7 @@
      "url": "https://sourcefuse.github.io/<path b88afdd7cb>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:51:06+00:00"
+     "checked_at": "2026-10-22T08:13:40+00:00"
     }
    ],
    "status": "drift",
@@ -10834,7 +10836,7 @@
    "kind": "Component",
    "type": "component",
    "lifecycle": "production",
-   "owner": "group:<5a3757>",
+   "owner": "group:<dea331>",
    "owner_kind": "group",
    "repo": "sourcefuse/loopback4-authorization",
    "repo_from": "github.com/project-slug",
@@ -10845,7 +10847,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<5a3757>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<dea331>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10868,7 +10870,7 @@
      "url": "https://npmjs.com/<path a004e05970>",
      "result": "unverifiable",
      "reason": "HTTP 403: needs login or blocks automated requests",
-     "checked_at": "2026-10-22T07:51:11+00:00"
+     "checked_at": "2026-10-22T08:13:42+00:00"
     },
     {
      "title": "Extending LoopBack",
@@ -10876,7 +10878,7 @@
      "url": "https://loopback.io/<path ce4651ffdc>",
      "result": "ok",
      "reason": "HTTP 200",
-     "checked_at": "2026-10-22T07:51:12+00:00"
+     "checked_at": "2026-10-22T08:13:42+00:00"
     }
    ],
    "status": "ok",
@@ -10890,7 +10892,7 @@
    "kind": "Component",
    "type": "website",
    "lifecycle": "production",
-   "owner": "group:<bafc89>",
+   "owner": "group:<9eb08e>",
    "owner_kind": "group",
    "repo": "sourcefuse/backstage",
    "repo_from": "github.com/project-slug",
@@ -10901,7 +10903,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @sourcefuse/<bafc89>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @sourcefuse/<9eb08e>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -10938,7 +10940,7 @@
    "kind": "Component",
    "type": "library",
    "lifecycle": null,
-   "owner": "group:<752cb2>",
+   "owner": "group:<d2f0f6>",
    "owner_kind": "group",
    "repo": "spotify/confidence-sdk-python",
    "repo_from": "file location",
@@ -10949,7 +10951,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @spotify/<752cb2>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @spotify/<d2f0f6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
@@ -10990,7 +10992,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @spotify/<5ad5bb>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "<email> is not a valid GitHub team name, not looked up"
     },
     "codeowners": {
      "status": "n/a",
@@ -11018,7 +11020,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": null,
-   "owner": "group:<752cb2>",
+   "owner": "group:<d2f0f6>",
    "owner_kind": "group",
    "repo": "spotify/confidence-resolver",
    "repo_from": "file location",
@@ -11029,7 +11031,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @spotify/<752cb2>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @spotify/<d2f0f6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11057,7 +11059,7 @@
    "kind": "Component",
    "type": "service",
    "lifecycle": null,
-   "owner": "group:<f2a7e9>",
+   "owner": "group:<427751>",
    "owner_kind": "group",
    "repo": "spotify/vispana",
    "repo_from": "file location",
@@ -11068,7 +11070,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @spotify/<f2a7e9>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @spotify/<427751>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11096,7 +11098,7 @@
    "kind": "Component",
    "type": "cli",
    "lifecycle": "experimental",
-   "owner": "group:<67611b>",
+   "owner": "group:<604933>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/MemorySnapshotDataTools",
    "repo_from": "github.com/project-slug",
@@ -11107,11 +11109,11 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Unity-Technologies/<67611b> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
+     "reason": "@Unity-Technologies/<604933> resolves in .github/CODEOWNERS of this repository (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "ok",
-     "reason": ".github/CODEOWNERS agrees: @Unity-Technologies/<67611b>"
+     "reason": ".github/CODEOWNERS agrees: @Unity-Technologies/<604933>"
     },
     "links": {
      "status": "n/a",
@@ -11135,7 +11137,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "production",
-   "owner": "group:<2f9fc5>",
+   "owner": "group:<7550d6>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/HDR-Calibration-Sample",
    "repo_from": "github.com/project-slug",
@@ -11146,7 +11148,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Unity-Technologies/<2f9fc5>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Unity-Technologies/<7550d6>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11174,7 +11176,7 @@
    "kind": "Component",
    "type": "unity-package",
    "lifecycle": "experimental",
-   "owner": "group:<a21bf0>",
+   "owner": "group:<49bc8f>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/boat-attack-water",
    "repo_from": "github.com/project-slug",
@@ -11185,7 +11187,7 @@
     },
     "owner": {
      "status": "drift",
-     "reason": "GitHub cannot resolve @Unity-Technologies/<a21bf0> in .github/CODEOWNERS of Unity-Technologies/Graphics (team deleted, renamed, secret, or without write access)"
+     "reason": "GitHub cannot resolve @Unity-Technologies/<49bc8f> in .github/CODEOWNERS of Unity-Technologies/Graphics (team deleted, renamed, secret, or without write access)"
     },
     "codeowners": {
      "status": "n/a",
@@ -11208,7 +11210,7 @@
      "url": "https://unity.slack.com/<path f2af8fc802>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:52:03+00:00"
+     "checked_at": "2026-10-22T08:13:45+00:00"
     }
    ],
    "status": "drift",
@@ -11222,7 +11224,7 @@
    "kind": "Component",
    "type": "unity-package",
    "lifecycle": "production",
-   "owner": "group:<bb0c95>",
+   "owner": "group:<f7f71c>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/RTCatmullClarkSubdivision",
    "repo_from": "github.com/project-slug",
@@ -11233,7 +11235,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Unity-Technologies/<bb0c95> resolves in .github/CODEOWNERS of Unity-Technologies/pixyz-scheduler (GitHub validates CODEOWNERS teams)"
+     "reason": "@Unity-Technologies/<f7f71c> resolves in .github/CODEOWNERS of Unity-Technologies/pixyz-scheduler (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -11256,7 +11258,7 @@
      "url": "https://unity.slack.com/<path 13b7e8f8cc>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:52:12+00:00"
+     "checked_at": "2026-10-22T08:13:47+00:00"
     }
    ],
    "status": "warn",
@@ -11270,7 +11272,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "pre-production",
-   "owner": "group:<7331fe>",
+   "owner": "group:<b3cdd7>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/com.unity.services.samples.relationships",
    "repo_from": "github.com/project-slug",
@@ -11281,11 +11283,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Unity-Technologies/<7331fe>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Unity-Technologies/<b3cdd7>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": "CODEOWNERS line 2 names owners GitHub cannot resolve: @Unity-Technologies/<a2cd63>",
+     "reason": "CODEOWNERS line 2 names owners GitHub cannot resolve: @Unity-Technologies/<b1f5f6>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -11311,7 +11313,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "pre-production",
-   "owner": "group:<c8bce9>",
+   "owner": "group:<03db47>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/pixyz-sdk-samples",
    "repo_from": "github.com/project-slug",
@@ -11322,7 +11324,7 @@
     },
     "owner": {
      "status": "ok",
-     "reason": "@Unity-Technologies/<c8bce9> resolves in .github/CODEOWNERS of Unity-Technologies/com.unity.usd-toolkit (GitHub validates CODEOWNERS teams)"
+     "reason": "@Unity-Technologies/<03db47> resolves in .github/CODEOWNERS of Unity-Technologies/com.unity.usd-toolkit (GitHub validates CODEOWNERS teams)"
     },
     "codeowners": {
      "status": "n/a",
@@ -11350,7 +11352,7 @@
    "kind": "Component",
    "type": "unity-package",
    "lifecycle": "production",
-   "owner": "group:<4d1a77>",
+   "owner": "group:<e2f926>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/mesh-to-sdf",
    "repo_from": "github.com/project-slug",
@@ -11361,7 +11363,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Unity-Technologies/<4d1a77>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Unity-Technologies/<e2f926>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11384,7 +11386,7 @@
      "url": "https://unity.slack.com/<path c5af5d067a>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:52:34+00:00"
+     "checked_at": "2026-10-22T08:13:49+00:00"
     }
    ],
    "status": "drift",
@@ -11398,7 +11400,7 @@
    "kind": "Component",
    "type": "other",
    "lifecycle": "production",
-   "owner": "group:<9ea896>",
+   "owner": "group:<ed39d7>",
    "owner_kind": "group",
    "repo": "Unity-Technologies/sentis-samples",
    "repo_from": "github.com/project-slug",
@@ -11409,11 +11411,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @Unity-Technologies/<9ea896>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @Unity-Technologies/<ed39d7>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": "CODEOWNERS line 2 names owners GitHub cannot resolve: @Unity-Technologies/<3ff7fa>",
+     "reason": "CODEOWNERS line 2 names owners GitHub cannot resolve: @Unity-Technologies/<6c691a>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -11434,7 +11436,7 @@
      "url": "https://unity.slack.com/<path 887b3de19b>",
      "result": "ok",
      "reason": "HTTP 200 after redirect",
-     "checked_at": "2026-10-22T07:52:41+00:00"
+     "checked_at": "2026-10-22T08:13:51+00:00"
     }
    ],
    "status": "drift",
@@ -11448,7 +11450,7 @@
    "kind": "Component",
    "type": "backend-api",
    "lifecycle": "maintenance",
-   "owner": "group:<5e0d1f>",
+   "owner": "group:<e3dfbd>",
    "owner_kind": "group",
    "repo": "vtex-apps/b2b-organizations-graphql",
    "repo_from": "github.com/project-slug",
@@ -11459,11 +11461,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<5e0d1f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<e3dfbd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": ".github/CODEOWNERS line 3 names owners GitHub cannot resolve: @vtex-apps/<debf67>",
+     "reason": ".github/CODEOWNERS line 3 names owners GitHub cannot resolve: @vtex-apps/<b5d359>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -11489,7 +11491,7 @@
    "kind": "Component",
    "type": "frontend-ui",
    "lifecycle": "maintenance",
-   "owner": "group:<5e0d1f>",
+   "owner": "group:<e3dfbd>",
    "owner_kind": "group",
    "repo": "vtex-apps/b2b-newstore-theme",
    "repo_from": "github.com/project-slug",
@@ -11500,7 +11502,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<5e0d1f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<e3dfbd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11528,7 +11530,7 @@
    "kind": "Component",
    "type": "frontend-ui",
    "lifecycle": "maintenance",
-   "owner": "group:<5e0d1f>",
+   "owner": "group:<e3dfbd>",
    "owner_kind": "group",
    "repo": "vtex-apps/sku-list",
    "repo_from": "github.com/project-slug",
@@ -11539,7 +11541,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<5e0d1f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<e3dfbd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11567,7 +11569,7 @@
    "kind": "Component",
    "type": "backend-api",
    "lifecycle": "maintenance",
-   "owner": "group:<5e0d1f>",
+   "owner": "group:<e3dfbd>",
    "owner_kind": "group",
    "repo": "vtex-apps/storefront-permissions",
    "repo_from": "github.com/project-slug",
@@ -11578,7 +11580,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<5e0d1f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<e3dfbd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11606,7 +11608,7 @@
    "kind": "Component",
    "type": "frontend-ui",
    "lifecycle": "maintenance",
-   "owner": "group:<5e0d1f>",
+   "owner": "group:<e3dfbd>",
    "owner_kind": "group",
    "repo": "vtex-apps/product-comparison",
    "repo_from": "github.com/project-slug",
@@ -11617,7 +11619,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<5e0d1f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<e3dfbd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11645,7 +11647,7 @@
    "kind": "Component",
    "type": "frontend-ui",
    "lifecycle": "maintenance",
-   "owner": "group:<5e0d1f>",
+   "owner": "group:<e3dfbd>",
    "owner_kind": "group",
    "repo": "vtex-apps/b2b-approved-message",
    "repo_from": "github.com/project-slug",
@@ -11656,7 +11658,7 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<5e0d1f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<e3dfbd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "n/a",
@@ -11684,7 +11686,7 @@
    "kind": "Component",
    "type": "frontend-ui",
    "lifecycle": "maintenance",
-   "owner": "group:<5e0d1f>",
+   "owner": "group:<e3dfbd>",
    "owner_kind": "group",
    "repo": "vtex-apps/b2b-organizations",
    "repo_from": "github.com/project-slug",
@@ -11695,11 +11697,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<5e0d1f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<e3dfbd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": ".github/CODEOWNERS line 3 names owners GitHub cannot resolve: @vtex-apps/<debf67>",
+     "reason": ".github/CODEOWNERS line 3 names owners GitHub cannot resolve: @vtex-apps/<b5d359>",
      "unknown_teams": 1,
      "unknown_users": 0
     },
@@ -11725,7 +11727,7 @@
    "kind": "Component",
    "type": "frontend-ui",
    "lifecycle": "maintenance",
-   "owner": "group:<5e0d1f>",
+   "owner": "group:<e3dfbd>",
    "owner_kind": "group",
    "repo": "vtex-apps/b2b-quotes",
    "repo_from": "github.com/project-slug",
@@ -11736,11 +11738,11 @@
     },
     "owner": {
      "status": "unverifiable",
-     "reason": "team @vtex-apps/<5e0d1f>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
+     "reason": "team @vtex-apps/<e3dfbd>: not named in any CODEOWNERS we could read, and teams are only visible to org members"
     },
     "codeowners": {
      "status": "drift",
-     "reason": ".github/CODEOWNERS line 3 names owners GitHub cannot resolve: @vtex-apps/<debf67>",
+     "reason": ".github/CODEOWNERS line 3 names owners GitHub cannot resolve: @vtex-apps/<b5d359>",
      "unknown_teams": 1,
      "unknown_users": 0
     },

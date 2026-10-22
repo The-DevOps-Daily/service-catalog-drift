@@ -4,11 +4,11 @@ Check a Backstage service catalog against GitHub and report what has drifted: ow
 
 ```bash
 # your own catalog file(s)
-python3 drift.py catalog-info.yaml --repo your-org/your-repo
+python3 drift.py catalog-info.yaml --repo your-org/your-repo --check-links
 
 # the public sample the write-up measured
 python3 sample.py                                   # stage 1: find files, pick the sample
-python3 drift.py --sample sample/sample-2026-10-22.json --redact --json results/run-<time>.json
+python3 drift.py --sample sample/sample-2026-10-22.json --check-links --redact --json results/run-<time>.json
 python3 summarize.py results/run-<time>.json        # stage 3: the numbers
 ```
 
@@ -48,7 +48,9 @@ How owners are checked depends on what the token can see:
 - **With access to the org** (a token that can list the org's teams), teams and membership are read directly.
 - **From outside**, teams are not visible. The checker looks for the team in the repository's CODEOWNERS file, then in other CODEOWNERS files in the org (one code search per team), and asks GitHub's CODEOWNERS validation (`GET /repos/{owner}/{repo}/codeowners/errors`) whether the team resolves. GitHub reports a team as unknown when it does not exist, was renamed, is secret, or has no write access to that repository. A team that no CODEOWNERS file names stays `unverifiable`.
 
-Links get a `HEAD`, then a `GET` if `HEAD` does not answer with 2xx or 3xx, with a 10 second timeout, one request per second per host, no `Authorization` header and no cookies. Hosts that resolve to private addresses are not contacted unless you pass `--allow-private`. Links to github.com files and repositories are checked through the API instead. Results are cached in `.cache/` (git-ignored), so a re-run does not repeat requests; `--no-cache` forces fresh ones.
+Links are only fetched with `--check-links`, because they are written by whoever wrote the catalog file. With it, each link gets a `HEAD`, then a `GET` if `HEAD` does not answer with 2xx or 3xx, with a 10 second timeout, one request per second per host, no `Authorization` header and no cookies. The host name is resolved once and every address it resolves to must be a public address; the request then goes to that pinned address, with the original name in the `Host` header and in TLS SNI, so a second DNS answer cannot redirect it. Every redirect hop is resolved and checked the same way. `--allow-private` lifts the public-address rule for a catalog you trust, such as your own, on a network where internal links resolve. Links to github.com files and repositories are checked through the API instead. Results are cached in `.cache/` (git-ignored), so a re-run does not repeat requests; `--no-cache` forces fresh ones.
+
+Values from catalog files never go into an API path unchecked: owner and repository names must match `^[A-Za-z0-9_.-]{1,100}$` and cannot be `.` or `..`, file path segments are quoted one by one, and anything else is reported as an invalid reference instead of being fetched.
 
 ## Files
 
