@@ -11,12 +11,13 @@ import base64
 import json
 import os
 import sys
-import urllib.parse
 
 import yaml
 
 import catalog
+from drift import valid_slug
 from ghapi import GitHub
+from links import quote_path
 
 FIELDS = (("kind",), ("metadata", "name"), ("metadata", "links"), ("metadata", "annotations"),
           ("spec", "owner"), ("spec", "lifecycle"), ("spec", "type"))
@@ -42,7 +43,10 @@ def main():
     gh = GitHub()
     agree, differ, ours_failed, both_failed, pyyaml_failed = [], [], [], [], []
     for s in sample["files"]:
-        r = gh.get(f"/repos/{s['repo']}/contents/{urllib.parse.quote(s['path'])}")
+        quoted = quote_path(s["path"])
+        if not valid_slug(s["repo"]) or quoted is None:
+            continue
+        r = gh.get(f"/repos/{s['repo']}/contents/{quoted}")
         if r.status != 200:
             continue
         text = base64.b64decode(r.json()["content"]).decode("utf-8", "replace")

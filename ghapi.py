@@ -68,9 +68,21 @@ def now_iso():
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+def is_stale(fetched_at, max_age_seconds):
+    if not fetched_at:
+        return True
+    age = datetime.now(timezone.utc) - datetime.fromisoformat(fetched_at)
+    return age.total_seconds() > max_age_seconds
+
+
 class GitHub:
-    def __init__(self, token=None, cache_dir=os.path.join(HERE, ".cache", "github"), use_cache=True, verbose=False):
+    def __init__(self, token=None, cache_dir=os.path.join(HERE, ".cache", "github"), use_cache=True, verbose=False,
+                 max_age_hours=24):
         self.token = token if token is not None else find_token()
+        # Cached answers are kept per token, because what GitHub shows depends on who asks,
+        # and they expire, so a scheduled run does not keep reporting yesterday's state.
+        self._token_id = hashlib.sha256((self.token or "anonymous").encode()).hexdigest()[:12]
+        self.max_age = max_age_hours * 3600
         self.cache_dir = cache_dir
         self.use_cache = use_cache
         self.verbose = verbose
@@ -84,7 +96,7 @@ class GitHub:
 
     def _cache_path(self, url, accept):
         key = hashlib.sha256(f"{accept}|{url}".encode()).hexdigest()
-        return os.path.join(self.cache_dir, key[:2], key + ".json")
+        return os.path.join(self.cache_dir, self._token_id, key[:2], key + ".json")
 
     def get(self, path, params=None, accept="application/vnd.github+json", follow=True):
         url = path if path.startswith("https://") else API + path
@@ -116,8 +128,9 @@ class GitHub:
         if self.use_cache and cache_file and os.path.exists(cache_file):
             with open(cache_file) as f:
                 data = json.load(f)
-            self.cache_hits += 1
-            return Response(**data)
+            if not is_stale(data.get("fetched_at"), self.max_age):
+                self.cache_hits += 1
+                return Response(**data)
         if "/search/" in url:
             wait = SEARCH_INTERVAL - (time.monotonic() - self._last_search)
             if wait > 0:

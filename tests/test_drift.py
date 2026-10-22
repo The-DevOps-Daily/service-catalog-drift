@@ -47,8 +47,11 @@ class FixtureCatalog(unittest.TestCase):
         self.assertIn("1 could not be checked", self.e["payments-api"]["checks"]["links"]["reason"])
 
     def test_deleted_team(self):
-        self.assertEqual(self.status("billing-worker", "owner"), "drift")
+        # From outside, an unresolvable team is a warning on the owner (it may only lack
+        # write access) and drift on the CODEOWNERS file, which GitHub says is broken.
+        self.assertEqual(self.status("billing-worker", "owner"), "warn")
         self.assertEqual(self.status("billing-worker", "codeowners"), "drift")
+        self.assertEqual(self.status("billing-worker"), "drift")
 
     def test_departed_user_and_archived_repo(self):
         # without knowing that user: names are GitHub logins, a missing account is only a warning
@@ -148,9 +151,9 @@ class FullAccessMode(unittest.TestCase):
         self.assertEqual(e["billing-worker"]["checks"]["owner"]["status"], "drift")
         self.assertIn("no team", e["billing-worker"]["checks"]["owner"]["reason"])
         self.assertIn("no members", e["feature-flags"]["checks"]["owner"]["reason"])
-        # with access to the org, a repository that answers 404 is gone, not private
-        self.assertEqual(e["legacy-reports"]["checks"]["repo"]["status"], "drift")
-        self.assertIn("not found", e["legacy-reports"]["checks"]["repo"]["reason"])
+        # seeing the org's teams does not mean seeing every private repository: a 404 is a warning
+        self.assertEqual(e["legacy-reports"]["checks"]["repo"]["status"], "warn")
+        self.assertIn("not found with this token", e["legacy-reports"]["checks"]["repo"]["reason"])
         self.assertFalse(any(k.startswith("/search/code") for k in gh.log))
 
 
@@ -158,12 +161,46 @@ class CopiedCatalogFile(unittest.TestCase):
     def test_root_file_pointing_at_another_repo_warns(self):
         gh = FakeGitHub()
         checker = drift.Checker(gh, FakeLinks(gh), now=NOW)
-        entries, _, _ = drift.run(drift.load_local(FIXTURES[:1], f"{ORG}/service-template"), checker, {"component"})
+        entries, _, _ = drift.run(drift.load_local(FIXTURES[:1], f"{ORG}/service-template", root=os.path.join(ROOT, "fixtures")), checker, {"component"})
         e = {x["name"]: x for x in entries}
         self.assertEqual(e["payments-api"]["checks"]["repo"]["status"], "warn")
         self.assertIn("points at acme-fixture/payments-api", e["payments-api"]["checks"]["repo"]["reason"])
         # a rename is still reported as a move, not as a copy
         self.assertIn("moved to", e["search-indexer"]["checks"]["repo"]["reason"])
+
+
+class CoverageAndExitCodes(unittest.TestCase):
+    def test_exit_codes(self):
+        drift_entry = {"status": "drift"}
+        ok_entry = {"status": "ok"}
+        self.assertEqual(drift.exit_code([ok_entry], {"unparsed": 0}), 0)
+        self.assertEqual(drift.exit_code([drift_entry], {}), 1)
+        self.assertEqual(drift.exit_code([ok_entry], {"unparsed": 1}), 1)  # a file that does not parse fails CI
+        self.assertEqual(drift.exit_code([ok_entry], {"errors": 1}), 2)    # an entry that could not be checked
+        self.assertEqual(drift.exit_code([], {}), 2)                       # nothing was checked at all
+
+    def test_unreadable_validation_never_says_ok(self):
+        from fake_world import WORLD
+        w = dict(WORLD)
+        w[key(f"/repos/{ORG}/payments-api/codeowners/errors", {"ref": "main"})] = (500, {})
+        e, _, _ = run_fixture(world=w)
+        self.assertEqual(e["payments-api"]["checks"]["codeowners"]["status"], "unverifiable")
+
+    def test_invalid_slug_is_drift_but_the_file_is_still_checked(self):
+        gh = FakeGitHub()
+        c = drift.Checker(gh, None, now=NOW)
+        ent = {"kind": "Component", "metadata": {"name": "payments-api",
+                                                 "annotations": {"github.com/project-slug": "payments-api"}},
+               "spec": {"owner": "group:payments", "lifecycle": "production"}}
+        e = c.check_entity(ent, {"repo": f"{ORG}/payments-api", "path": "catalog-info.yaml"})
+        self.assertEqual(e["checks"]["repo"]["status"], "drift")
+        self.assertEqual(e["checks"]["codeowners"]["status"], "ok")  # CODEOWNERS read from the file's repository
+        self.assertEqual(e["checks"]["lifecycle"]["status"], "ok")
+
+    def test_groups_in_other_namespaces_are_not_mapped(self):
+        gh = FakeGitHub()
+        c = drift.Checker(gh, None, now=NOW)
+        self.assertEqual(c.check_owner("group:hr-directory/payments", ORG, None)["status"], "unverifiable")
 
 
 class PublicMode404(unittest.TestCase):
@@ -193,13 +230,20 @@ class RepoSlug(unittest.TestCase):
         self.assertEqual(drift.repo_slug({"github.com/project-slug": "a/b"}, None), ("a/b", "github.com/project-slug"))
         self.assertEqual(drift.repo_slug({"backstage.io/source-location": "url:https://github.com/a/b/tree/main/"}, None)[0], "a/b")
         self.assertEqual(drift.repo_slug({}, "x/y"), ("x/y", "file location"))
-        self.assertEqual(drift.repo_slug({"github.com/project-slug": "${{ values.x }}"}, None), (None, None))
+        # an explicit annotation that is not owner/repo is reported, not replaced by the file's repository
+        self.assertEqual(drift.repo_slug({"github.com/project-slug": "${{ values.x }}"}, "x/y"), (None, "invalid"))
+        # source-location must really be on github.com
+        self.assertEqual(drift.repo_slug({"backstage.io/source-location": "url:https://evil.example/github.com/a/b"},
+                                         None), (None, None))
 
     def test_link_kinds(self):
         self.assertEqual(drift.link_kind("On-call runbook", "https://x"), "runbook")
         self.assertEqual(drift.link_kind("Metrics", "https://grafana.x/d/1"), "dashboard")
         self.assertEqual(drift.link_kind("Docs", "https://x"), "docs")
-        self.assertEqual(drift.link_kind("#team-payments", "https://acme.slack.com/archives/C1"), "chat")
+        self.assertEqual(drift.link_kind("Slack", "https://acme.slack.com/archives/C1"), "chat")
+        # the hostname does not decide the kind: a chat link on a grafana host is not a dashboard
+        self.assertEqual(drift.link_kind("Community Slack Channel", "https://slack.grafana.com/"), "chat")
+        self.assertEqual(drift.link_kind("Home", "https://grafana.example.com/"), "other")
 
 
 if __name__ == "__main__":

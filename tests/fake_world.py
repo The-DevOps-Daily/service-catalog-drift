@@ -49,6 +49,7 @@ WORLD = {
         (200, content("* @acme-fixture/payments\n/docs/ @acme-fixture/payments @acme-fixture/sre\n")),
     key(f"/repos/{ORG}/payments-api/codeowners/errors", {"ref": "main"}): (200, {"errors": []}),
     key(f"/repos/{ORG}/payments-api/contents/docs/runbook.md", {"ref": "main"}): (200, content("# Runbook")),
+    key(f"/repos/{ORG}/payments-api/commits/main", {"per_page": 1}): (200, [commit("2026-10-01T10:00:00Z")]),
 
     key(f"/repos/{ORG}/billing-worker"): (200, repo("billing-worker")),
     key(f"/repos/{ORG}/billing-worker/commits", {"sha": "main", "per_page": 30}): (200, [commit("2026-09-15T10:00:00Z")]),
@@ -67,6 +68,7 @@ WORLD = {
     key(f"/repos/{ORG}/search/contents/.github/CODEOWNERS", {"ref": "main"}): (200, content("* @acme-fixture/discovery\n")),
     key(f"/repos/{ORG}/search/codeowners/errors", {"ref": "main"}): (200, {"errors": []}),
     key(f"/repos/{ORG}/search/contents/RUNBOOK.md", {"ref": "main"}): (404, {"message": "Not Found"}),
+    key(f"/repos/{ORG}/search/commits/main", {"per_page": 1}): (200, [commit("2026-10-10T10:00:00Z")]),
     key("/search/code", {"q": f'"{ORG}/search" filename:CODEOWNERS org:{ORG}', "per_page": 20}): (200, {"items": []}),
 
     key(f"/repos/{ORG}/feature-flags"): (200, repo("feature-flags")),

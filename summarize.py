@@ -44,8 +44,10 @@ def reason_class(check, c):
             return "no owner field"
         if "no GitHub account" in r:
             return "owner user: no GitHub account with that name"
+        if "resolves elsewhere" in r:
+            return "owner team resolves elsewhere, not in this repo's CODEOWNERS"
         if "cannot resolve" in r:
-            return "owner team does not resolve on GitHub"
+            return "owner team does not resolve in any CODEOWNERS that names it"
         if "not a member" in r:
             return "owner user not in org"
         if "no team" in r or "no members" in r:
@@ -58,8 +60,12 @@ def reason_class(check, c):
             return "repo archived, not marked deprecated"
         if "not found" in r:
             return "repo not found"
-        if "no human commit" in r or "all from bots" in r:
+        if "no human commit" in r:
             return "no human commit in a year"
+        if "all from bots" in r:
+            return "only bot commits among the last 30"
+        if "not a valid owner/repo" in r:
+            return "invalid project-slug annotation"
         if "points at" in r:
             return "root catalog file describes another repo"
         return "repo other"
@@ -86,12 +92,27 @@ def summarize(run):
         "file_counts": run["file_counts"],
         "entries": n,
         "orgs": len({e["org"].lower() for e in entries}),
-        "repos": len({(e["repo"] or "").lower() for e in entries}),
+        "source_repos": len({e["source"].split(":")[0].lower() for e in entries}),
+        "referenced_repos": len({(e["repo"] or "").lower() for e in entries if e["repo"]}),
         "status": dict(Counter(e["status"] for e in entries)),
     }
     out["drift_pct"] = pct(out["status"].get("drift", 0), n)
     out["warn_pct"] = pct(out["status"].get("warn", 0), n)
     out["drift_or_warn_pct"] = pct(out["status"].get("drift", 0) + out["status"].get("warn", 0), n)
+    # The pooled share weights orgs by how many entries they contributed; this one weights each org once.
+    by_org = defaultdict(list)
+    for e in entries:
+        by_org[e["org"].lower()].append(e["status"] == "drift")
+    out["drift_pct_org_average"] = round(100 * sum(sum(v) / len(v) for v in by_org.values()) / len(by_org), 1) \
+        if by_org else None
+    out["entries_per_org"] = {"min": min(map(len, by_org.values())), "max": max(map(len, by_org.values()))} \
+        if by_org else None
+    # Where the drift is: in the catalog entry itself, or only in the CODEOWNERS file next to it
+    catalog_checks = ("owner", "repo", "links", "lifecycle")
+    in_catalog = sum(1 for e in entries if any(e["checks"].get(k, {}).get("status") == "drift" for k in catalog_checks))
+    only_co = sum(1 for e in entries if e["status"] == "drift" and not any(
+        e["checks"].get(k, {}).get("status") == "drift" for k in catalog_checks))
+    out["drift_where"] = {"catalog_entry": in_catalog, "only_codeowners": only_co}
 
     per_check = {}
     for check in CHECKS:
@@ -126,14 +147,16 @@ def summarize(run):
     ov = Counter()
     for e in entries:
         c = e["checks"]["owner"]
-        how = "unverifiable"
-        if c["status"] in ("ok", "drift"):
+        how = "unverifiable " + (e.get("owner_kind") or "none")
+        if c["status"] in ("ok", "drift", "warn"):
             if "CODEOWNERS" in c["reason"] and "this repository" in c["reason"]:
                 how = "via this repo's CODEOWNERS"
             elif "CODEOWNERS" in c["reason"]:
                 how = "via another repo's CODEOWNERS"
-            elif "GitHub account" in c["reason"] or "public member" in c["reason"]:
+            elif "GitHub account" in c["reason"] or "member" in c["reason"]:
                 how = "via GitHub user API"
+            elif "no spec.owner" in c["reason"]:
+                how = "no owner field"
             else:
                 how = "other"
         ov[(how, c["status"])] += 1
@@ -216,11 +239,16 @@ def summarize(run):
 
 
 def print_summary(s):
-    print(f"{s['entries']} entries, {s['orgs']} orgs, {s['repos']} repos "
-          f"(run {s['source_run']['started_at']} to {s['source_run']['finished_at']})")
+    print(f"{s['entries']} entries from {s['source_repos']} repos in {s['orgs']} orgs "
+          f"({s['referenced_repos']} repos referenced; run {s['source_run']['started_at']} to "
+          f"{s['source_run']['finished_at']})")
     st = s["status"]
     print(f"  drift {st.get('drift', 0)} ({s['drift_pct']}%), warn {st.get('warn', 0)} ({s['warn_pct']}%), "
           f"ok {st.get('ok', 0)}; drift or warn {s['drift_or_warn_pct']}%")
+    print(f"  drift averaged per org: {s['drift_pct_org_average']}% "
+          f"({s['entries_per_org']['min']} to {s['entries_per_org']['max']} entries per org)")
+    print(f"  drift in the catalog entry itself: {s['drift_where']['catalog_entry']}, "
+          f"only in the CODEOWNERS file: {s['drift_where']['only_codeowners']}")
     print("\nper check (drift % of all entries / of entries the check could verify):")
     for check, c in s["per_check"].items():
         print(f"  {check:10} {c['counts']}  drift {c['drift_pct_of_all']}% / {c['drift_pct_of_verifiable']}% "

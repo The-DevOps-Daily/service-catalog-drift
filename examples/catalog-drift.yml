@@ -35,4 +35,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.CATALOG_DRIFT_TOKEN || github.token }}
           REPO: ${{ github.repository }}
-        run: python .catalog-drift/drift.py catalog-info.yaml --repo "$REPO" --check-links --no-org-search
+          # on a pull request, read CODEOWNERS as the pull request changes it
+          REF: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python .catalog-drift/drift.py catalog-info.yaml --repo "$REPO" --ref "$REF" --check-links --no-org-search --cache-hours 0

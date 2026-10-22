@@ -26,7 +26,7 @@ import threading
 import time
 import urllib.parse
 
-from ghapi import HERE, USER_AGENT, now_iso
+from ghapi import HERE, USER_AGENT, is_stale, now_iso
 
 TIMEOUT = 10
 PER_HOST_INTERVAL = 1.0
@@ -102,8 +102,9 @@ class PinnedHTTPSConnection(http.client.HTTPSConnection):
 
 class LinkChecker:
     def __init__(self, github, cache_dir=os.path.join(HERE, ".cache", "links"), use_cache=True,
-                 allow_private=False, full_access_orgs=()):
+                 allow_private=False, full_access_orgs=(), max_age_hours=24):
         self.gh = github
+        self.max_age = max_age_hours * 3600
         self.cache_dir = cache_dir
         self.use_cache = use_cache
         self.allow_private = allow_private
@@ -145,17 +146,30 @@ class LinkChecker:
             if not (valid_github_name(owner) and valid_github_name(repo)) or ref in (".", ".."):
                 return invalid
             base = f"/repos/{owner}/{repo}"
-            if file_path.strip("/"):
-                quoted = quote_path(file_path)
-                if quoted is None:
-                    return invalid
-                r = self.gh.get(f"{base}/contents/{quoted}", {"ref": ref})
-            else:
-                r = self.gh.get(f"{base}/branches/{urllib.parse.quote(ref, safe='')}")
+            quoted = quote_path(file_path) if file_path.strip("/") else ""
+            if quoted is None:
+                return invalid
+            # /commits/{ref} accepts a branch, a tag or a commit SHA
+            ref_resp = self.gh.get(f"{base}/commits/{urllib.parse.quote(ref, safe='')}", {"per_page": 1})
+            if ref_resp.status in (404, 422):
+                repo_resp = self.gh.get(base)
+                if repo_resp.status != 200:
+                    return self._github_404(owner, repo, "repository not found on GitHub", ref_resp.fetched_at)
+                # A ref with a slash in it (feature/x) is ambiguous in a URL: do not call it dead.
+                return {"result": UNVERIFIABLE, "reason": "ref not found (it may contain a slash)",
+                        "status": ref_resp.status, "checked_at": ref_resp.fetched_at}
+            if ref_resp.status != 200:
+                return {"result": UNVERIFIABLE, "reason": f"GitHub API answered {ref_resp.status}",
+                        "status": ref_resp.status}
+            if not quoted:
+                return {"result": OK, "reason": "ref exists on GitHub", "status": 200,
+                        "checked_at": ref_resp.fetched_at}
+            r = self.gh.get(f"{base}/contents/{quoted}", {"ref": ref})
             if r.status == 200:
                 return {"result": OK, "reason": "exists on GitHub", "status": 200, "checked_at": r.fetched_at}
             if r.status == 404:
-                return self._github_404(owner, repo, "file or branch not found on GitHub", r.fetched_at)
+                return {"result": DEAD, "reason": "file not found on GitHub at that ref", "status": 404,
+                        "checked_at": r.fetched_at}
             return {"result": UNVERIFIABLE, "reason": f"GitHub API answered {r.status}", "status": r.status}
         m = GITHUB_REPO.match(path)
         if m and m.group(1).lower() not in GITHUB_RESERVED:
@@ -164,10 +178,21 @@ class LinkChecker:
                 return invalid
             r = self.gh.get(f"/repos/{owner}/{repo}")
             if r.status == 200:
-                if rest and rest.split("/")[0] == "wiki" and not (r.json() or {}).get("has_wiki", True):
-                    return {"result": DEAD, "reason": "repository wiki is turned off", "status": 200,
+                parts = [x for x in (rest or "").split("/") if x]
+                if not parts:
+                    return {"result": OK, "reason": "repository exists on GitHub", "status": 200,
                             "checked_at": r.fetched_at}
-                return {"result": OK, "reason": "repository exists on GitHub", "status": 200,
+                flag = {"issues": "has_issues", "wiki": "has_wiki", "discussions": "has_discussions"}.get(parts[0])
+                if flag and len(parts) == 1:
+                    on = (r.json() or {}).get(flag)
+                    if on is False:
+                        return {"result": DEAD, "reason": f"repository {parts[0]} turned off", "status": 200,
+                                "checked_at": r.fetched_at}
+                    if on:
+                        return {"result": OK, "reason": f"repository {parts[0]} on", "status": 200,
+                                "checked_at": r.fetched_at}
+                # An issue, a release or a wiki page: the repository exists, the page was not checked.
+                return {"result": UNVERIFIABLE, "reason": "page below the repository not checked", "status": 200,
                         "checked_at": r.fetched_at}
             if r.status == 404:
                 return self._github_404(owner, repo, "repository not found on GitHub", r.fetched_at)
@@ -201,7 +226,9 @@ class LinkChecker:
         path = os.path.join(self.cache_dir, key[:2], key + ".json")
         if self.use_cache and os.path.exists(path):
             with open(path) as f:
-                return json.load(f)
+                cached = json.load(f)
+            if not is_stale(cached.get("checked_at"), self.max_age):
+                return cached
         result = self._http(url)
         result["checked_at"] = result.get("checked_at") or now_iso()
         if result.get("transient"):
@@ -268,15 +295,15 @@ class LinkChecker:
             if status in (301, 302, 303, 307, 308):
                 loc = {k.lower(): v for k, v in headers.items()}.get("location")
                 if not loc:
-                    return status, None, hops
+                    return None, f"HTTP {status} without a Location header", hops
                 nxt = urllib.parse.urljoin(url, loc)
                 if urllib.parse.urlsplit(nxt).scheme not in ("http", "https"):
-                    return status, None, hops
+                    return None, "redirect to a non-http(s) address", hops
                 hops.append(status)
                 url = nxt  # the next hop is resolved and checked again in _request
                 continue
             return status, None, hops
-        return 399, None, hops  # still redirecting after MAX_REDIRECTS: count as 3xx
+        return None, f"more than {MAX_REDIRECTS} redirects", hops
 
     def _http(self, url):
         status, err, hops = self._follow(url, "HEAD")
@@ -285,7 +312,7 @@ class LinkChecker:
             if g_status is not None or status is None:
                 status, err, hops = g_status, g_err, g_hops
         if status is None:
-            transient = err == "timed out" or err.startswith("connection failed")
+            transient = err == "timed out" or "connection failed" in err
             return {"result": UNVERIFIABLE, "reason": err, "transient": transient}
         out = {"status": status, "redirects": len(hops)}
         if 200 <= status < 400:

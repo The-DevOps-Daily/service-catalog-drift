@@ -95,17 +95,31 @@ def _split_key(text):
     return key, text[m.end():]
 
 
+_ESCAPES = {"0": "\0", "a": "\a", "b": "\b", "t": "\t", "\t": "\t", "n": "\n", "v": "\v", "f": "\f",
+            "r": "\r", "e": "\x1b", " ": " ", '"': '"', "/": "/", "\\": "\\", "N": "\x85", "_": "\xa0",
+            "L": "\u2028", "P": "\u2029"}
+_HEX_ESCAPES = {"x": 2, "u": 4, "U": 8}
+
+
 def _unescape_double(s):
     out, i = [], 0
     while i < len(s):
         c = s[i]
-        if c == "\\" and i + 1 < len(s):
+        if c == "\\":
+            if i + 1 >= len(s):
+                raise YamlError("backslash at the end of a double-quoted scalar")
             n = s[i + 1]
-            if n == "u" and i + 5 < len(s):
-                out.append(chr(int(s[i + 2:i + 6], 16)))
-                i += 6
+            if n in _HEX_ESCAPES:
+                width = _HEX_ESCAPES[n]
+                digits = s[i + 2:i + 2 + width]
+                if len(digits) != width or not re.fullmatch(r"[0-9a-fA-F]+", digits):
+                    raise YamlError(f"bad \\{n} escape in a double-quoted scalar")
+                out.append(chr(int(digits, 16)))
+                i += 2 + width
                 continue
-            out.append({"n": "\n", "t": "\t", '"': '"', "\\": "\\", "/": "/", "r": "\r", "0": "\0", " ": " "}.get(n, n))
+            if n not in _ESCAPES:
+                raise YamlError(f"unsupported escape \\{n} in a double-quoted scalar")
+            out.append(_ESCAPES[n])
             i += 2
             continue
         out.append(c)
@@ -516,7 +530,8 @@ def parse_codeowners(text):
         if not line or line.startswith("#"):
             continue
         line = re.split(r"\s#", line, maxsplit=1)[0].strip()
-        parts = line.split()
+        # A pattern may contain escaped spaces ("my\\ dir/"); split on unescaped whitespace only.
+        parts = [x.replace("\\ ", " ") for x in re.split(r"(?<!\\)\s+", line) if x]
         pattern, owners = parts[0], parts[1:]
         rules.append({"line": n, "pattern": pattern, "owners": owners})
     return rules
@@ -546,7 +561,13 @@ def _pattern_regex(pattern):
             rx += re.escape(p[i])
             i += 1
     prefix = "^" if anchored else "^(?:.*/)?"
-    suffix = "/.*$" if dir_only else "(?:/.*)?$"
+    if dir_only:
+        suffix = "/.*$"
+    elif "*" in p.rsplit("/", 1)[-1] and "**" not in p.rsplit("/", 1)[-1]:
+        # GitHub: "docs/*" matches docs/getting-started.md but not docs/build-app/x.md
+        suffix = "$"
+    else:
+        suffix = "(?:/.*)?$"
     return re.compile(prefix + rx + suffix)
 
 

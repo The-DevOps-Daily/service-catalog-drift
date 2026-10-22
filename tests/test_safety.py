@@ -166,6 +166,13 @@ class LinkRequests(unittest.TestCase):
         self.assertEqual(res["result"], links.UNVERIFIABLE)
         self.assertIn("redirect target", res["reason"])
 
+    def test_redirect_loop_is_not_ok(self):
+        lc = checker()
+        with mock.patch.object(lc, "_request", return_value=((302, {"Location": "/again"}), None)):
+            res = lc.check("https://x.example/loop")
+        self.assertEqual(res["result"], links.UNVERIFIABLE)
+        self.assertIn("redirects", res["reason"])
+
     def test_head_404_falls_back_to_get(self):
         lc = checker()
         calls = []
@@ -181,7 +188,8 @@ class LinkRequests(unittest.TestCase):
 
     def test_status_classes(self):
         for code, expected in ((404, links.DEAD), (410, links.DEAD), (403, links.UNVERIFIABLE),
-                               (401, links.UNVERIFIABLE), (503, links.UNVERIFIABLE), (301, links.OK)):
+                               (401, links.UNVERIFIABLE), (503, links.UNVERIFIABLE), (200, links.OK),
+                               (301, links.UNVERIFIABLE)):  # a redirect with no Location goes nowhere
             lc = checker()
             with mock.patch.object(lc, "_request", return_value=((code, {}), None)):
                 self.assertEqual(lc.check(f"https://x.example/{code}")["result"], expected, code)
@@ -208,13 +216,28 @@ class GitHubPaths(unittest.TestCase):
             self.assertIn("not a valid GitHub reference", res["reason"], url)
 
     def test_segments_are_quoted(self):
-        lc, gh = self.lc()
+        gh = FakeGitHub(world={"/repos/acme/repo/commits/main?per_page=1": (200, [{}])})
+        lc = links.LinkChecker(gh, cache_dir=tempfile.mkdtemp(), use_cache=False)
         lc.check("https://github.com/acme/repo/blob/main/docs/a%3Fb%23c.md")
-        self.assertEqual(gh.log[0], "/repos/acme/repo/contents/docs/a%3Fb%23c.md?ref=main")
+        self.assertEqual(gh.log, ["/repos/acme/repo/commits/main?per_page=1",
+                                  "/repos/acme/repo/contents/docs/a%3Fb%23c.md?ref=main"])
+
+    def test_unknown_ref_is_not_called_dead(self):
+        gh = FakeGitHub(world={"/repos/acme/repo": (200, {"full_name": "acme/repo"})})
+        lc = links.LinkChecker(gh, cache_dir=tempfile.mkdtemp(), use_cache=False)
+        res = lc.check("https://github.com/acme/repo/blob/feature/x/README.md")
+        self.assertEqual(res["result"], links.UNVERIFIABLE)
+
+    def test_pages_below_a_repository_are_not_assumed_alive(self):
+        gh = FakeGitHub(world={"/repos/acme/repo": (200, {"full_name": "acme/repo", "has_wiki": False})})
+        lc = links.LinkChecker(gh, cache_dir=tempfile.mkdtemp(), use_cache=False)
+        self.assertEqual(lc.check("https://github.com/acme/repo/issues/123")["result"], links.UNVERIFIABLE)
+        self.assertEqual(lc.check("https://github.com/acme/repo/wiki")["result"], links.DEAD)
+        self.assertEqual(lc.check("https://github.com/acme/repo")["result"], links.OK)
 
     def test_slugs_from_catalog_files_are_validated(self):
         for bad in ("../x", "a/..", "a/b/c", "a/.", "a b/c", "a/b?x=1"):
-            self.assertEqual(drift.repo_slug({"github.com/project-slug": bad}, None), (None, None), bad)
+            self.assertEqual(drift.repo_slug({"github.com/project-slug": bad}, None), (None, "invalid"), bad)
         self.assertEqual(drift.repo_slug({"backstage.io/source-location": "url:https://github.com/../x/"}, None),
                          (None, None))
 

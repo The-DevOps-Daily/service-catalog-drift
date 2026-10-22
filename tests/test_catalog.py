@@ -90,6 +90,13 @@ class Yaml(unittest.TestCase):
         self.assertEqual(catalog.parse_yaml_documents("a: foo\n  - bar\n"), [{"a": "foo - bar"}])
         self.assertEqual(catalog.parse_yaml_documents("a: foo\n  http://x.y/z\n"), [{"a": "foo http://x.y/z"}])
 
+    def test_double_quoted_escapes(self):
+        self.assertEqual(catalog.parse_yaml_documents('a: "\\x70ayments"\n'), [{"a": "payments"}])
+        self.assertEqual(catalog.parse_yaml_documents('a: "caf\\u00e9\\n"\n'), [{"a": "caf\u00e9\n"}])
+        ents, err = catalog.entities('kind: Component\nmetadata:\n  name: "x\\qy"\n')
+        self.assertEqual(ents, [])
+        self.assertIn("unsupported escape", err)
+
     def test_refuses_anchors(self):
         ents, err = catalog.entities("kind: Component\nmetadata: &m\n  name: x\nother: *m\n")
         self.assertEqual(ents, [])
@@ -141,6 +148,17 @@ apps/**/catalog-info.yaml @acme/apps
 
     def test_comment_stripped(self):
         self.assertEqual(self.RULES[1]["owners"], ["@acme/config"])
+
+    def test_wildcard_last_segment_is_not_recursive(self):
+        # GitHub's own example: docs/* matches docs/getting-started.md, not docs/build-app/x.md
+        rules = catalog.parse_codeowners("docs/* @acme/docs\n")
+        self.assertEqual(catalog.owners_for(rules, "docs/getting-started.md")["owners"], ["@acme/docs"])
+        self.assertIsNone(catalog.owners_for(rules, "docs/build-app/troubleshooting.md"))
+
+    def test_escaped_space_in_pattern(self):
+        rules = catalog.parse_codeowners("my\\ dir/ @acme/x\n")
+        self.assertEqual(rules[0]["pattern"], "my dir/")
+        self.assertEqual(catalog.owners_for(rules, "my dir/catalog-info.yaml")["owners"], ["@acme/x"])
 
 
 if __name__ == "__main__":

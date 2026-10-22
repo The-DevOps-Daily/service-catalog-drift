@@ -92,8 +92,9 @@ class Redactor:
 
 class Checker:
     def __init__(self, gh, links, stale_days=365, redact=False, now=None, org_search=True,
-                 users_are_logins=False):
+                 users_are_logins=False, ref=None):
         self.gh = gh
+        self.ref = ref  # read the source repository's CODEOWNERS at this ref (a pull request head)
         self.users_are_logins = users_are_logins
         self.org_search = org_search
         self._team_search = {}
@@ -140,7 +141,7 @@ class Checker:
         return info
 
     def codeowners(self, slug, branch):
-        key = slug.lower()
+        key = f"{slug.lower()}@{branch}"
         if key in self._codeowners_cache:
             return self._codeowners_cache[key]
         found = None
@@ -153,14 +154,17 @@ class Checker:
         if found:
             e = self.gh.get(f"/repos/{slug}/codeowners/errors", {"ref": branch} if branch else None)
             unknown = set()
+            found["other_errors"] = 0
             if e.status == 200:
                 for err in (e.json() or {}).get("errors", []):
-                    if "unknown owner" in (err.get("kind", "") + err.get("message", "")).lower():
-                        # "make sure @user exists and ..." or "make sure the team @org/team exists, ..."
-                        named = re.findall(UNKNOWN_OWNER, err.get("message", ""))
-                        unknown.update(h.lower() for h in named)
-                        if not named:
-                            unknown.update(_owners_on_line(err.get("source", "")))
+                    if "unknown owner" not in (err.get("kind", "") + err.get("message", "")).lower():
+                        found["other_errors"] += 1  # syntax errors and the like
+                        continue
+                    # "make sure @user exists and ..." or "make sure the team @org/team exists, ..."
+                    named = re.findall(UNKNOWN_OWNER, err.get("message", ""))
+                    unknown.update(h.lower() for h in named)
+                    if not named:
+                        unknown.update(_owners_on_line(err.get("source", "")))
             found["unknown"] = unknown
             found["errors_status"] = e.status
         self._codeowners_cache[key] = found
@@ -198,13 +202,19 @@ class Checker:
                 m = self.gh.get(f"/orgs/{org}/members/{name}", follow=False)
                 if m.status == 204:
                     return result("ok", f"{shown} is a member of {org}")
-                return result("drift", f"{shown} is not a member of {org}")
+                if m.status == 404:
+                    # a GitHub account of that name exists, but it may not be the person the catalog means
+                    return result("drift" if self.users_are_logins else "warn", f"{shown} is not a member of {org}")
+                return result("unverifiable", f"membership lookup answered {m.status}")
             m = self.gh.get(f"/orgs/{org}/public_members/{name}")
             if m.status == 204:
                 return result("ok", f"{shown} is a public member of {org}")
             return result("unverifiable", f"{shown} is not a public member of {org} (membership may be private)")
-        # group
+        # group: the checker assumes Backstage group names are GitHub team slugs, which is what
+        # Backstage's GitHub org provider produces; groups in another namespace are not mapped.
         team = self.r.team(org, name)
+        if ref["namespace"].lower() not in ("default", org.lower()):
+            return result("unverifiable", f"{shown} is in namespace {ref['namespace']}, not mapped to a GitHub team")
         if full:
             t = self.gh.get(f"/orgs/{org}/teams/{urllib.parse.quote(name, safe='')}")
             if t.status == 404:
@@ -212,15 +222,27 @@ class Checker:
             if t.status != 200:
                 return result("unverifiable", f"team lookup answered {t.status}")
             mem = self.gh.get(f"/orgs/{org}/teams/{urllib.parse.quote(name, safe='')}/members", {"per_page": 1})
-            if mem.status == 200 and mem.json() == []:
+            if mem.status != 200:
+                return result("unverifiable", f"team members lookup answered {mem.status}")
+            if mem.json() == []:
                 return result("drift", f"team {team} has no members")
             return result("ok", f"team {team} exists")
+        # From outside the org: GitHub's CODEOWNERS validation is the only public signal.
+        # It proves a team exists when it resolves; when it does not, the team may be
+        # deleted, renamed, secret, or without write access there, so that is a warning.
         handle = f"@{org}/{name}".lower()
-        verdict = _team_verdict(co, handle, team, "this repository")
-        if verdict is None and self.org_search:
-            verdict = self.team_via_org_codeowners(org, name)
-        if verdict is not None:
-            return verdict
+        local = _team_verdict(co, handle, team, "this repository")
+        if local and local["status"] == "ok":
+            return local
+        other = self.team_via_org_codeowners(org, name) if self.org_search else None
+        if other and other["status"] == "ok":
+            if local:
+                return result("warn", f"{team} resolves elsewhere in {org}, but not in this repository's "
+                                      "CODEOWNERS (no write access here?)")
+            return other
+        if local or other:
+            return result("warn", f"GitHub cannot resolve {team} in the CODEOWNERS files that name it "
+                                  "(deleted, renamed, secret, or without write access)")
         return result("unverifiable", f"team {team}: not named in any CODEOWNERS we could read, "
                                       "and teams are only visible to org members")
 
@@ -247,7 +269,7 @@ class Checker:
                 if v and v["status"] == "ok":
                     verdict = v
                     break
-                if v and v["status"] == "drift":
+                if v and v["status"] == "unknown":
                     unknown_in.append(v)
             if verdict is None and unknown_in:
                 verdict = unknown_in[0]
@@ -259,7 +281,7 @@ class Checker:
         if info["status"] == 404:
             owner = slug.split("/")[0]
             if self.full_access(owner):
-                return result("drift", f"{slug} not found"), info
+                return result("warn", f"{slug} not found with this token (deleted, or no access)"), info
             return result("unverifiable", f"{slug} not visible (deleted, or private)"), info
         if info["status"] != 200:
             return result("unverifiable", f"{slug}: GitHub answered {info['status']}"), info
@@ -293,6 +315,12 @@ class Checker:
             expected = f"@{org}/{ref['name']}".lower()
         elif ref and ref["kind"] == "user":
             expected = f"@{ref['name']}".lower()
+        if co.get("errors_status") != 200:
+            if expected and expected not in (o.lower() for o in owners):
+                out = result("warn", f"disagree: catalog says {self.r.owner(owner_ref)}, {co['path']} says {shown}")
+                out["disagreement"] = disagreement_kind(ref, owners)
+                return out
+            return result("unverifiable", f"GitHub's CODEOWNERS validation not readable ({co.get('errors_status')})")
         if unknown:
             out = result("drift", f"{co['path']} line {rule['line']} names owners GitHub cannot resolve: "
                                   + ", ".join(self.r.codeowner(o) for o in unknown))
@@ -334,7 +362,9 @@ class Checker:
                 return result("n/a", "no http(s) links"), details
             return result("unverifiable", f"none of {len(urls)} links could be checked from outside"), details
         note = f", {len(unver)} could not be checked" if unver else ""
-        return result("ok", f"{len(checked)} of {len(urls)} links answer{note}"), details
+        out = result("ok", f"{len(checked)} of {len(urls)} links answer{note}")
+        out["links_unverifiable"] = len(unver)
+        return out, details
 
     def check_lifecycle(self, lifecycle, info):
         if not lifecycle:
@@ -378,7 +408,9 @@ class Checker:
             repo_res, info = self.check_repo(slug, lifecycle)
             out["checks"]["repo"] = repo_res
             if info.get("status") == 200:
-                co = self.codeowners(info["full_name"], info.get("default_branch"))
+                is_source = source.get("repo") and info["full_name"].lower() == source["repo"].lower()
+                co = self.codeowners(info["full_name"], (self.ref if is_source and self.ref else None)
+                                     or info.get("default_branch"))
                 out["last_human_commit"] = info.get("last_human_commit")
                 src = source.get("repo")
                 if repo_res["status"] == "ok" and src and info["full_name"].lower() != src.lower() \
@@ -386,11 +418,19 @@ class Checker:
                     # A root catalog file that describes another repository: often a copy
                     # from a template repo that nobody edited, sometimes intended.
                     out["checks"]["repo"] = result("warn", f"the catalog file in {src} points at {info['full_name']}")
+        elif slug_from == "invalid":
+            out["checks"]["repo"] = result("drift", "github.com/project-slug is not a valid owner/repo")
+            # The catalog file itself still lives in its repository: check its CODEOWNERS and activity there.
+            if source.get("repo") and valid_slug(source["repo"]):
+                info = self.repo_info(source["repo"])
+                if info.get("status") == 200:
+                    co = self.codeowners(info["full_name"], self.ref or info.get("default_branch"))
         else:
             out["checks"]["repo"] = result("n/a", "no github.com/project-slug and no source repository")
         out["checks"]["owner"] = self.check_owner(owner_ref, org, co)
         same_repo = source.get("repo") and slug and info and info.get("status") == 200 and \
             info["full_name"].lower() == source["repo"].lower()
+        # For an entry that describes another repository, use the rule for that repository's root.
         file_path = source["path"] if same_repo else "catalog-info.yaml"
         out["checks"]["codeowners"] = self.check_codeowners(owner_ref, org, co, file_path)
         links_res, link_details = self.check_links(entity_links(meta, ann))
@@ -424,7 +464,7 @@ def _team_verdict(co, handle, shown, where):
     if co.get("errors_status") != 200:
         return None
     if handle in co["unknown"]:
-        return result("drift", f"GitHub cannot resolve {shown} in {co['path']} of {where} "
+        return result("unknown", f"GitHub cannot resolve {shown} in {co['path']} of {where} "
                                "(team deleted, renamed, secret, or without write access)")
     return result("ok", f"{shown} resolves in {co['path']} of {where} (GitHub validates CODEOWNERS teams)")
 
@@ -450,14 +490,24 @@ def valid_slug(slug):
 def repo_slug(ann, source_repo):
     """The repository an entry points at. Values from the file are validated, never trusted."""
     slug = ann.get("github.com/project-slug")
-    if isinstance(slug, str) and valid_slug(slug.strip()):
-        return slug.strip(), "github.com/project-slug"
+    if slug is not None:
+        if isinstance(slug, str) and valid_slug(slug.strip()):
+            return slug.strip(), "github.com/project-slug"
+        return None, "invalid"
     for key in ("backstage.io/source-location", "backstage.io/managed-by-location"):
         v = ann.get(key)
         if isinstance(v, str):
-            m = re.search(r"github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+?)(?:\.git)?(?:/|$)", v)
-            if m and valid_slug(f"{m.group(1)}/{m.group(2)}"):
-                return f"{m.group(1)}/{m.group(2)}", key
+            v = v.strip()
+            for prefix in ("url:", "github:"):
+                if v.startswith(prefix):
+                    v = v[len(prefix):]
+            parsed = urllib.parse.urlsplit(v)
+            if (parsed.hostname or "").lower() in ("github.com", "www.github.com"):
+                parts = [x for x in parsed.path.split("/") if x]
+                if len(parts) >= 2:
+                    candidate = f"{parts[0]}/{parts[1].removesuffix('.git')}"
+                    if valid_slug(candidate):
+                        return candidate, key
     if source_repo and valid_slug(source_repo):
         return source_repo, "file location"
     return None, None
@@ -472,7 +522,13 @@ LINK_KINDS = (
 
 
 def link_kind(title, url, key=""):
-    text = f"{key} {title or ''} {url}"
+    # Title and type first; the URL path only as a fallback, never the hostname
+    # (a chat link on a grafana.com host is not a dashboard).
+    text = f"{key} {title or ''}"
+    for kind, rx in LINK_KINDS:
+        if rx.search(text):
+            return kind
+    text = urllib.parse.urlsplit(url).path
     for kind, rx in LINK_KINDS:
         if rx.search(text):
             return kind
@@ -504,10 +560,12 @@ def entity_links(meta, ann):
 
 # ------------------------------------------------------------------- inputs
 
-def load_local(paths, repo):
+def load_local(paths, repo, root="."):
     for p in paths:
         with open(p) as f:
-            yield {"repo": repo, "path": os.path.basename(p) if repo else p, "text": f.read()}
+            text = f.read()
+        rel = os.path.relpath(os.path.abspath(p), os.path.abspath(root)).replace(os.sep, "/")
+        yield {"repo": repo, "path": rel if repo else p, "text": text}
 
 
 def load_sample(gh, sample_file):
@@ -647,23 +705,27 @@ def main(argv=None):
                     help="do not search the org's other CODEOWNERS files for a team (saves code-search calls)")
     ap.add_argument("--users-are-github-logins", action="store_true",
                     help="your catalog's user: names are GitHub logins, so a missing account is drift")
+    ap.add_argument("--ref", help="read the repository's CODEOWNERS at this ref, such as a pull request's head SHA")
+    ap.add_argument("--root", default=".", help="repository root that local file paths are relative to")
+    ap.add_argument("--cache-hours", type=float, default=24, help="reuse cached answers younger than this")
     args = ap.parse_args(argv)
     if not args.files and not args.sample:
         ap.error("give catalog files or --sample")
 
     started = now_iso()
-    gh = GitHub(use_cache=not args.no_cache)
+    gh = GitHub(use_cache=not args.no_cache, max_age_hours=args.cache_hours)
     if not gh.token:
         print("no GitHub token: set GITHUB_TOKEN or log in with gh", file=sys.stderr)
         return 2
     if args.repo and not valid_slug(args.repo):
         ap.error("--repo must be owner/repo")
-    links = LinkChecker(gh, use_cache=not args.no_cache, allow_private=args.allow_private) \
-        if args.check_links else None
+    links = LinkChecker(gh, use_cache=not args.no_cache, allow_private=args.allow_private,
+                        max_age_hours=args.cache_hours) if args.check_links else None
     checker = Checker(gh, links, stale_days=args.stale_days, redact=args.redact,
-                      org_search=not args.no_org_search, users_are_logins=args.users_are_github_logins)
+                      org_search=not args.no_org_search, users_are_logins=args.users_are_github_logins,
+                      ref=args.ref)
     kinds = {k.strip().lower() for k in args.kinds.split(",")}
-    sources = load_sample(gh, args.sample) if args.sample else load_local(args.files, args.repo)
+    sources = load_sample(gh, args.sample) if args.sample else load_local(args.files, args.repo, args.root)
 
     entries, counts, file_log = run(sources, checker, kinds, progress=bool(args.sample))
 
@@ -690,9 +752,17 @@ def main(argv=None):
                 "entries": entries,
             }, f, indent=1)
         print(f"wrote {args.json}")
-    if any(e["status"] == "drift" for e in entries):
+    return exit_code(entries, counts, args.fail_on)
+
+
+def exit_code(entries, counts, fail_on="drift"):
+    """2: the run could not check what it was given. 1: drift, or a catalog file that does not parse."""
+    if counts.get("errors") or counts.get("unreadable") or (not entries and not counts.get("templates")
+                                                              and not counts.get("other_kinds")):
+        return 2
+    if counts.get("unparsed") or any(e["status"] == "drift" for e in entries):
         return 1
-    if args.fail_on == "warn" and any(e["status"] == "warn" for e in entries):
+    if fail_on == "warn" and any(e["status"] == "warn" for e in entries):
         return 1
     return 0
 
