@@ -1,0 +1,20 @@
+{
+ "sample": "sample-2026-10-22.json",
+ "files": 240,
+ "agree": 239,
+ "differ": [],
+ "ours_failed": [],
+ "pyyaml_failed": [],
+ "both_failed": [
+  "sendbird/sendbird-platform-sdk-typescript:catalog-info.yaml"
+ ],
+ "fields": [
+  "kind",
+  "metadata.name",
+  "metadata.links",
+  "metadata.annotations",
+  "spec.owner",
+  "spec.lifecycle",
+  "spec.type"
+ ]
+}

@@ -1,0 +1,538 @@
+{
+ "source_run": {
+  "started_at": "2026-10-22T07:57:34+00:00",
+  "finished_at": "2026-10-22T07:57:52+00:00",
+  "stale_days": 365,
+  "api_calls": 30,
+  "link_requests": 0
+ },
+ "file_counts": {
+  "read": 239,
+  "templates": 1,
+  "unparsed": 0,
+  "unreadable": 0,
+  "other_kinds": 40
+ },
+ "entries": 218,
+ "orgs": 30,
+ "repos": 214,
+ "status": {
+  "warn": 60,
+  "ok": 137,
+  "drift": 21
+ },
+ "drift_pct": 9.6,
+ "warn_pct": 27.5,
+ "drift_or_warn_pct": 37.2,
+ "per_check": {
+  "owner": {
+   "counts": {
+    "unverifiable": 159,
+    "ok": 54,
+    "drift": 4,
+    "warn": 1
+   },
+   "verifiable": 59,
+   "drift_pct_of_all": 1.8,
+   "drift_pct_of_verifiable": 6.8,
+   "warn_pct_of_verifiable": 1.7
+  },
+  "repo": {
+   "counts": {
+    "ok": 171,
+    "warn": 43,
+    "drift": 4
+   },
+   "verifiable": 218,
+   "drift_pct_of_all": 1.8,
+   "drift_pct_of_verifiable": 1.8,
+   "warn_pct_of_verifiable": 19.7
+  },
+  "codeowners": {
+   "counts": {
+    "warn": 22,
+    "n/a": 145,
+    "ok": 37,
+    "drift": 14
+   },
+   "verifiable": 73,
+   "drift_pct_of_all": 6.4,
+   "drift_pct_of_verifiable": 19.2,
+   "warn_pct_of_verifiable": 30.1
+  },
+  "links": {
+   "counts": {
+    "n/a": 148,
+    "unverifiable": 5,
+    "ok": 63,
+    "drift": 2
+   },
+   "verifiable": 65,
+   "drift_pct_of_all": 0.9,
+   "drift_pct_of_verifiable": 3.1,
+   "warn_pct_of_verifiable": 0.0
+  },
+  "lifecycle": {
+   "counts": {
+    "ok": 149,
+    "warn": 31,
+    "n/a": 38
+   },
+   "verifiable": 180,
+   "drift_pct_of_all": 0.0,
+   "drift_pct_of_verifiable": 0.0,
+   "warn_pct_of_verifiable": 17.2
+  }
+ },
+ "reasons": [
+  {
+   "check": "repo",
+   "status": "warn",
+   "reason": "no human commit in a year",
+   "entries": 41,
+   "pct": 18.8
+  },
+  {
+   "check": "lifecycle",
+   "status": "warn",
+   "reason": "lifecycle says active, no human commit in a year",
+   "entries": 28,
+   "pct": 12.8
+  },
+  {
+   "check": "codeowners",
+   "status": "warn",
+   "reason": "catalog and CODEOWNERS disagree",
+   "entries": 22,
+   "pct": 10.1
+  },
+  {
+   "check": "codeowners",
+   "status": "drift",
+   "reason": "CODEOWNERS names an owner GitHub cannot resolve",
+   "entries": 14,
+   "pct": 6.4
+  },
+  {
+   "check": "repo",
+   "status": "drift",
+   "reason": "repo renamed or transferred",
+   "entries": 4,
+   "pct": 1.8
+  },
+  {
+   "check": "owner",
+   "status": "drift",
+   "reason": "owner team does not resolve on GitHub",
+   "entries": 3,
+   "pct": 1.4
+  },
+  {
+   "check": "lifecycle",
+   "status": "warn",
+   "reason": "no lifecycle field",
+   "entries": 3,
+   "pct": 1.4
+  },
+  {
+   "check": "links",
+   "status": "drift",
+   "reason": "dead link",
+   "entries": 2,
+   "pct": 0.9
+  },
+  {
+   "check": "repo",
+   "status": "warn",
+   "reason": "root catalog file describes another repo",
+   "entries": 2,
+   "pct": 0.9
+  },
+  {
+   "check": "owner",
+   "status": "warn",
+   "reason": "owner user: no GitHub account with that name",
+   "entries": 1,
+   "pct": 0.5
+  },
+  {
+   "check": "owner",
+   "status": "drift",
+   "reason": "no owner field",
+   "entries": 1,
+   "pct": 0.5
+  }
+ ],
+ "owner_kinds": {
+  "group": 198,
+  "user": 19,
+  "none": 1
+ },
+ "owner_verification": [
+  {
+   "how": "other",
+   "status": "drift",
+   "entries": 1
+  },
+  {
+   "how": "unverifiable",
+   "status": "unverifiable",
+   "entries": 159
+  },
+  {
+   "how": "unverifiable",
+   "status": "warn",
+   "entries": 1
+  },
+  {
+   "how": "via GitHub user API",
+   "status": "ok",
+   "entries": 1
+  },
+  {
+   "how": "via another repo's CODEOWNERS",
+   "status": "drift",
+   "entries": 2
+  },
+  {
+   "how": "via another repo's CODEOWNERS",
+   "status": "ok",
+   "entries": 16
+  },
+  {
+   "how": "via this repo's CODEOWNERS",
+   "status": "drift",
+   "entries": 1
+  },
+  {
+   "how": "via this repo's CODEOWNERS",
+   "status": "ok",
+   "entries": 37
+  }
+ ],
+ "catalog_vs_codeowners": {
+  "entries_with_both": 73,
+  "agree_and_resolve": 37,
+  "agree_and_resolve_pct": 50.7,
+  "disagree": {
+   "catalog names a team, CODEOWNERS people": 4,
+   "different team names": 11,
+   "one team name contains the other": 7
+  },
+  "unknown_owner_entries": 14,
+  "unknown_owner_entries_with_teams": 8,
+  "unknown_owner_entries_with_users": 6
+ },
+ "links": {
+  "entries_with_links": 70,
+  "links": 152,
+  "results": {
+   "unverifiable": 17,
+   "ok": 133,
+   "dead": 2
+  },
+  "dead_pct_of_checked": 1.5,
+  "by_kind": {
+   "other": {
+    "links": 105,
+    "dead": 1
+   },
+   "docs": {
+    "links": 34,
+    "dead": 1
+   },
+   "dashboard": {
+    "links": 1,
+    "dead": 0
+   },
+   "chat": {
+    "links": 12,
+    "dead": 0
+   }
+  },
+  "unverifiable_or_dead_reasons": {
+   "does not resolve in public DNS": 12,
+   "HTTP 403: needs login or blocks automated requests": 5,
+   "HTTP 404": 2
+  }
+ },
+ "catalog_file_age_days": {
+  "median": 356,
+  "min": 0,
+  "max": 1811,
+  "n": 218
+ },
+ "by_catalog_file_age": [
+  {
+   "bucket": "under 6 months",
+   "entries": 81,
+   "drift": 8,
+   "warn": 12,
+   "drift_pct": 9.9,
+   "drift_or_warn_pct": 24.7
+  },
+  {
+   "bucket": "6 to 12 months",
+   "entries": 31,
+   "drift": 0,
+   "warn": 5,
+   "drift_pct": 0.0,
+   "drift_or_warn_pct": 16.1
+  },
+  {
+   "bucket": "1 to 2 years",
+   "entries": 48,
+   "drift": 6,
+   "warn": 19,
+   "drift_pct": 12.5,
+   "drift_or_warn_pct": 52.1
+  },
+  {
+   "bucket": "over 2 years",
+   "entries": 58,
+   "drift": 7,
+   "warn": 24,
+   "drift_pct": 12.1,
+   "drift_or_warn_pct": 53.4
+  }
+ ],
+ "drift_by_age_test": {
+  "under_1_year": {
+   "entries": 112,
+   "drift": 8,
+   "pct": 7.1
+  },
+  "1_year_or_more": {
+   "entries": 106,
+   "drift": 13,
+   "pct": 12.3
+  },
+  "fisher_two_sided_p": 0.253
+ },
+ "per_org": [
+  {
+   "org": "bcgov",
+   "entries": 6,
+   "drift": 0,
+   "warn": 4,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "broadinstitute",
+   "entries": 8,
+   "drift": 1,
+   "warn": 4,
+   "drift_pct": 12.5
+  },
+  {
+   "org": "cds-snc",
+   "entries": 8,
+   "drift": 0,
+   "warn": 3,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "clever",
+   "entries": 8,
+   "drift": 0,
+   "warn": 0,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "contentful",
+   "entries": 8,
+   "drift": 0,
+   "warn": 0,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "cultureamp",
+   "entries": 5,
+   "drift": 1,
+   "warn": 1,
+   "drift_pct": 20.0
+  },
+  {
+   "org": "defra",
+   "entries": 8,
+   "drift": 1,
+   "warn": 7,
+   "drift_pct": 12.5
+  },
+  {
+   "org": "dell",
+   "entries": 8,
+   "drift": 4,
+   "warn": 0,
+   "drift_pct": 50.0
+  },
+  {
+   "org": "diamondlightsource",
+   "entries": 7,
+   "drift": 1,
+   "warn": 4,
+   "drift_pct": 14.3
+  },
+  {
+   "org": "dwp",
+   "entries": 8,
+   "drift": 0,
+   "warn": 2,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "edunext",
+   "entries": 1,
+   "drift": 0,
+   "warn": 0,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "elastic",
+   "entries": 3,
+   "drift": 1,
+   "warn": 1,
+   "drift_pct": 33.3
+  },
+  {
+   "org": "equinor",
+   "entries": 10,
+   "drift": 0,
+   "warn": 0,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "grafana",
+   "entries": 8,
+   "drift": 0,
+   "warn": 5,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "hmcts",
+   "entries": 7,
+   "drift": 1,
+   "warn": 1,
+   "drift_pct": 14.3
+  },
+  {
+   "org": "invoca",
+   "entries": 8,
+   "drift": 0,
+   "warn": 0,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "kajabi",
+   "entries": 9,
+   "drift": 0,
+   "warn": 7,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "kartverket",
+   "entries": 8,
+   "drift": 0,
+   "warn": 0,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "open-dxp",
+   "entries": 8,
+   "drift": 0,
+   "warn": 0,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "openedx",
+   "entries": 8,
+   "drift": 0,
+   "warn": 1,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "pantheon-systems",
+   "entries": 8,
+   "drift": 0,
+   "warn": 2,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "prime-radiant-inc",
+   "entries": 8,
+   "drift": 0,
+   "warn": 0,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "radiorabe",
+   "entries": 6,
+   "drift": 0,
+   "warn": 2,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "reearth",
+   "entries": 8,
+   "drift": 0,
+   "warn": 2,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "sendbird",
+   "entries": 8,
+   "drift": 0,
+   "warn": 3,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "snyk",
+   "entries": 8,
+   "drift": 0,
+   "warn": 5,
+   "drift_pct": 0.0
+  },
+  {
+   "org": "sourcefuse",
+   "entries": 8,
+   "drift": 2,
+   "warn": 2,
+   "drift_pct": 25.0
+  },
+  {
+   "org": "spotify",
+   "entries": 4,
+   "drift": 1,
+   "warn": 3,
+   "drift_pct": 25.0
+  },
+  {
+   "org": "unity-technologies",
+   "entries": 8,
+   "drift": 4,
+   "warn": 1,
+   "drift_pct": 50.0
+  },
+  {
+   "org": "vtex-apps",
+   "entries": 8,
+   "drift": 4,
+   "warn": 0,
+   "drift_pct": 50.0
+  }
+ ],
+ "lifecycle_values": {
+  "experimental": 32,
+  "production": 144,
+  "development": 5,
+  "alpha": 5,
+  "discovery": 3,
+  "deprecated": 1,
+  "unknown": 3,
+  "mature": 4,
+  "-": 8,
+  "none": 3,
+  "pre-production": 2,
+  "maintenance": 8
+ }
+}

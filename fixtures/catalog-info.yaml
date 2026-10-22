@@ -1,0 +1,100 @@
+# A made-up catalog for the tests. Every kind of drift the checker reports is
+# in here once. The GitHub answers it is checked against are in
+# tests/fake_world.py; nothing here points at a real organization.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: payments-api
+  description: Takes card payments.
+  annotations:
+    github.com/project-slug: acme-fixture/payments-api
+  links:
+    - url: https://github.com/acme-fixture/payments-api/blob/main/docs/runbook.md
+      title: Runbook
+    - url: https://grafana.acme-fixture.example/d/payments
+      title: Dashboard
+spec:
+  type: service
+  owner: group:default/payments
+  lifecycle: production
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: billing-worker
+  annotations:
+    github.com/project-slug: acme-fixture/billing-worker
+spec:
+  type: service
+  owner: billing          # the team was deleted in a reorg
+  lifecycle: production
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: legacy-reports
+  annotations:
+    github.com/project-slug: acme-fixture/legacy-reports
+spec:
+  type: service
+  owner: user:former-engineer
+  lifecycle: production
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: search-indexer
+  annotations:
+    github.com/project-slug: acme-fixture/search-indexer   # renamed to acme-fixture/search
+  links:
+    - url: https://github.com/acme-fixture/search/blob/main/RUNBOOK.md
+      title: On-call runbook
+    - url: https://wiki.acme-fixture.example/search
+      title: Docs
+spec:
+  type: service
+  owner: group:search
+  lifecycle: production
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: feature-flags
+  annotations:
+    github.com/project-slug: acme-fixture/feature-flags
+spec:
+  type: service
+  owner: group:platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: old-cli
+  annotations:
+    github.com/project-slug: acme-fixture/old-cli
+spec:
+  type: tool
+  owner: group:platform
+  lifecycle: deprecated
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: payments
+spec:
+  type: team
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: payments-api-v1
+spec:
+  type: openapi
+  owner: group:payments
+  lifecycle: production
+  definition: |
+    openapi: 3.0.0
+    info:
+      title: Payments

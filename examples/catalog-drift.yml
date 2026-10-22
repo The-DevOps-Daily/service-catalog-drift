@@ -1,0 +1,37 @@
+# Copy to .github/workflows/catalog-drift.yml in a repository that has a
+# catalog-info.yaml. It fails the pull request that introduces drift, and a
+# weekly run catches what drifted without anyone touching the file.
+#
+# The default GITHUB_TOKEN cannot read your org's teams, so owner checks fall
+# back to what is public. For full owner checks, use a GitHub App token or a
+# fine-grained token with "Members: read" on the organization, stored as
+# CATALOG_DRIFT_TOKEN.
+name: catalog drift
+
+on:
+  pull_request:
+    paths: ["catalog-info.yaml", ".github/CODEOWNERS", "CODEOWNERS", "docs/CODEOWNERS"]
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          repository: The-DevOps-Daily/service-catalog-drift
+          path: .catalog-drift
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: check catalog-info.yaml
+        env:
+          GITHUB_TOKEN: ${{ secrets.CATALOG_DRIFT_TOKEN || github.token }}
+          REPO: ${{ github.repository }}
+        run: python .catalog-drift/drift.py catalog-info.yaml --repo "$REPO" --no-org-search
